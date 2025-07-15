@@ -11,17 +11,27 @@ public class PlatformerMovement : MonoBehaviour
     private bool facingRight = true;
     private Vector2 currentVelocity;
 
-    // Local Variables - Player Movement Properties
-    [Header("Movement Properties")]
+    // Player Movement Variables
+    [Header("Movement Properties ---")]
+
+    [Header("Walking")]
+    public bool canMove = true;
+    [Space]
     [Tooltip("The maximum speed for the character.")]
     [SerializeField] private float speed;
+
+    [Header("Jumping")]
+    public bool canJump = true;
+    [Space]
     [Tooltip("The maximum jump height for the character.")]
     [SerializeField] private float jumpHeight;
+    [Tooltip("When true, this applies gravityForce while the character is falling.")]
+    [SerializeField] private bool useGravityForce = true;
     [Tooltip("The speed at which the character falls.")]
     [SerializeField] private float gravityForce;
 
-    // Public Variables
-    [Header("Ground Check")]
+    // Ground Check Variables
+    [Header("Ground Check ---")]
     [Tooltip("An empty transform child positioned at the bottom of the character.")]
     public Transform groundCheck;
     [Tooltip("This is the layer(s) type which the character can jump on.")]
@@ -35,27 +45,33 @@ public class PlatformerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Applies horizontal movement, with smooth acceleration and deceleration.
-        float horizontalVel = horizontalInput * speed;
-        float smoothVel = Mathf.SmoothDamp(rb.linearVelocity.x, horizontalVel, ref currentVelocity.x, 0.1f);
-        rb.linearVelocity = new Vector2(smoothVel, rb.linearVelocity.y);
+        if(canMove)
+        {
+            // Applies horizontal movement, with smooth acceleration and deceleration.
+            float horizontalVel = horizontalInput * speed;
+            float smoothVel = Mathf.SmoothDamp(rb.linearVelocity.x, horizontalVel, ref currentVelocity.x, 0.1f);
+            rb.linearVelocity = new Vector2(smoothVel, rb.linearVelocity.y);
+        } 
     }
 
     // Update is called once per frame
     void Update()
     {
-        // This if-statement flips the character's x-direction, to face in the direction of horizontal movement.
-        if(!facingRight && horizontalInput > 0) // Facing left, but moving right?
+        if(canMove)
         {
-            Flip(); // Flip right!
-        }
-        else if(facingRight && horizontalInput < 0) // Facing right, but moving left?
-        {
-            Flip(); // Flip left!
+            // This if-statement flips the character's x-direction, to face in the direction of horizontal movement.
+            if (!facingRight && horizontalInput > 0) // Facing left, but moving right?
+            {
+                Flip(); // Flip right!
+            }
+            else if (facingRight && horizontalInput < 0) // Facing right, but moving left?
+            {
+                Flip(); // Flip left!
+            }
         }
 
         // This if-statement checks if the character is falling, and pulls the character down quicker, avoiding floatiness.
-        if (rb.linearVelocity.y < 0f) 
+        if (rb.linearVelocity.y < 0f && useGravityForce) 
         {
             // Increase falling velocity based on current gravity multiplied by a gravity factor.
             rb.linearVelocity -= Vector2.down * gravityForce * Physics.gravity.y * Time.fixedDeltaTime;
@@ -89,7 +105,7 @@ public class PlatformerMovement : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         // This if-statement checks if the jump button is pressed while the character is "grounded".
-        if(context.performed && IsGrounded())
+        if(context.performed && IsGrounded() && canJump)
         {
             // Apply an upwards velocity to the character based on jumpHeight.
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpHeight);
