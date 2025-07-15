@@ -12,17 +12,19 @@ public class PlatformerMovement : MonoBehaviour
     private Vector2 currentVelocity;
 
     // Player Movement Variables
-    [Header("Movement Properties ---")]
+    [Header("[Movement Properties]")]
 
     [Header("Walking")]
+    [Tooltip("When true, the character is able to move horizontally.")]
     public bool canMove = true;
-    [Space]
     [Tooltip("The maximum speed for the character.")]
     [SerializeField] private float speed;
 
     [Header("Jumping")]
+    [Tooltip("When true, the character is able to perform jumps.")]
     public bool canJump = true;
-    [Space]
+    [Tooltip("When true, the character jumps higher when the jump button is held, and shorter when tapped quickly.")]
+    public bool holdToJumpHigher = true;
     [Tooltip("The maximum jump height for the character.")]
     [SerializeField] private float jumpHeight;
     [Tooltip("When true, this applies gravityForce while the character is falling.")]
@@ -31,7 +33,7 @@ public class PlatformerMovement : MonoBehaviour
     [SerializeField] private float gravityForce;
 
     // Ground Check Variables
-    [Header("Ground Check ---")]
+    [Header("[Ground Check]")]
     [Tooltip("An empty transform child positioned at the bottom of the character.")]
     public Transform groundCheck;
     [Tooltip("This is the layer(s) type which the character can jump on.")]
@@ -113,7 +115,7 @@ public class PlatformerMovement : MonoBehaviour
 
         // This if-statement checks if the jump button is released, so that by holding the jump button longer, the character-
         // -jumps higher.
-        if(context.canceled && rb.linearVelocity.y > 0f)
+        if(context.canceled && rb.linearVelocity.y > 0f && holdToJumpHigher)
         {
             // Reduce current y-velocity by half to reduce jump height on jump button released.
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
