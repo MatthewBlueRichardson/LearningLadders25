@@ -518,13 +518,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a366b2404f5a5ba4c80bec25defcc1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallingObjects:
-  - {fileID: 7449464879658668986, guid: 7d0c82f3536934f4db73ee78482471db, type: 3}
-  - {fileID: 3961696604366819588, guid: bf3d272a85de72e44a4e5add697c7950, type: 3}
-  - {fileID: 9218424740516944561, guid: 925da5a943418a14f93878cd98e4af2f, type: 3}
-  stackedObjects: []
+  fallingObjectPrefabs: []
   rig: {fileID: 0}
   dampedTransObject: {fileID: 0}
+  jointFrequency: 1.5
+  jointDampingRatio: 0.5
+  jointAutoConfigureDistance: 0
+  jointDistance: 0
+  jointEnableCollision: 0
 --- !u!114 &482189684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1272,9 +1273,11 @@ GameObject:
   - component: {fileID: 1893402534}
   - component: {fileID: 1893402536}
   - component: {fileID: 1893402537}
+  - component: {fileID: 1893402538}
+  - component: {fileID: 1893402539}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: PartOfPlatform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1408,13 +1411,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a366b2404f5a5ba4c80bec25defcc1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallingObjects:
+  fallingObjectPrefabs:
   - {fileID: 7449464879658668986, guid: 7d0c82f3536934f4db73ee78482471db, type: 3}
   - {fileID: 3961696604366819588, guid: bf3d272a85de72e44a4e5add697c7950, type: 3}
   - {fileID: 9218424740516944561, guid: 925da5a943418a14f93878cd98e4af2f, type: 3}
-  stackedObjects: []
   rig: {fileID: 1136141069}
   dampedTransObject: {fileID: 8019224724337306027, guid: 5c9236a47b1ed144692267f60d457b4d, type: 3}
+  jointFrequency: 1.5
+  jointDampingRatio: 0.3
+  jointAutoConfigureDistance: 0
+  jointDistance: 0
+  jointEnableCollision: 1
+--- !u!114 &1893402538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893402533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c203b132a0b798c4491b5eb73e1f2c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: f39b5e02121ca9f419f2d8efc76be2d0, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1893402537}
+        m_TargetAssemblyTypeName: LearningLadders.PlatformManager, Assembly-CSharp
+        m_MethodName: ConnectStackObject
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!50 &1893402539
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893402533}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &2097197471
 GameObject:
   m_ObjectHideFlags: 0

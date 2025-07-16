@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -832880018616541106}
   m_Layer: 0
   m_Name: Falling Object 1
-  m_TagString: Untagged
+  m_TagString: Stackable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,11 +102,11 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0.02
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 192f623d5a1988643888cb30518aeb25, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -116,7 +116,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!61 &2403048154314310374
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -175,3 +175,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7accdf048f31a4c4b8c519d421baec5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onStackConnection: {fileID: 11400000, guid: f39b5e02121ca9f419f2d8efc76be2d0, type: 2}
