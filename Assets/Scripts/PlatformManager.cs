@@ -7,9 +7,6 @@ namespace LearningLadders
 {
     public class PlatformManager : MonoBehaviour
     {
-        [Header("Falling Object Prefabs")]
-        [SerializeField] private GameObject[] fallingObjectPrefabs;
-
         [Header("Joint Attributes")]
         [SerializeField] private float jointFrequency = 1.5f;
         [SerializeField] private float jointDampingRatio = 0.5f;
@@ -17,33 +14,7 @@ namespace LearningLadders
         [SerializeField] private float jointDistance = 0f;
         [SerializeField] private bool jointEnableCollision = false;
 
-        private GameObject _previousSpawnedObject;
-        private GameObject _newObject;
-
-        private static GameObject _lastConnectedObject;
-
         private static Dictionary<int, StackableObject> stackableObjects = new();
-
-        private void Start() // TODO: remove after testing!
-        {
-            _previousSpawnedObject = gameObject;
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.S)) // TODO: remove after testing!
-            {
-                SpawnRandomObject();
-            }
-        }
-
-        /// <summary>
-        /// This is placeholder code until the spawner is in.
-        /// </summary>
-        private void SpawnRandomObject() // TODO: remove after testing!
-        {
-            _newObject = Instantiate(fallingObjectPrefabs[Random.Range(0, fallingObjectPrefabs.Length)], new Vector3(0, 4, 0), Quaternion.identity);
-        }
 
         public static void RegisterStackable(int id, StackableObject obj)
         {
