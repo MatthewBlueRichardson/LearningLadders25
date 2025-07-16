@@ -519,8 +519,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallingObjectPrefabs: []
-  rig: {fileID: 0}
-  dampedTransObject: {fileID: 0}
   jointFrequency: 1.5
   jointDampingRatio: 0.5
   jointAutoConfigureDistance: 0
@@ -1415,8 +1413,6 @@ MonoBehaviour:
   - {fileID: 7449464879658668986, guid: 7d0c82f3536934f4db73ee78482471db, type: 3}
   - {fileID: 3961696604366819588, guid: bf3d272a85de72e44a4e5add697c7950, type: 3}
   - {fileID: 9218424740516944561, guid: 925da5a943418a14f93878cd98e4af2f, type: 3}
-  rig: {fileID: 1136141069}
-  dampedTransObject: {fileID: 8019224724337306027, guid: 5c9236a47b1ed144692267f60d457b4d, type: 3}
   jointFrequency: 1.5
   jointDampingRatio: 0.3
   jointAutoConfigureDistance: 0
