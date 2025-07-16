@@ -1,7 +1,5 @@
 using UnityEngine;
-using Random = UnityEngine.Random;
 using System.Collections.Generic;
-using UnityEngine.Animations.Rigging;
 
 namespace LearningLadders
 {
@@ -10,15 +8,10 @@ namespace LearningLadders
         [Header("Joint Attributes")]
         [SerializeField] private float jointFrequency = 1.5f;
         [SerializeField] private float jointDampingRatio = 0.5f;
-
-        //[SerializeField] private bool jointAutoConfigureDistance = false;
-        //[SerializeField] private float jointDistance = 0f;
-
         [SerializeField] private bool jointEnableCollision = false;
         [SerializeField] private float jointBreakForce;
         [SerializeField] private float jointTorqueForce;
         [SerializeField] private bool jointAutoConfigureConnectedAnchor;
-        //[SerializeField] private enum jointBreakAction { };
 
         private static Dictionary<int, StackableObject> stackableObjects = new();
 
@@ -57,11 +50,6 @@ namespace LearningLadders
             joint.connectedBody = collidedRb;
             joint.frequency = jointFrequency;
             joint.dampingRatio = jointDampingRatio;
-
-            //joint.autoConfigureDistance = jointAutoConfigureDistance;
-            //joint.distance = jointDistance;
-
-            //joint.breakAction = JointBreakAction2D.KeepApart;
             joint.autoConfigureConnectedAnchor = jointAutoConfigureConnectedAnchor;
             joint.breakForce = jointBreakForce;
             joint.breakTorque = jointTorqueForce;
