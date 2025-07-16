@@ -6,12 +6,18 @@ namespace LearningLadders
     public class PlatformManager : MonoBehaviour
     {
         [Header("Joint Attributes")]
+        [Tooltip("Frequency of spring oscillating when game objects approach the separation distance.")]
         [SerializeField] private float jointFrequency = 1.5f;
-        [SerializeField] private float jointDampingRatio = 0.5f;
-        [SerializeField] private bool jointEnableCollision = false;
-        [SerializeField] private float jointBreakForce;
-        [SerializeField] private float jointTorqueForce;
-        [SerializeField] private bool jointAutoConfigureConnectedAnchor;
+        [Tooltip("Degree of supressing oscillation, from 0 to 1, higher = less movement.")]
+        [SerializeField] private float jointDampingRatio = 0.5f; 
+        [Tooltip("Enable collision between connected game objects.")]
+        [SerializeField] private bool jointEnableCollision = false; 
+        [Tooltip("How much force is required to perform the selected break action.")]
+        [SerializeField] private float jointBreakForce; 
+        [Tooltip("How much torque is required to perform the selected break action.")]
+        [SerializeField] private float jointTorqueForce; 
+        [Tooltip("Enable to automatically set the anchor location for the other object a joint connects to.")]
+        [SerializeField] private bool jointAutoConfigureConnectedAnchor; 
 
         private static Dictionary<int, StackableObject> stackableObjects = new();
 

@@ -171,18 +171,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3319990648701099938, guid: a672034d906c559498c056ecae27742d, type: 3}
-      propertyPath: jointBreakForce
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319990648701099938, guid: a672034d906c559498c056ecae27742d, type: 3}
-      propertyPath: jointTorqueForce
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319990648701099938, guid: a672034d906c559498c056ecae27742d, type: 3}
-      propertyPath: jointAutoConfigureConnectedAnchor
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

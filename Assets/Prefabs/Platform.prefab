@@ -190,12 +190,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a366b2404f5a5ba4c80bec25defcc1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallingObjectPrefabs: []
   jointFrequency: 1.5
   jointDampingRatio: 0.3
-  jointAutoConfigureDistance: 0
-  jointDistance: 0
   jointEnableCollision: 1
+  jointBreakForce: 100
+  jointTorqueForce: 100
+  jointAutoConfigureConnectedAnchor: 1
 --- !u!114 &2781570275884953575
 MonoBehaviour:
   m_ObjectHideFlags: 0
