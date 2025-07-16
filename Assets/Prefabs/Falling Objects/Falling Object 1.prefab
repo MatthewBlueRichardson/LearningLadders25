@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8406265531125661850}
   - component: {fileID: 4353408193145856360}
   - component: {fileID: 2403048154314310374}
+  - component: {fileID: -832880018616541106}
   m_Layer: 0
   m_Name: Falling Object 1
   m_TagString: Untagged
@@ -162,3 +163,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-832880018616541106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7449464879658668986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7accdf048f31a4c4b8c519d421baec5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

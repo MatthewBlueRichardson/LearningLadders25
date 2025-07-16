@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 199426382085672849}
   - component: {fileID: 4149570919916070378}
   - component: {fileID: 975254492052973740}
+  - component: {fileID: 9176332292796420702}
   m_Layer: 0
   m_Name: Falling Object 2
   m_TagString: Untagged
@@ -166,3 +167,15 @@ PolygonCollider2D:
       - {x: -0.5, y: -0.28866667}
       - {x: 0.5, y: -0.28866667}
   m_UseDelaunayMesh: 0
+--- !u!114 &9176332292796420702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3961696604366819588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7accdf048f31a4c4b8c519d421baec5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
