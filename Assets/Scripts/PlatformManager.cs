@@ -10,9 +10,15 @@ namespace LearningLadders
         [Header("Joint Attributes")]
         [SerializeField] private float jointFrequency = 1.5f;
         [SerializeField] private float jointDampingRatio = 0.5f;
-        [SerializeField] private bool jointAutoConfigureDistance = false;
-        [SerializeField] private float jointDistance = 0f;
+
+        //[SerializeField] private bool jointAutoConfigureDistance = false;
+        //[SerializeField] private float jointDistance = 0f;
+
         [SerializeField] private bool jointEnableCollision = false;
+        [SerializeField] private float jointBreakForce;
+        [SerializeField] private float jointTorqueForce;
+        [SerializeField] private bool jointAutoConfigureConnectedAnchor;
+        //[SerializeField] private enum jointBreakAction { };
 
         private static Dictionary<int, StackableObject> stackableObjects = new();
 
@@ -47,12 +53,20 @@ namespace LearningLadders
 
             if(newRb == null || collidedRb == null) return;
 
-            var joint = newObj.AddComponent<SpringJoint2D>();
+            var joint = newObj.AddComponent<FixedJoint2D>();
             joint.connectedBody = collidedRb;
             joint.frequency = jointFrequency;
             joint.dampingRatio = jointDampingRatio;
-            joint.autoConfigureDistance = jointAutoConfigureDistance;
-            joint.distance = jointDistance;
+
+            //joint.autoConfigureDistance = jointAutoConfigureDistance;
+            //joint.distance = jointDistance;
+
+            //joint.breakAction = JointBreakAction2D.KeepApart;
+            joint.autoConfigureConnectedAnchor = jointAutoConfigureConnectedAnchor;
+            joint.breakForce = jointBreakForce;
+            joint.breakTorque = jointTorqueForce;
+            joint.breakAction = JointBreakAction2D.Destroy;
+
             joint.enableCollision = jointEnableCollision;
 
             stackable.MarkConnected();
