@@ -23,6 +23,12 @@ namespace LearningLadders
             PlatformManager.UnregisterStackable(ID);
         }
 
+        /// <summary>
+        /// When the stackable object collides with another object, it checks whether this object is already connected.
+        /// If not, it then checks the tag of the object it collided with. If it meets the condition,
+        /// it tracks the object it collided with and invokes the stack connection event and passes its own ID number.
+        /// </summary>
+        /// <param name="collision"></param>
         public void OnCollisionEnter2D(Collision2D collision)
         {
             if (isConnected) return;
@@ -30,7 +36,6 @@ namespace LearningLadders
             if (collision.collider.CompareTag("PartOfPlatform") || collision.collider.CompareTag("Stackable"))
             {
                 Debug.Log("Tag matches!");
-                //isConnected = true;
                 lastPlatformPart = collision.collider.gameObject;
                 onStackConnection.Invoke(ID);
             }
