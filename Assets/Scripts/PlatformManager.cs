@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using LearningLadders.EventSystem;
+using static Unity.Collections.AllocatorManager;
 
 namespace LearningLadders
 {
@@ -17,7 +19,9 @@ namespace LearningLadders
         [Tooltip("How much torque is required to perform the selected break action.")]
         [SerializeField] private float jointTorqueForce; 
         [Tooltip("Enable to automatically set the anchor location for the other object a joint connects to.")]
-        [SerializeField] private bool jointAutoConfigureConnectedAnchor; 
+        [SerializeField] private bool jointAutoConfigureConnectedAnchor;
+
+        [SerializeField] private IntEvent onStackConnectionEvent;
 
         private static Dictionary<int, StackableObject> stackableObjects = new();
 
@@ -60,8 +64,10 @@ namespace LearningLadders
             joint.breakForce = jointBreakForce;
             joint.breakTorque = jointTorqueForce;
             joint.breakAction = JointBreakAction2D.Destroy;
-
             joint.enableCollision = jointEnableCollision;
+
+            int blockY = Mathf.FloorToInt(stackable.transform.position.y);
+            onStackConnectionEvent.Invoke(blockY);
 
             stackable.MarkConnected();
         }
