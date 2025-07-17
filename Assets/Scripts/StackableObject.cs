@@ -33,6 +33,12 @@ namespace LearningLadders
         /// <param name="collision"></param>
         public void OnCollisionEnter2D(Collision2D collision)
         {
+            if(collision.collider.CompareTag("GameOver"))
+            {
+                Debug.Log("Block has fallen, game over!");
+                onGameOverEvent.Invoke(new Empty());
+            }
+
             if (isConnected) return;
 
             if (collision.collider.CompareTag("PartOfPlatform") || collision.collider.CompareTag("Stackable"))
@@ -40,11 +46,6 @@ namespace LearningLadders
                 Debug.Log("Tag matches!");
                 lastPlatformPart = collision.collider.gameObject;
                 onStackConnectionEvent.Invoke(ID);
-            }
-            else if(collision.collider.CompareTag("GameOver"))
-            {
-                Debug.Log("Block has fallen, game over!");
-                onGameOverEvent.Invoke(new Empty());
             }
         }
 

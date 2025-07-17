@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PartOfPlatform
   - Stackable
+  - GameOver
   layers:
   - Default
   - TransparentFX
