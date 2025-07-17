@@ -5,7 +5,9 @@ namespace LearningLadders
 {
     public class StackableObject : MonoBehaviour
     {
+        [Header("Events")]
         [SerializeField] private IntEvent onStackConnection;
+        [SerializeField] private VoidEvent onGameOverEvent;
 
         private bool isConnected = false;
         private GameObject lastPlatformPart;
@@ -38,6 +40,11 @@ namespace LearningLadders
                 Debug.Log("Tag matches!");
                 lastPlatformPart = collision.collider.gameObject;
                 onStackConnection.Invoke(ID);
+            }
+            else if(collision.collider.CompareTag("GameOver"))
+            {
+                Debug.Log("Block has fallen, game over!");
+                onGameOverEvent.Invoke(new Empty());
             }
         }
 
