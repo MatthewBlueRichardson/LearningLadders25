@@ -1,49 +1,25 @@
 using UnityEngine;
-using Random = UnityEngine.Random;
 using System.Collections.Generic;
-using UnityEngine.Animations.Rigging;
 
 namespace LearningLadders
 {
     public class PlatformManager : MonoBehaviour
     {
-        [Header("Falling Object Prefabs")]
-        [SerializeField] private GameObject[] fallingObjectPrefabs;
-
         [Header("Joint Attributes")]
+        [Tooltip("Frequency of spring oscillating when game objects approach the separation distance.")]
         [SerializeField] private float jointFrequency = 1.5f;
-        [SerializeField] private float jointDampingRatio = 0.5f;
-        [SerializeField] private bool jointAutoConfigureDistance = false;
-        [SerializeField] private float jointDistance = 0f;
-        [SerializeField] private bool jointEnableCollision = false;
-
-        private GameObject _previousSpawnedObject;
-        private GameObject _newObject;
-
-        private static GameObject _lastConnectedObject;
+        [Tooltip("Degree of supressing oscillation, from 0 to 1, higher = less movement.")]
+        [SerializeField] private float jointDampingRatio = 0.5f; 
+        [Tooltip("Enable collision between connected game objects.")]
+        [SerializeField] private bool jointEnableCollision = false; 
+        [Tooltip("How much force is required to perform the selected break action.")]
+        [SerializeField] private float jointBreakForce; 
+        [Tooltip("How much torque is required to perform the selected break action.")]
+        [SerializeField] private float jointTorqueForce; 
+        [Tooltip("Enable to automatically set the anchor location for the other object a joint connects to.")]
+        [SerializeField] private bool jointAutoConfigureConnectedAnchor; 
 
         private static Dictionary<int, StackableObject> stackableObjects = new();
-
-        private void Start() // TODO: remove after testing!
-        {
-            _previousSpawnedObject = gameObject;
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.S)) // TODO: remove after testing!
-            {
-                SpawnRandomObject();
-            }
-        }
-
-        /// <summary>
-        /// This is placeholder code until the spawner is in.
-        /// </summary>
-        private void SpawnRandomObject() // TODO: remove after testing!
-        {
-            _newObject = Instantiate(fallingObjectPrefabs[Random.Range(0, fallingObjectPrefabs.Length)], new Vector3(0, 4, 0), Quaternion.identity);
-        }
 
         public static void RegisterStackable(int id, StackableObject obj)
         {
@@ -76,12 +52,15 @@ namespace LearningLadders
 
             if(newRb == null || collidedRb == null) return;
 
-            var joint = newObj.AddComponent<SpringJoint2D>();
+            var joint = newObj.AddComponent<FixedJoint2D>();
             joint.connectedBody = collidedRb;
             joint.frequency = jointFrequency;
             joint.dampingRatio = jointDampingRatio;
-            joint.autoConfigureDistance = jointAutoConfigureDistance;
-            joint.distance = jointDistance;
+            joint.autoConfigureConnectedAnchor = jointAutoConfigureConnectedAnchor;
+            joint.breakForce = jointBreakForce;
+            joint.breakTorque = jointTorqueForce;
+            joint.breakAction = JointBreakAction2D.Destroy;
+
             joint.enableCollision = jointEnableCollision;
 
             stackable.MarkConnected();

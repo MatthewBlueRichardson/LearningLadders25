@@ -518,9 +518,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a366b2404f5a5ba4c80bec25defcc1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallingObjectPrefabs: []
-  rig: {fileID: 0}
-  dampedTransObject: {fileID: 0}
   jointFrequency: 1.5
   jointDampingRatio: 0.5
   jointAutoConfigureDistance: 0
@@ -610,6 +607,63 @@ Transform:
   - {fileID: 24819546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &594145612
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6969540282411390249, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969540282411390249, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969540282411390249, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969540282411390249, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969540282411390249, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969540282411390249, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969540282411390249, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969540282411390249, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969540282411390249, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969540282411390249, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9001744071043819915, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
+      propertyPath: m_Name
+      value: LevelObjectSpawner
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
 --- !u!1 &611280807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1411,12 +1465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a366b2404f5a5ba4c80bec25defcc1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallingObjectPrefabs:
-  - {fileID: 7449464879658668986, guid: 7d0c82f3536934f4db73ee78482471db, type: 3}
-  - {fileID: 3961696604366819588, guid: bf3d272a85de72e44a4e5add697c7950, type: 3}
-  - {fileID: 9218424740516944561, guid: 925da5a943418a14f93878cd98e4af2f, type: 3}
-  rig: {fileID: 1136141069}
-  dampedTransObject: {fileID: 8019224724337306027, guid: 5c9236a47b1ed144692267f60d457b4d, type: 3}
   jointFrequency: 1.5
   jointDampingRatio: 0.3
   jointAutoConfigureDistance: 0
@@ -1535,3 +1583,4 @@ SceneRoots:
   - {fileID: 662955765}
   - {fileID: 482189687}
   - {fileID: 784461178}
+  - {fileID: 594145612}

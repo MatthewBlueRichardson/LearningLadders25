@@ -2,9 +2,12 @@ using UnityEngine;
 
 public class LevelObjectSpawnScript : MonoBehaviour
 {
-    public GameObject[] objectsToSpawn;
-    public float spawnInterval = 1f;
-    public float spawnRangeX = 8f;  //How far left/right objects can spawn
+    [Header("Objects To Spawn")]
+    [SerializeField] private GameObject[] objectsToSpawn;
+
+    [Header("Spawn Variables")]
+    [SerializeField] private float spawnInterval = 1f;
+    [SerializeField] private float spawnRangeX = 8f;  //How far left/right objects can spawn
 
     private float timer = 0f;
 
