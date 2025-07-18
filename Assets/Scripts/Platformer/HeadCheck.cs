@@ -16,6 +16,7 @@ public class HeadCheck : MonoBehaviour
         {
             Rigidbody2D rb = collision.attachedRigidbody;
 
+            // If the stackable has a RigidBody, and is currently falling...
             if(rb != null && rb.linearVelocityY < -0.2f)
             {
                 Debug.Log("Hit");
