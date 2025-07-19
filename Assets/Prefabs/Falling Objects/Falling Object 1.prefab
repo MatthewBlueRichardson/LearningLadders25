@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4353408193145856360}
   - component: {fileID: 2403048154314310374}
   - component: {fileID: -832880018616541106}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Falling Object 1
   m_TagString: Stackable
   m_Icon: {fileID: 0}

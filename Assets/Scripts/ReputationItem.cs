@@ -16,7 +16,9 @@ public class ReputationItem : MonoBehaviour
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.CompareTag("Player"))
-        repScript.currentRep += repRestore;
-        Destroy(gameObject);
+        {
+            repScript.currentRep += repRestore;
+            Destroy(gameObject);
+        }
     }
 }

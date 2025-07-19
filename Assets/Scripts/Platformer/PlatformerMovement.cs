@@ -78,12 +78,13 @@ public class PlatformerMovement : MonoBehaviour
             // Increase falling velocity based on current gravity multiplied by a gravity factor.
             rb.linearVelocity -= Vector2.down * gravityForce * Physics.gravity.y * Time.fixedDeltaTime;
         }
+
     }
 
     // This function checks if the player is standing on a platform marked as "Ground".
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.4f, groundLayer);
     }
 
     // This function flips the character to face in the opposite x-direction.
