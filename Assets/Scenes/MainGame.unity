@@ -202,18 +202,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3319990648701099938, guid: a672034d906c559498c056ecae27742d, type: 3}
-      propertyPath: jointBreakForce
-      value: 2000
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319990648701099938, guid: a672034d906c559498c056ecae27742d, type: 3}
-      propertyPath: jointTorqueForce
-      value: 2000
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319990648701099938, guid: a672034d906c559498c056ecae27742d, type: 3}
-      propertyPath: onStackConnectionEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: f39b5e02121ca9f419f2d8efc76be2d0, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -529,8 +517,8 @@ Transform:
   m_GameObject: {fileID: 655288108}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.509, y: 9.5, z: 0}
-  m_LocalScale: {x: 20, y: 0.05, z: 1}
+  m_LocalPosition: {x: 0.509, y: 15.5513, z: 0}
+  m_LocalScale: {x: 32.102455, y: 0.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 295825781}
@@ -864,8 +852,8 @@ Transform:
   m_GameObject: {fileID: 1025593655}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.509, y: 9.5, z: 0}
-  m_LocalScale: {x: 20, y: 0.05, z: 1}
+  m_LocalPosition: {x: -0.509, y: 15.5513, z: 0}
+  m_LocalScale: {x: 32.10246, y: 0.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 295825781}

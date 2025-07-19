@@ -49,13 +49,13 @@ namespace LearningLadders
                     Debug.Log("Block has fallen, game over!");
                     onGameOverEvent.Invoke(new Empty());
                 }
+                Destroy(gameObject);
             }
 
             if (isConnected) return;
 
             if (collision.collider.CompareTag("PartOfPlatform") || collision.collider.CompareTag("Stackable"))
             {
-                Debug.Log("Tag matches!");
                 lastPlatformPart = collision.collider.gameObject;
                 onStackConnectionEvent.Invoke(ID);
             }
