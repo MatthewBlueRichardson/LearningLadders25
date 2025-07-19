@@ -6,19 +6,29 @@ public class LevelObjectSpawnScript : MonoBehaviour
     [SerializeField] private GameObject[] objectsToSpawn;
 
     [Header("Spawn Variables")]
-    [SerializeField] private float spawnInterval = 1f;
+    [SerializeField] private float spawnInterval = 3f;
     [SerializeField] private float spawnRangeX = 8f;  //How far left/right objects can spawn
+    [SerializeField] private float difficultyIncreaseTimer = 10f; // After how much time to increase the difficulty.
 
-    private float timer = 0f;
+    private float spawnTimer = 0f;
+    private float difficultyTimer = 0f;
 
     private void Update()
     {
-        timer += Time.deltaTime;
+        spawnTimer += Time.deltaTime;
+        difficultyTimer += Time.deltaTime;
 
-        if (timer >= spawnInterval)
+        if (spawnTimer >= spawnInterval)
         {
             SpawnObject();
-            timer = 0f;
+            spawnTimer = 0f;
+        }
+
+        if(difficultyTimer >= difficultyIncreaseTimer)
+        {
+            spawnInterval -= 0.25f;
+            difficultyTimer = 0f;
+            if (spawnInterval <= 1.5f) spawnInterval = 1.5f;
         }
     }
 
