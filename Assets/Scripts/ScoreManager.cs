@@ -21,7 +21,6 @@ public class ScoreManager : MonoBehaviour
 
     public void CheckTowerHeight(int blockY)
     {
-        print("After event " + blockY);
         if (blockY > highestY)
         {
             highestY = blockY;

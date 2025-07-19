@@ -66,6 +66,7 @@ namespace LearningLadders
             joint.breakAction = JointBreakAction2D.Destroy;
             joint.enableCollision = jointEnableCollision;
 
+            //Checks tower height in ScoreManager
             int blockY = Mathf.FloorToInt(stackable.transform.position.y);
             onStackConnectionEvent.Invoke(blockY);
 
