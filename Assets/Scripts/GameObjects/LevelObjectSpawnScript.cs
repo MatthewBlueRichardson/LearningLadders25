@@ -11,6 +11,7 @@ public class LevelObjectSpawnScript : MonoBehaviour
     [SerializeField] private float spawnRangeX = 8f;  //How far left/right objects can spawn
     [SerializeField] private float difficultyIncreaseTimer = 10f; // After how much time to increase the difficulty.
     [SerializeField] private float randomObjectFloat;
+    [Tooltip("Chance out of 10 that repItem will spawn instead")]
     [SerializeField] private float repItemChance;
 
     private float spawnTimer = 0f;
@@ -41,7 +42,7 @@ public class LevelObjectSpawnScript : MonoBehaviour
         Vector3 spawnPos = new Vector3(randomX, transform.position.y, 0f);
         randomObjectFloat = Random.Range(1f, 10f);
 
-        if (randomObjectFloat > repItemChance)
+        if (randomObjectFloat < repItemChance)
         {
             Instantiate(repItem, spawnPos, Quaternion.identity);
         }
