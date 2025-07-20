@@ -31,6 +31,9 @@ public class PlatformerMovement : MonoBehaviour
     [SerializeField] private bool useGravityForce = true;
     [Tooltip("The speed at which the character falls.")]
     [SerializeField] private float gravityForce;
+    [SerializeField] private PlayerRespawn respawnScript;
+
+
 
     // Ground Check Variables
     [Header("[Ground Check]")]
@@ -94,6 +97,16 @@ public class PlatformerMovement : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x *= -1f; // Toggles and flips character x-direction based on current x-direction.
         transform.localScale = localScale; // Apply flip!
+    }
+
+    //Check if player hit GameOver barriers
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        print("Hit edge");
+        if (collision.collider.CompareTag("GameOver"))
+        {
+            respawnScript.Respawn();
+        }
     }
 
     #region Input Actions
