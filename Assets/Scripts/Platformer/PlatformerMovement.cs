@@ -102,7 +102,6 @@ public class PlatformerMovement : MonoBehaviour
     //Check if player hit GameOver barriers
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        print("Hit edge");
         if (collision.collider.CompareTag("GameOver"))
         {
             respawnScript.Respawn();
