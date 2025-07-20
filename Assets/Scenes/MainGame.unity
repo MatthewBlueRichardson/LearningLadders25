@@ -119,37 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &220360806
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 220360807}
-  m_Layer: 0
-  m_Name: test
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &220360807
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 220360806}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.530373, y: 11.875269, z: -0.20176668}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &271793277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -818,7 +787,7 @@ PrefabInstance:
       objectReference: {fileID: 487923053267757508, guid: 7c3492ecb4f97cb44ae39b774ff4c877, type: 3}
     - target: {fileID: 8424228228463588887, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
       propertyPath: repItemChance
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9001744071043819915, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
       propertyPath: m_Name
@@ -1189,6 +1158,7 @@ GameObject:
   - component: {fileID: 1465623224}
   - component: {fileID: 1465623226}
   - component: {fileID: 1465623225}
+  - component: {fileID: 1465623227}
   m_Layer: 5
   m_Name: RepBar
   m_TagString: Untagged
@@ -1253,6 +1223,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465623223}
   m_CullTransparentMesh: 1
+--- !u!114 &1465623227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465623223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1747b0fc8c549e44b811e4d760a021a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: f648be595403a8e46ae726fe0cf00da1, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2088842502458792086}
+        m_TargetAssemblyTypeName: ReputationScript, Assembly-CSharp
+        m_MethodName: UpdateReputation
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1610794740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1663,6 +1661,5 @@ SceneRoots:
   - {fileID: 295825781}
   - {fileID: 382658222}
   - {fileID: 1209254807}
-  - {fileID: 220360807}
   - {fileID: 1968776431}
   - {fileID: 1610794740}
