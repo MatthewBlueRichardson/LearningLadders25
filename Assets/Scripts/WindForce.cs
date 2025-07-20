@@ -46,9 +46,12 @@ public class WindForce : MonoBehaviour
 
     private void SetWindForceToLeft()
     {
-        windDirection = "Wind Direction: West!";
         effector.forceAngle = 180; // Set to left
+        effector.forceMagnitude = Random.Range(7, 21);
+
+        windDirection = "Wind Direction: West!";
         windForce = "Wind Force: " + effector.forceMagnitude.ToString() + " mph!";
+
         isRight = false;
         windDirectionText.text = windDirection;
         windForceText.text = windForce;
@@ -56,9 +59,12 @@ public class WindForce : MonoBehaviour
 
     private void SetWindForceToRight()
     {
-        windDirection = "Wind Direction: East!";
         effector.forceAngle = 0; // Set to left
+        effector.forceMagnitude = Random.Range(7, 21);
+
+        windDirection = "Wind Direction: East!";
         windForce = "Wind Force: " + effector.forceMagnitude.ToString() + " mph!";
+
         isRight = true;
         windDirectionText.text = windDirection;
         windForceText.text = windForce;
