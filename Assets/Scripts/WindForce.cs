@@ -1,8 +1,12 @@
 using LearningLadders.EventSystem;
 using UnityEngine;
+using TMPro;
 
 public class WindForce : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI windForceText;
+    [SerializeField] private TextMeshProUGUI windDirectionText;
+
     private AreaEffector2D effector;
     private string windDirection;
     private string windForce;
@@ -44,9 +48,10 @@ public class WindForce : MonoBehaviour
     {
         windDirection = "Wind Direction: West!";
         effector.forceAngle = 180; // Set to left
-        windForce = effector.forceMagnitude.ToString() + " mph!";
+        windForce = "Wind Force: " + effector.forceMagnitude.ToString() + " mph!";
         isRight = false;
-        Debug.Log("Setting wind to left!" + windDirection + windForce);
+        windDirectionText.text = windDirection;
+        windForceText.text = windForce;
     }
 
     private void SetWindForceToRight()
@@ -55,6 +60,7 @@ public class WindForce : MonoBehaviour
         effector.forceAngle = 0; // Set to left
         windForce = "Wind Force: " + effector.forceMagnitude.ToString() + " mph!";
         isRight = true;
-        Debug.Log("Setting wind to right!" + windDirection + windForce);
+        windDirectionText.text = windDirection;
+        windForceText.text = windForce;
     }
 }
