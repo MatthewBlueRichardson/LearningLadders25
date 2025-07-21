@@ -14,18 +14,12 @@ namespace LearningLadders
 
         public int ID {  get; private set; }
 
-        public ReputationScript repScript;
         public float repDamage;
 
         private void Awake()
         {
             ID = GetInstanceID();
             PlatformManager.RegisterStackable(ID, this);
-
-            if (repScript == null)
-            {
-                repScript = FindAnyObjectByType<ReputationScript>();
-            }
         }
 
         private void OnDestroy()
@@ -43,12 +37,7 @@ namespace LearningLadders
         {
             if(collision.collider.CompareTag("GameOver"))
             {
-                repScript.currentRep -= repDamage;
-                if (repScript.currentRep <= 0f)
-                {
-                    Debug.Log("Block has fallen, game over!");
-                    onGameOverEvent.Invoke(new Empty());
-                }
+                onGameOverEvent.Invoke(new Empty());
                 Destroy(gameObject);
             }
 
