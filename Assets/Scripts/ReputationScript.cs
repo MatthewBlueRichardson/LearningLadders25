@@ -1,3 +1,4 @@
+using LearningLadders.EventSystem;
 using UnityEngine;
 using UnityEngine.UI;
 public class ReputationScript : MonoBehaviour
@@ -13,6 +14,13 @@ public class ReputationScript : MonoBehaviour
 
     void Update()
     {
-        repBar.fillAmount = Mathf.Clamp(currentRep / maxRep, 0, 1);
+        
+    }
+    public void UpdateReputation(float repRestore)
+    {
+        currentRep += repRestore;
+        currentRep = Mathf.Clamp(currentRep, 0f, maxRep);
+        repBar.fillAmount = currentRep;
+
     }
 }

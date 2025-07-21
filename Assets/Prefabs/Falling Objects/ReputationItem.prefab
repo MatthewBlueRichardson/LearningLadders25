@@ -182,3 +182,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c88c266360b1724d85cb8b72a5b764a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  repRestore: 15
+  onUpdateReputation: {fileID: 11400000, guid: f648be595403a8e46ae726fe0cf00da1, type: 2}
