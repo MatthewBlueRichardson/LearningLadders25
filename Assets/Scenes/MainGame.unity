@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1397718314922965749, guid: 0ef431903d5685a46beb3d0294105d57, type: 3}
+      propertyPath: m_ColliderMask.m_Bits
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 1834032690308045937, guid: 0ef431903d5685a46beb3d0294105d57, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1362,6 +1366,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 216306575088199763, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 909929119603699770, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1103584339696330576, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1402,18 +1414,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3397618877050566193, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604104245325635111, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6648596808990464408, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6648596808990464408, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6648596808990464408, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6929640738274195798, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162503736647630634, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8794306545707388298, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       propertyPath: respawnScript
       value: 
       objectReference: {fileID: 1968776430}
+    - target: {fileID: 8978146042309181335, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
