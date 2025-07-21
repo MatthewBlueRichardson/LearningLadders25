@@ -917,14 +917,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8424228228463588887, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
-      propertyPath: repItem
-      value: 
-      objectReference: {fileID: 487923053267757508, guid: 7c3492ecb4f97cb44ae39b774ff4c877, type: 3}
-    - target: {fileID: 8424228228463588887, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
-      propertyPath: repItemChance
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 9001744071043819915, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
       propertyPath: m_Name
       value: LevelObjectSpawner
@@ -1832,3 +1824,4 @@ SceneRoots:
   - {fileID: 1968776431}
   - {fileID: 1610794740}
   - {fileID: 104947450}
+  - {fileID: 220360807}
