@@ -23,8 +23,8 @@ public class ReputationScript : MonoBehaviour
         currentRep += repRestore;
         currentRep = Mathf.Clamp(currentRep, 0f, maxRep);
         repBar.fillAmount = currentRep / maxRep;
-        print("Rep Bar: " + repBar.fillAmount);
-        print("Rep: " + currentRep);
+        Debug.Log("Rep Bar: " + repBar.fillAmount);
+        Debug.Log("Rep: " + currentRep);
 
         if (currentRep <= 0f)
         {
