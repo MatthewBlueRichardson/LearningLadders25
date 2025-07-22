@@ -3,8 +3,8 @@ using UnityEngine;
 public class BackgroundObjects : MonoBehaviour
 {
     [Header("Spawn Positions")]
-    [SerializeField] private Vector2[] leftSpawnPos;
-    [SerializeField] private Vector2[] rightSpawnPos;
+    [SerializeField] private Vector3[] leftSpawnPos;
+    [SerializeField] private Vector3[] rightSpawnPos;
 
     [Header("Flying Objects Prefabs")]
     [SerializeField] private GameObject[] lowTierObjects; // First objects that can spawn randomly at low level heights
@@ -16,8 +16,8 @@ public class BackgroundObjects : MonoBehaviour
 
     private int currentTier = 0; // 0 = low, 1 = mid, 2 = high
 
-    private Vector2 startPos;
-    private Vector2 endPos;
+    private Vector3 startPos;
+    private Vector3 endPos;
 
     private void Update()
     {
@@ -48,13 +48,15 @@ public class BackgroundObjects : MonoBehaviour
         switch(currentTier)
         {
             case 0: // Instantiate at start pos, set path to end pos.
-                Instantiate(lowTierObjects[Random.Range(0, lowTierObjects.Length)]);
+                Instantiate(lowTierObjects[Random.Range(0, lowTierObjects.Length)], startPos, Quaternion.identity);
                 break;
 
             case 1:
+                Instantiate(midTierObjects[Random.Range(0, lowTierObjects.Length)], startPos, Quaternion.identity);
                 break;
 
             case 2:
+                Instantiate(highTierObjects[Random.Range(0, lowTierObjects.Length)], startPos, Quaternion.identity);
                 break;
         }
 
