@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 515f327206ca8aa449efe7846bf53d3f, type: 3}
-  m_Name: OnUpdateReputation
+  m_Name: OnDamageReputation
   m_EditorClassIdentifier: 

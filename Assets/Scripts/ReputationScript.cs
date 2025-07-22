@@ -18,13 +18,18 @@ public class ReputationScript : MonoBehaviour
     {
         
     }
-    public void UpdateReputation(float repRestore)
+    public void IncreaseReputation(float repRestore)
     {
         currentRep += repRestore;
         currentRep = Mathf.Clamp(currentRep, 0f, maxRep);
         repBar.fillAmount = currentRep / maxRep;
-        Debug.Log("Rep Bar: " + repBar.fillAmount);
-        Debug.Log("Rep: " + currentRep);
+    }
+
+    public void DamageReputation(float repDamage)
+    {
+        currentRep -= repDamage;
+        currentRep = Mathf.Clamp(currentRep, 0f, maxRep);
+        repBar.fillAmount = currentRep / maxRep;
 
         if (currentRep <= 0f)
         {

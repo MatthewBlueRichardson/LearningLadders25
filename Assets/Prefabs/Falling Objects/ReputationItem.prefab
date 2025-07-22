@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repRestore: 15
-  onUpdateReputation: {fileID: 11400000, guid: f648be595403a8e46ae726fe0cf00da1, type: 2}
+  onIncreaseReputation: {fileID: 11400000, guid: f648be595403a8e46ae726fe0cf00da1, type: 2}
 --- !u!96 &462150601885442321
 TrailRenderer:
   serializedVersion: 3
