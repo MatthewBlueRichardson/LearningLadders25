@@ -272,6 +272,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3023683304057610892, guid: a672034d906c559498c056ecae27742d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.2174997
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023683304057610892, guid: a672034d906c559498c056ecae27742d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -923,7 +927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8424228228463588887, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
       propertyPath: repItemChance
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8424228228463588887, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
       propertyPath: objectsToSpawn.Array.size

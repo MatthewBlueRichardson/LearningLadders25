@@ -9,6 +9,7 @@ namespace LearningLadders
         [SerializeField] private IntEvent onStackConnectionEvent;
         [SerializeField] private VoidEvent onGameOverEvent;
         [SerializeField] private FloatEvent onDamageReputation;
+        [SerializeField] private GameObject repTextObject;
 
         private bool isConnected = false;
         private GameObject lastPlatformPart;
@@ -38,6 +39,8 @@ namespace LearningLadders
         {
             if(collision.collider.CompareTag("GameOver"))
             {
+                //Spawns rep damage number text
+                Instantiate(repTextObject, transform.position, transform.rotation);
                 onDamageReputation.Invoke(repDamage);
                 Destroy(gameObject);
             }

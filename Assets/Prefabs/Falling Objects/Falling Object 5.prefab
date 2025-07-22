@@ -897,6 +897,7 @@ MonoBehaviour:
   onStackConnectionEvent: {fileID: 11400000, guid: f39b5e02121ca9f419f2d8efc76be2d0, type: 2}
   onGameOverEvent: {fileID: 11400000, guid: a0e1c97750146ca4281ba910e4867825, type: 2}
   onDamageReputation: {fileID: 11400000, guid: 8fe9aa7b6506cd049b4ac58918c1d2d0, type: 2}
+  repTextObject: {fileID: 2033495289049802595, guid: 02875fcf2b2bce34ca7a60e02b9ab511, type: 3}
   repDamage: 10
 --- !u!60 &4236875482574014723
 PolygonCollider2D:
