@@ -19,6 +19,8 @@ public class BackgroundObjects : MonoBehaviour
     private Vector3 startPos;
     private Vector3 endPos;
 
+    private GameObject spawnedObject;
+
     private void Update()
     {
         spawnTimer += Time.deltaTime;
@@ -48,15 +50,15 @@ public class BackgroundObjects : MonoBehaviour
         switch(currentTier)
         {
             case 0: // Instantiate at start pos, set path to end pos.
-                Instantiate(lowTierObjects[Random.Range(0, lowTierObjects.Length)], startPos, Quaternion.identity);
+                spawnedObject = Instantiate(lowTierObjects[Random.Range(0, lowTierObjects.Length)], startPos, Quaternion.identity);
                 break;
 
             case 1:
-                Instantiate(midTierObjects[Random.Range(0, lowTierObjects.Length)], startPos, Quaternion.identity);
+                spawnedObject = Instantiate(midTierObjects[Random.Range(0, midTierObjects.Length)], startPos, Quaternion.identity);
                 break;
 
             case 2:
-                Instantiate(highTierObjects[Random.Range(0, lowTierObjects.Length)], startPos, Quaternion.identity);
+                spawnedObject = Instantiate(highTierObjects[Random.Range(0, highTierObjects.Length)], startPos, Quaternion.identity);
                 break;
         }
 
@@ -74,6 +76,6 @@ public class BackgroundObjects : MonoBehaviour
 
     private void MoveObject()
     {
-
+        //spawnedObject.transform.position = endPos;
     }
 }
