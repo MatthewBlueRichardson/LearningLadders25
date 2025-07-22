@@ -272,6 +272,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3023683304057610892, guid: a672034d906c559498c056ecae27742d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3023683304057610892, guid: a672034d906c559498c056ecae27742d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -923,7 +927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8424228228463588887, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
       propertyPath: repItemChance
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8424228228463588887, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
       propertyPath: objectsToSpawn.Array.size
@@ -1749,6 +1753,7 @@ GameObject:
   - component: {fileID: 2051161831}
   - component: {fileID: 2051161830}
   - component: {fileID: 2051161829}
+  - component: {fileID: 2051161832}
   m_Layer: 5
   m_Name: RepBarBackground
   m_TagString: Untagged
@@ -1794,7 +1799,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2088842502458792086}
         m_TargetAssemblyTypeName: ReputationScript, Assembly-CSharp
-        m_MethodName: UpdateReputation
+        m_MethodName: IncreaseReputation
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1842,6 +1847,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051161827}
   m_CullTransparentMesh: 1
+--- !u!114 &2051161832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051161827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1747b0fc8c549e44b811e4d760a021a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 8fe9aa7b6506cd049b4ac58918c1d2d0, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2088842502458792086}
+        m_TargetAssemblyTypeName: ReputationScript, Assembly-CSharp
+        m_MethodName: DamageReputation
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &2088842502458792084
 PrefabInstance:
   m_ObjectHideFlags: 0
