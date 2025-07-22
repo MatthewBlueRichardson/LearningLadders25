@@ -9,7 +9,9 @@ namespace LearningLadders
         [SerializeField] private IntEvent onStackConnectionEvent;
         [SerializeField] private VoidEvent onGameOverEvent;
         [SerializeField] private FloatEvent onDamageReputation;
+        
         [SerializeField] private GameObject repTextObject;
+        //[SerializeField] private ParticleSystem dustEffect;
 
         private bool isConnected = false;
         private GameObject lastPlatformPart;
@@ -49,6 +51,7 @@ namespace LearningLadders
 
             if (collision.collider.CompareTag("PartOfPlatform") || collision.collider.CompareTag("Stackable"))
             {
+                //dustEffect.Play();
                 lastPlatformPart = collision.collider.gameObject;
                 onStackConnectionEvent.Invoke(ID);
             }
