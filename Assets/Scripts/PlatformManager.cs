@@ -23,6 +23,8 @@ namespace LearningLadders
 
         [SerializeField] private IntEvent onStackConnectionEvent;
 
+        [SerializeField] private GameObject dustEffect;
+
         private static Dictionary<int, StackableObject> stackableObjects = new();
 
         public static void RegisterStackable(int id, StackableObject obj)
@@ -65,6 +67,8 @@ namespace LearningLadders
             joint.breakTorque = jointTorqueForce;
             joint.breakAction = JointBreakAction2D.Destroy;
             joint.enableCollision = jointEnableCollision;
+
+            Instantiate(dustEffect, joint.transform.position, joint.transform.rotation);
 
             //Checks tower height in ScoreManager
             int blockY = Mathf.FloorToInt(stackable.transform.position.y);
