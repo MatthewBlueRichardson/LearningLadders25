@@ -526,9 +526,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftSpawnPos: []
   rightSpawnPos: []
-  lowTierObjects: []
-  midTierObjects: []
-  highTierObjects: []
+  lowTierObjects:
+  - {fileID: 302520585280217323, guid: 3c75f99619c176a4f9108fb5ea5b6578, type: 3}
+  - {fileID: 828720573972720115, guid: e26c688726c3ea141acfdc3281806340, type: 3}
+  midTierObjects:
+  - {fileID: 2369958568916564841, guid: 67cf1ea77edd24d44be8b36d8ace9a1d, type: 3}
+  - {fileID: 7491195336185740516, guid: 36ddbe85593fd334db6f8485bc1a0ec3, type: 3}
+  highTierObjects:
+  - {fileID: 3225734520361303136, guid: 08d8bca194fdffe418ab8a403200f1a5, type: 3}
+  - {fileID: 3718633526436804050, guid: f67ee5a63055ca342b755284920125f4, type: 3}
 --- !u!1001 &1830943807
 PrefabInstance:
   m_ObjectHideFlags: 0
