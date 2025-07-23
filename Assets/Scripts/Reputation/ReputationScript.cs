@@ -1,6 +1,7 @@
 using LearningLadders.EventSystem;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class ReputationScript : MonoBehaviour
 {
     [SerializeField] private VoidEvent onGameOverEvent;
@@ -8,10 +9,12 @@ public class ReputationScript : MonoBehaviour
     public float currentRep;
     public float maxRep;
     public Image repBar;
+    public TMP_Text repText;
 
     void Start()
     {
         currentRep = maxRep;
+        repText.text = currentRep.ToString();
     }
 
     void Update()
@@ -23,6 +26,7 @@ public class ReputationScript : MonoBehaviour
         currentRep += repRestore;
         currentRep = Mathf.Clamp(currentRep, 0f, maxRep);
         repBar.fillAmount = currentRep / maxRep;
+        repText.text = currentRep.ToString();
     }
 
     public void DamageReputation(float repDamage)
@@ -30,6 +34,7 @@ public class ReputationScript : MonoBehaviour
         currentRep -= repDamage;
         currentRep = Mathf.Clamp(currentRep, 0f, maxRep);
         repBar.fillAmount = currentRep / maxRep;
+        repText.text = currentRep.ToString();
 
         if (currentRep <= 0f)
         {
