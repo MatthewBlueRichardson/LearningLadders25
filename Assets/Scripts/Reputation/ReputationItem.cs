@@ -4,14 +4,14 @@ using UnityEngine;
 public class ReputationItem : MonoBehaviour
 {
     [SerializeField] private float repRestore = 15f;
-    [SerializeField] private FloatEvent onUpdateReputation;
+    [SerializeField] private FloatEvent onIncreaseReputation;
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (collider.CompareTag("Player"))
         {
             //Updates rep in ReputationScript
-            onUpdateReputation.Invoke(repRestore);
+            onIncreaseReputation.Invoke(repRestore);
             Destroy(gameObject);
         }
     }

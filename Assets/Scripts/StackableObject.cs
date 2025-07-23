@@ -8,13 +8,17 @@ namespace LearningLadders
         [Header("Events")]
         [SerializeField] private IntEvent onStackConnectionEvent;
         [SerializeField] private VoidEvent onGameOverEvent;
+        [SerializeField] private FloatEvent onDamageReputation;
+        
+        [SerializeField] private GameObject repTextObject;
+        //[SerializeField] private ParticleSystem dustEffect;
 
         private bool isConnected = false;
         private GameObject lastPlatformPart;
 
         public int ID {  get; private set; }
 
-        public float repDamage;
+        public float repDamage = -10f;
 
         private void Awake()
         {
@@ -37,7 +41,9 @@ namespace LearningLadders
         {
             if(collision.collider.CompareTag("GameOver"))
             {
-                onGameOverEvent.Invoke(new Empty());
+                //Spawns rep damage number text
+                Instantiate(repTextObject, transform.position, Quaternion.Euler(0, 0, 0));
+                onDamageReputation.Invoke(repDamage);
                 Destroy(gameObject);
             }
 
@@ -45,6 +51,7 @@ namespace LearningLadders
 
             if (collision.collider.CompareTag("PartOfPlatform") || collision.collider.CompareTag("Stackable"))
             {
+                //dustEffect.Play();
                 lastPlatformPart = collision.collider.gameObject;
                 onStackConnectionEvent.Invoke(ID);
             }
