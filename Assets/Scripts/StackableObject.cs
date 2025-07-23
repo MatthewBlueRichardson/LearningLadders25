@@ -42,7 +42,7 @@ namespace LearningLadders
             if(collision.collider.CompareTag("GameOver"))
             {
                 //Spawns rep damage number text
-                Instantiate(repTextObject, transform.position, transform.rotation);
+                Instantiate(repTextObject, transform.position, Quaternion.Euler(0, 0, 0));
                 onDamageReputation.Invoke(repDamage);
                 Destroy(gameObject);
             }
