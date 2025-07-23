@@ -85,9 +85,7 @@ public class BackgroundObjects : MonoBehaviour
     /// <param name="tier"></param>
     public void ChangeTier(int tier)
     {
-        currentTier += tier;
-        if (currentTier <= 0) currentTier = 0;
-        if(currentTier >= 2) currentTier = 2;
+        currentTier = tier;
     }
 
     /// <summary>
