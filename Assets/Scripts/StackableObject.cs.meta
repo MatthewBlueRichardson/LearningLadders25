@@ -1,2 +1,16 @@
 fileFormatVersion: 2
 guid: 7accdf048f31a4c4b8c519d421baec5c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - onStackConnectionEvent: {instanceID: 0}
+  - onStackBroken: {instanceID: 0}
+  - onGameOverEvent: {instanceID: 0}
+  - onDamageReputation: {instanceID: 0}
+  - repTextObject: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
