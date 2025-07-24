@@ -7,10 +7,9 @@ namespace LearningLadders
     {
         [Header("Events")]
         [SerializeField] private IntEvent onStackConnectionEvent;
-        [SerializeField] private VoidEvent onStackBroken;
         [SerializeField] private VoidEvent onGameOverEvent;
         [SerializeField] private FloatEvent onDamageReputation;
-
+        
         [SerializeField] private GameObject repTextObject;
         //[SerializeField] private ParticleSystem dustEffect;
 
@@ -56,11 +55,6 @@ namespace LearningLadders
                 lastPlatformPart = collision.collider.gameObject;
                 onStackConnectionEvent.Invoke(ID);
             }
-        }
-
-        void OnJointBreak2D(Joint2D brokenJoint)
-        {
-            onStackBroken.Invoke(new Empty()); 
         }
 
         public GameObject GetLastPlatformPart() => lastPlatformPart;

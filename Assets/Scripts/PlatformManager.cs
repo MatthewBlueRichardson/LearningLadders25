@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections.Generic;
 using LearningLadders.EventSystem;
 using static Unity.Collections.AllocatorManager;
-using LearningLadders.Audio;
 
 namespace LearningLadders
 {
@@ -21,12 +20,6 @@ namespace LearningLadders
         [SerializeField] private float jointTorqueForce; 
         [Tooltip("Enable to automatically set the anchor location for the other object a joint connects to.")]
         [SerializeField] private bool jointAutoConfigureConnectedAnchor;
-
-        [Header("Audio")]
-        [SerializeField] private AudioClipSO[] stackSFX;
-        [SerializeField] private AudioClipSO breakSFX;
-        [SerializeField] private AudioClipSOEvent sfxEvent;
-        //[SerializeField] private AudioSource audioSource;
 
         [SerializeField] private IntEvent onStackConnectionEvent;
 
@@ -81,17 +74,7 @@ namespace LearningLadders
             int blockY = Mathf.FloorToInt(stackable.transform.position.y);
             onStackConnectionEvent.Invoke(blockY);
 
-            //Plays stack SFX
-            int randomIndex = Random.Range(0, stackSFX.Length);
-            AudioClipSO soundToPlay = stackSFX[randomIndex];
-            sfxEvent.Invoke(soundToPlay);
-
             stackable.MarkConnected();
-        }
-
-        public void OnStackBroken()
-        {
-            sfxEvent.Invoke(breakSFX);
         }
     }
 }
