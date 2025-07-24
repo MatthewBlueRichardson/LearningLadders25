@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using LearningLadders.Audio;
 public class ReputationScript : MonoBehaviour
 {
     [Header("Events")]
@@ -10,6 +11,10 @@ public class ReputationScript : MonoBehaviour
 
     [Header("Reputation Related")]
     [SerializeField] private float gracePeriod;
+    [SerializeField] private AudioClipSOEvent sfxEvent;
+    [SerializeField] private AudioClipSO repDownSFX;
+    [SerializeField] private AudioClipSO repUpSFX;
+    
     public float currentRep;
     public float maxRep;
     public Image repBar;
@@ -34,6 +39,7 @@ public class ReputationScript : MonoBehaviour
         currentRep = Mathf.Clamp(currentRep, 0f, maxRep);
         repBar.fillAmount = currentRep / maxRep;
         repText.text = currentRep.ToString();
+        sfxEvent.Invoke(repUpSFX);
     }
 
     public void DamageReputation(float repDamage)
@@ -44,6 +50,7 @@ public class ReputationScript : MonoBehaviour
         currentRep = Mathf.Clamp(currentRep, 0f, maxRep);
         repBar.fillAmount = currentRep / maxRep;
         repText.text = currentRep.ToString();
+        sfxEvent.Invoke(repDownSFX);
 
         if (currentRep <= 0f)
         {
