@@ -2,9 +2,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using LearningLadders.EventSystem;
+using LearningLadders.Audio;
 
 public class ScoreManager : MonoBehaviour
 {
+    [Header("Audio")]
+    [SerializeField] private AudioClipSOEvent sfxEvent;
+    [SerializeField] private AudioClipSO scoreSound;
+    [SerializeField] private AudioClipSO scoreMilestoneSound;
+
     [SerializeField] private IntEvent onReachScore;
 
     public TMP_Text scoreText;
@@ -28,6 +34,7 @@ public class ScoreManager : MonoBehaviour
             highestY = blockY;
             score = highestY;
             scoreText.text = score.ToString();
+            sfxEvent.Invoke(scoreSound);
         }
 
         // Change tier of background objects, 0 = low, 1 = mid, 2 = high.
@@ -37,11 +44,13 @@ public class ScoreManager : MonoBehaviour
         }
         else if(score >= 5 && score < 10)
         {
+            sfxEvent.Invoke(scoreMilestoneSound);
             onReachScore.Invoke(1);
         }
         else
         {
             onReachScore.Invoke(2);
+            sfxEvent.Invoke(scoreMilestoneSound);
         }
     }
 }

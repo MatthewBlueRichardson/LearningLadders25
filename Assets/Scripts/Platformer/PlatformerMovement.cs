@@ -1,3 +1,5 @@
+using LearningLadders.Audio;
+using LearningLadders.EventSystem;
 using UnityEngine;
 using UnityEngine.InputSystem; // We need to use this library to access our input actions!
 
@@ -32,6 +34,10 @@ public class PlatformerMovement : MonoBehaviour
     [Tooltip("The speed at which the character falls.")]
     [SerializeField] private float gravityForce;
     [SerializeField] private PlayerRespawn respawnScript;
+
+    [Header("Audio")]
+    [SerializeField] private AudioClipSOEvent sfxEvent;
+    [SerializeField] private AudioClipSO jumpSound;
 
 
 
@@ -124,6 +130,7 @@ public class PlatformerMovement : MonoBehaviour
         {
             // Apply an upwards velocity to the character based on jumpHeight.
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpHeight);
+            sfxEvent.Invoke(jumpSound);
         }
 
         // This if-statement checks if the jump button is released, so that by holding the jump button longer, the character-
