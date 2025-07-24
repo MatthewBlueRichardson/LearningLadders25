@@ -13,6 +13,11 @@ public class ButtonsAndUI : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void RestartCurrentScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void ExitGame()
     {
         Application.Quit();
