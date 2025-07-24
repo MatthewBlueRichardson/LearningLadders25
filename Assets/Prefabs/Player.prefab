@@ -552,6 +552,10 @@ MonoBehaviour:
   jumpHeight: 7
   useGravityForce: 1
   gravityForce: 0.2
+  maxJumps: 2
+  respawnScript: {fileID: 0}
+  sfxEvent: {fileID: 0}
+  jumpSound: {fileID: 0}
   groundCheck: {fileID: 7067118383082176543}
   groundLayer:
     serializedVersion: 2

@@ -1590,6 +1590,10 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8794306545707388298, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: maxJumps
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794306545707388298, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       propertyPath: sfxEvent
       value: 
       objectReference: {fileID: 11400000, guid: 4c2a0dd782c94b943b16340fc1441a81, type: 2}
