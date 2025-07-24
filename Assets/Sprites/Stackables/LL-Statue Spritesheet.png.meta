@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: ffe0179680f30aa42b0b4501f43875cc
+guid: 4d100b4bdb1d3374297575041b83f3da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -507523559112315440
-    second: Lamppost_0
+      213: 5547608036414617140
+    second: LL-Statue Spritesheet_0
+  - first:
+      213: -2322650517521113723
+    second: LL-Statue Spritesheet_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,17 +99,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lamppost_0
+      name: LL-Statue Spritesheet_0
       rect:
         serializedVersion: 2
-        x: 251
-        y: 327
-        width: 292
-        height: 607
+        x: 0
+        y: 0
+        width: 201
+        height: 603
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +144,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0dde7ff030ae4f8f0800000000000000
-      internalID: -507523559112315440
+      spriteID: 436789bdd101dfc40800000000000000
+      internalID: 5547608036414617140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LL-Statue Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 202
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58dd6c509a944cfd0800000000000000
+      internalID: -2322650517521113723
       vertices: []
       indices: 
       edges: []
@@ -135,7 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lamppost_0: -507523559112315440
+      LL-Statue Spritesheet_0: 5547608036414617140
+      LL-Statue Spritesheet_1: -2322650517521113723
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
