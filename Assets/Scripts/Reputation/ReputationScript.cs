@@ -2,17 +2,24 @@ using LearningLadders.EventSystem;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 public class ReputationScript : MonoBehaviour
 {
+    [Header("Events")]
     [SerializeField] private VoidEvent onGameOverEvent;
 
+    [Header("Reputation Related")]
+    [SerializeField] private float gracePeriod;
     public float currentRep;
     public float maxRep;
     public Image repBar;
     public TMP_Text repText;
 
+    private bool canBeDamaged;
+
     void Start()
     {
+        canBeDamaged = true;
         currentRep = maxRep;
         repText.text = currentRep.ToString();
     }
@@ -31,6 +38,9 @@ public class ReputationScript : MonoBehaviour
 
     public void DamageReputation(float repDamage)
     {
+        if (!canBeDamaged) return;
+        Debug.Log("Damaged reputation!");
+        StartCoroutine(GracePeriod());
         currentRep -= repDamage;
         currentRep = Mathf.Clamp(currentRep, 0f, maxRep);
         repBar.fillAmount = currentRep / maxRep;
@@ -40,5 +50,12 @@ public class ReputationScript : MonoBehaviour
         {
             onGameOverEvent.Invoke(new Empty());
         }
+    }
+
+    private IEnumerator GracePeriod()
+    {
+        canBeDamaged = false;
+        yield return new WaitForSeconds(gracePeriod);
+        canBeDamaged = true;
     }
 }
