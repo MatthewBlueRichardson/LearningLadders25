@@ -1,9 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using LearningLadders.EventSystem;
 
 public class ScoreManager : MonoBehaviour
 {
+    [SerializeField] private IntEvent onReachScore;
 
     public TMP_Text scoreText;
     public TMP_Text highscoreText;
@@ -26,6 +28,20 @@ public class ScoreManager : MonoBehaviour
             highestY = blockY;
             score = highestY;
             scoreText.text = score.ToString();
+        }
+
+        // Change tier of background objects, 0 = low, 1 = mid, 2 = high.
+        if(score < 4)
+        {
+            onReachScore.Invoke(0);
+        }
+        else if(score >= 5 && score < 10)
+        {
+            onReachScore.Invoke(1);
+        }
+        else
+        {
+            onReachScore.Invoke(2);
         }
     }
 }
