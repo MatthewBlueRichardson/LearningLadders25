@@ -39,7 +39,6 @@ public class ReputationScript : MonoBehaviour
     public void DamageReputation(float repDamage)
     {
         if (!canBeDamaged) return;
-        Debug.Log("Damaged reputation!");
         StartCoroutine(GracePeriod());
         currentRep -= repDamage;
         currentRep = Mathf.Clamp(currentRep, 0f, maxRep);
