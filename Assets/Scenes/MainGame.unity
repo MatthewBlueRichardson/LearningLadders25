@@ -1208,6 +1208,14 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8794306545707388298, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: sfxEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c2a0dd782c94b943b16340fc1441a81, type: 2}
+    - target: {fileID: 8794306545707388298, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 8e1b6d47c9d7cc747bd6d986a8aaf6d8, type: 2}
+    - target: {fileID: 8794306545707388298, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       propertyPath: respawnScript
       value: 
       objectReference: {fileID: 1968776430}
@@ -1583,10 +1591,18 @@ PrefabInstance:
       propertyPath: scoreSound
       value: 
       objectReference: {fileID: 11400000, guid: 21d08edd4b4f65b458ed424542f4b2c5, type: 2}
+    - target: {fileID: 7953509354777325156, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
+      propertyPath: scoreMilestoneSound
+      value: 
+      objectReference: {fileID: 11400000, guid: bb5c5989e929c6f4dae4f4c6bec09760, type: 2}
     - target: {fileID: 8022205133974251552, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
       propertyPath: onEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2088842502458792086}
+    - target: {fileID: 8250068891989645014, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

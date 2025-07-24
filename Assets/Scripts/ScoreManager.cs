@@ -6,8 +6,11 @@ using LearningLadders.Audio;
 
 public class ScoreManager : MonoBehaviour
 {
+    [Header("Audio")]
     [SerializeField] private AudioClipSOEvent sfxEvent;
     [SerializeField] private AudioClipSO scoreSound;
+    [SerializeField] private AudioClipSO scoreMilestoneSound;
+
     [SerializeField] private IntEvent onReachScore;
 
     public TMP_Text scoreText;
@@ -41,11 +44,13 @@ public class ScoreManager : MonoBehaviour
         }
         else if(score >= 5 && score < 10)
         {
+            sfxEvent.Invoke(scoreMilestoneSound);
             onReachScore.Invoke(1);
         }
         else
         {
             onReachScore.Invoke(2);
+            sfxEvent.Invoke(scoreMilestoneSound);
         }
     }
 }
