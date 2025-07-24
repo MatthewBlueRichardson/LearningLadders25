@@ -19,6 +19,8 @@ public class ScoreManager : MonoBehaviour
     int score = 0;
     int highscore = 0;
     int highestY = 0;
+    bool t1SoundPlayed = false;
+    bool t2SoundPlayed = false;
 
 
     void Start()
@@ -44,13 +46,22 @@ public class ScoreManager : MonoBehaviour
         }
         else if(score >= 5 && score < 10)
         {
-            sfxEvent.Invoke(scoreMilestoneSound);
             onReachScore.Invoke(1);
+            if (t1SoundPlayed == false)
+            {
+                print("T1 sound played");
+                sfxEvent.Invoke(scoreMilestoneSound);
+                t1SoundPlayed = true;
+            }
         }
         else
         {
             onReachScore.Invoke(2);
-            sfxEvent.Invoke(scoreMilestoneSound);
+            if (t2SoundPlayed == false)
+            {
+                sfxEvent.Invoke(scoreMilestoneSound);
+                t2SoundPlayed = true;
+            }
         }
     }
 }

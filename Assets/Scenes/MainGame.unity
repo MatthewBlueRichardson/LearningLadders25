@@ -1693,9 +1693,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onGameOverEvent: {fileID: 11400000, guid: a0e1c97750146ca4281ba910e4867825, type: 2}
   gracePeriod: 0.25
-  sfxEvent: {fileID: 0}
-  repDownSFX: {fileID: 0}
-  repUpSFX: {fileID: 0}
+  sfxEvent: {fileID: 11400000, guid: 4c2a0dd782c94b943b16340fc1441a81, type: 2}
+  repDownSFX: {fileID: 11400000, guid: 844ad4ee49806e64297337e1dbf5f361, type: 2}
+  repUpSFX: {fileID: 11400000, guid: 63108d9561d5d264f8039c35d5d85391, type: 2}
   currentRep: 0
   maxRep: 100
   repBar: {fileID: 1465623225}
