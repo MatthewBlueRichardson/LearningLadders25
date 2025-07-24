@@ -230,10 +230,10 @@ GameObject:
   m_Component:
   - component: {fileID: 258985273}
   - component: {fileID: 258985278}
-  - component: {fileID: 258985277}
   - component: {fileID: 258985276}
   - component: {fileID: 258985275}
   - component: {fileID: 258985274}
+  - component: {fileID: 258985279}
   m_Layer: 0
   m_Name: ScreenShake
   m_TagString: Untagged
@@ -365,7 +365,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &258985277
+--- !u!114 &258985278
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -374,10 +374,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 258985272}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2573294fc02ad974aafe8fd39ec7f267, type: 3}
+  m_Script: {fileID: 11500000, guid: 6df9244208c85be4a8c1b040a604c6e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventToListen: {fileID: 11400000, guid: a0e1c97750146ca4281ba910e4867825, type: 2}
+  DoScreenShake: 1
+--- !u!114 &258985279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258985272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1747b0fc8c549e44b811e4d760a021a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 8fe9aa7b6506cd049b4ac58918c1d2d0, type: 2}
   onEvent:
     m_PersistentCalls:
       m_Calls:
@@ -393,19 +406,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &258985278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258985272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6df9244208c85be4a8c1b040a604c6e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DoScreenShake: 1
 --- !u!114 &261000873 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8280145388705280269, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
@@ -1588,10 +1588,6 @@ PrefabInstance:
     - target: {fileID: 8162503736647630634, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       propertyPath: m_Layer
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8794306545707388298, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
-      propertyPath: maxJumps
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8794306545707388298, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       propertyPath: sfxEvent
