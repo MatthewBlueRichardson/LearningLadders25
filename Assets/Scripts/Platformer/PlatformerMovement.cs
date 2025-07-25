@@ -1,3 +1,6 @@
+using LearningLadders.Audio;
+using LearningLadders.EventSystem;
+using Mono.Cecil;
 using UnityEngine;
 using UnityEngine.InputSystem; // We need to use this library to access our input actions!
 
@@ -24,16 +27,24 @@ public class PlatformerMovement : MonoBehaviour
     [Tooltip("When true, the character is able to perform jumps.")]
     public bool canJump = true;
     [Tooltip("When true, the character jumps higher when the jump button is held, and shorter when tapped quickly.")]
-    public bool holdToJumpHigher = true;
+    public bool holdToJumpHigher = true;  
     [Tooltip("The maximum jump height for the character.")]
     [SerializeField] private float jumpHeight;
     [Tooltip("When true, this applies gravityForce while the character is falling.")]
     [SerializeField] private bool useGravityForce = true;
     [Tooltip("The speed at which the character falls.")]
     [SerializeField] private float gravityForce;
+    [Tooltip("The amount of times the character can jump before becoming ungrounded.")]
+    [SerializeField] private int maxJumps = 1;
+
     [SerializeField] private PlayerRespawn respawnScript;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClipSOEvent sfxEvent;
+    [SerializeField] private AudioClipSO jumpSound;
 
+    private int jumpCount = 0;
+    private bool grounded = true;
 
     // Ground Check Variables
     [Header("[Ground Check]")]
@@ -82,6 +93,12 @@ public class PlatformerMovement : MonoBehaviour
             rb.linearVelocity -= Vector2.down * gravityForce * Physics.gravity.y * Time.fixedDeltaTime;
         }
 
+        // If the character is grounded, we can reset the jump count to allow for more jumping!
+        if (IsGrounded() && !grounded)
+        {
+            grounded = true;
+            jumpCount = 1;
+        }
     }
 
     // This function checks if the player is standing on a platform marked as "Ground".
@@ -119,11 +136,16 @@ public class PlatformerMovement : MonoBehaviour
     // This function is called by the Player Input component, when "Jump" input actions are triggered.
     public void Jump(InputAction.CallbackContext context)
     {
-        // This if-statement checks if the jump button is pressed while the character is "grounded".
-        if(context.performed && IsGrounded() && canJump)
+        // This if-statement checks if the jump button is pressed while the has refuelled their allowed jumps (from being grounded).
+        if(context.performed && canJump && jumpCount < maxJumps)
         {
             // Apply an upwards velocity to the character based on jumpHeight.
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpHeight);
+            sfxEvent.Invoke(jumpSound);
+
+            grounded = false;
+
+            jumpCount++;
         }
 
         // This if-statement checks if the jump button is released, so that by holding the jump button longer, the character-

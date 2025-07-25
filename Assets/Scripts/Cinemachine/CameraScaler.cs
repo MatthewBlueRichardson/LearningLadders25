@@ -38,7 +38,7 @@ public class CameraScaler : MonoBehaviour
         int difference = newHeight - previousHeight;
 
         // If there's a difference in height...
-        if (difference != 0)
+        if (difference > 0)
         {
             // Calculate new target size based on delta
             float targetSize = cineCam.Lens.OrthographicSize + difference * zoomIncrementSize;
