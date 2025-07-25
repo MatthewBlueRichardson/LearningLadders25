@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 905dd24480f812d4b839fa3374f865b4, type: 3}
   m_Name: WindSfx
   m_EditorClassIdentifier: 
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: a79378ea655dcc24bb42ddc5dca3bf06, type: 3}
   volume: 1
