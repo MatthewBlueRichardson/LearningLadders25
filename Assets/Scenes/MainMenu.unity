@@ -3298,7 +3298,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -84.73254}
+  m_AnchoredPosition: {x: 0, y: -74.7319}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1739068240
@@ -3319,7 +3319,7 @@ MonoBehaviour:
     m_Top: 30
     m_Bottom: 30
   m_ChildAlignment: 4
-  m_Spacing: 15
+  m_Spacing: 5
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -3736,34 +3736,17 @@ MonoBehaviour:
     Game Programmer: Nikolaos C. (TheLastGiant)
 
 
-    Publisher
-
-    Pinfall
-    Games
-
-
-    Special Thanks
+    Special
+    Thanks
 
     Pinfall Games/Learning Ladders
 
 
     Audio Credits
 
-
-    Example
-    1
-
-    Example 2
-
-    Example
-
-    Example
-
-    Example
-
-    Example
-
-    Examplet'
+    wind in city
+    bare trees 922 150331_0554 by klankbeeld -- https://freesound.org/s/809450/ --
+    License: Attribution 4.0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
