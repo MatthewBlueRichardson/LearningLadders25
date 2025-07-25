@@ -16,21 +16,10 @@ public class ButtonsAndUI : MonoBehaviour
     public void RestartCurrentScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        UnpauseGame();
     }
 
     public void ExitGame()
     {
         Application.Quit();
-    }
-
-    public void PauseGame()
-    {
-        Time.timeScale = 0f;
-    }
-
-    public void UnpauseGame()
-    {
-        Time.timeScale = 1f;
     }
 }

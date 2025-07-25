@@ -9,7 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6567385037227423213}
+  - component: {fileID: 2825234640119830512}
+  - component: {fileID: 7834632411186261876}
   - component: {fileID: 5026553240257794325}
+  - component: {fileID: 1783531060978033651}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -32,6 +35,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2825234640119830512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3339300856122316720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4899c6dff4239344395c540a5842d39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPauseGameEvent: {fileID: 11400000, guid: 004c2a4882f2e434eabdbc0258cceb5d, type: 2}
+  onUnpauseGameEvent: {fileID: 11400000, guid: 37584ff682d7f7247aa52d5472903883, type: 2}
+--- !u!114 &7834632411186261876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3339300856122316720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ebf604f6113464cbfb932532633002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onGameOverEvent: {fileID: 11400000, guid: a0e1c97750146ca4281ba910e4867825, type: 2}
+  gracePeriod: 0.25
+  sfxEvent: {fileID: 11400000, guid: 4c2a0dd782c94b943b16340fc1441a81, type: 2}
+  repDownSFX: {fileID: 11400000, guid: 844ad4ee49806e64297337e1dbf5f361, type: 2}
+  repUpSFX: {fileID: 11400000, guid: 63108d9561d5d264f8039c35d5d85391, type: 2}
+  currentRep: 0
+  maxRep: 100
+  repBar: {fileID: 0}
+  repText: {fileID: 0}
 --- !u!114 &5026553240257794325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,7 +82,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2573294fc02ad974aafe8fd39ec7f267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventToListen: {fileID: 11400000, guid: a0e1c97750146ca4281ba910e4867825, type: 2}
+  eventToListen: {fileID: 11400000, guid: 004c2a4882f2e434eabdbc0258cceb5d, type: 2}
   onEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2825234640119830512}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: PauseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1783531060978033651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3339300856122316720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573294fc02ad974aafe8fd39ec7f267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 37584ff682d7f7247aa52d5472903883, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2825234640119830512}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: UnpauseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
