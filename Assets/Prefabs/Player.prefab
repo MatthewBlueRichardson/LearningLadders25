@@ -124,7 +124,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 2}
-  m_ConnectedAnchor: {x: 0, y: -1.5200001}
+  m_ConnectedAnchor: {x: 0, y: -1.5200002}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -180,7 +180,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8777923315099502727}
@@ -389,7 +389,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.009965301, y: -1.674173}
-  m_ConnectedAnchor: {x: 0.009965301, y: -1.6741729}
+  m_ConnectedAnchor: {x: 0.009965301, y: -1.6741728}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -413,7 +413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3683802929308256146, guid: 40a702348427d614daabf9e59ce6845c, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -0.3099996
+      value: -0.30999976
       objectReference: {fileID: 0}
     - target: {fileID: 5219773224076133311, guid: 40a702348427d614daabf9e59ce6845c, type: 3}
       propertyPath: m_LocalPosition.x
