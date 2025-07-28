@@ -8,7 +8,7 @@ using UnityEngine.InputSystem; // We need to use this library to access our inpu
 public class PlatformerMovement : MonoBehaviour
 {
     // Local Variables
-    private Rigidbody2D rb;
+    public Rigidbody2D torsoRb;
     private float horizontalInput;
     private bool facingRight = true;
     private Vector2 currentVelocity;
@@ -21,6 +21,7 @@ public class PlatformerMovement : MonoBehaviour
     public bool canMove = true;
     [Tooltip("The maximum speed for the character.")]
     [SerializeField] private float speed;
+    [SerializeField] private bool doFlip = true;
 
     [Header("Jumping")]
     [Tooltip("When true, the character is able to perform jumps.")]
@@ -55,7 +56,7 @@ public class PlatformerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>(); // Finds local RigidBody2D component in the character.
+        // rb = GetComponent<Rigidbody2D>(); // Finds local RigidBody2D component in the character.
     }
 
     private void FixedUpdate()
@@ -64,8 +65,8 @@ public class PlatformerMovement : MonoBehaviour
         {
             // Applies horizontal movement, with smooth acceleration and deceleration.
             float horizontalVel = horizontalInput * speed;
-            float smoothVel = Mathf.SmoothDamp(rb.linearVelocity.x, horizontalVel, ref currentVelocity.x, 0.1f);
-            rb.linearVelocity = new Vector2(smoothVel, rb.linearVelocity.y);
+            float smoothVel = Mathf.SmoothDamp(torsoRb.linearVelocity.x, horizontalVel, ref currentVelocity.x, 0.1f);
+            torsoRb.linearVelocity = new Vector2(smoothVel, torsoRb.linearVelocity.y);
         } 
     }
 
@@ -86,21 +87,23 @@ public class PlatformerMovement : MonoBehaviour
         }
 
         // This if-statement checks if the character is falling, and pulls the character down quicker, avoiding floatiness.
-        if (rb.linearVelocity.y < 0f && useGravityForce) 
+        if (torsoRb.linearVelocity.y < 0f && useGravityForce) 
         {
             // Increase falling velocity based on current gravity multiplied by a gravity factor.
-            rb.linearVelocity -= Vector2.down * gravityForce * Physics.gravity.y * Time.fixedDeltaTime;
+            torsoRb.linearVelocity -= Vector2.down * gravityForce * Physics.gravity.y * Time.fixedDeltaTime;
         }
 
-        // If the character is grounded, we can reset the jump count to allow for more jumping!
+        /*
+        // If the character is grounded, we can reset the jump count to allow for more jumping! Replaced with JumpScript.cs.
         if (IsGrounded() && !grounded)
         {
             grounded = true;
             jumpCount = 1;
         }
+        */
     }
 
-    // This function checks if the player is standing on a platform marked as "Ground".
+    // This function checks if the player is standing on a platform marked as "Ground", but was replaced with JumpScript.cs.
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.4f, groundLayer);
@@ -109,10 +112,13 @@ public class PlatformerMovement : MonoBehaviour
     // This function flips the character to face in the opposite x-direction.
     private void Flip()
     {
-        facingRight = !facingRight; 
-        Vector3 localScale = transform.localScale;
-        localScale.x *= -1f; // Toggles and flips character x-direction based on current x-direction.
-        transform.localScale = localScale; // Apply flip!
+        if (doFlip)
+        {
+            facingRight = !facingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f; // Toggles and flips character x-direction based on current x-direction.
+            transform.localScale = localScale; // Apply flip!
+        }
     }
 
     //Check if player hit GameOver barriers
@@ -139,7 +145,7 @@ public class PlatformerMovement : MonoBehaviour
         if(context.performed && canJump && jumpCount < maxJumps)
         {
             // Apply an upwards velocity to the character based on jumpHeight.
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpHeight);
+            torsoRb.linearVelocity = new Vector2(torsoRb.linearVelocity.x, jumpHeight);
             sfxEvent.Invoke(jumpSound);
 
             grounded = false;
@@ -149,13 +155,19 @@ public class PlatformerMovement : MonoBehaviour
 
         // This if-statement checks if the jump button is released, so that by holding the jump button longer, the character-
         // -jumps higher.
-        if(context.canceled && rb.linearVelocity.y > 0f && holdToJumpHigher)
+        if(context.canceled && torsoRb.linearVelocity.y > 0f && holdToJumpHigher)
         {
             // Reduce current y-velocity by half to reduce jump height on jump button released.
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+            torsoRb.linearVelocity = new Vector2(torsoRb.linearVelocity.x, torsoRb.linearVelocity.y * 0.5f);
         }
     }
 
     #endregion
 
+    // This function is called by the JumpScript.cs script, when the puppet collides with anything that is a Ground Layer.
+    public void ResetJump()
+    {
+        grounded = true;
+        jumpCount = 0;
+    }
 }
