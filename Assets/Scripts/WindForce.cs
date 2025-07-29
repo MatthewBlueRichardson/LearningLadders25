@@ -27,7 +27,7 @@ public class WindForce : MonoBehaviour
 
     private void Update()
     {
-        timer += Time.deltaTime;
+        /*timer += Time.deltaTime;
 
         if (isRight && timer >= interval)
         {
@@ -41,13 +41,36 @@ public class WindForce : MonoBehaviour
             SetWindForceToRight();
             timer = 0;
             interval = Random.Range(8, 15);
+        }*/
+
+        if(Input.GetKeyDown(KeyCode.RightArrow)) // Set wind direction to right
+        {
+            SetWindForceToRight(); 
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) // Set wind direction to left
+        {
+            SetWindForceToLeft();
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow)) // Increase wind strength
+        {
+            effector.forceMagnitude += 5;
+            if (effector.forceMagnitude > 50) effector.forceMagnitude = 50;
+            windForce = "Wind Force: " + effector.forceMagnitude.ToString() + " mph!";
+            windForceText.text = windForce;
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow)) // Decrease wind strength
+        {
+            effector.forceMagnitude -= 5;
+            if (effector.forceMagnitude < 0) effector.forceMagnitude = 0;
+            windForce = "Wind Force: " + effector.forceMagnitude.ToString() + " mph!";
+            windForceText.text = windForce;
         }
     }
 
     private void SetWindForceToLeft()
     {
         effector.forceAngle = 180; // Set to left
-        effector.forceMagnitude = Random.Range(7, 21);
+        //effector.forceMagnitude = Random.Range(7, 21);
 
         windDirection = "Wind Direction: West!";
         windForce = "Wind Force: " + effector.forceMagnitude.ToString() + " mph!";
@@ -60,7 +83,7 @@ public class WindForce : MonoBehaviour
     private void SetWindForceToRight()
     {
         effector.forceAngle = 0; // Set to left
-        effector.forceMagnitude = Random.Range(7, 21);
+        //effector.forceMagnitude = Random.Range(7, 21);
 
         windDirection = "Wind Direction: East!";
         windForce = "Wind Force: " + effector.forceMagnitude.ToString() + " mph!";
