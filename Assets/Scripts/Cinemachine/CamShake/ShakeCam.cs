@@ -19,7 +19,6 @@ public class ShakeCam : MonoBehaviour
         if(DoScreenShake)
         {
             CameraShakeManager.instance.ScreenShakeFromProfile(shakeProfile, impulseSource); // Shake camera.
-            Debug.Log("Shake!");
         }
     }
 }

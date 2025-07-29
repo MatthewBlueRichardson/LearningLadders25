@@ -7,6 +7,11 @@ public class WindForce : MonoBehaviour
     [SerializeField] private TextMeshProUGUI windForceText;
     [SerializeField] private TextMeshProUGUI windDirectionText;
 
+    [SerializeField] private int windTier;
+
+    [SerializeField] private IntEvent windTierEvent;
+    [SerializeField] private BoolEvent flipCanvasEvent;
+
     private AreaEffector2D effector;
     private string windDirection;
     private string windForce;
@@ -55,6 +60,24 @@ public class WindForce : MonoBehaviour
         isRight = false;
         windDirectionText.text = windDirection;
         windForceText.text = windForce;
+        flipCanvasEvent.Invoke(isRight);
+
+        if (effector.forceMagnitude <= 12)
+        {
+            windTier = 1;
+            windTierEvent.Invoke(windTier);
+        }
+        else if (effector.forceMagnitude <= 17)
+        {
+            windTier = 2;
+            windTierEvent.Invoke(windTier);
+        }
+        else if (effector.forceMagnitude <= 21)
+        {
+            windTier = 3;
+            windTierEvent.Invoke(windTier);
+        }
+
     }
 
     private void SetWindForceToRight()
@@ -68,5 +91,24 @@ public class WindForce : MonoBehaviour
         isRight = true;
         windDirectionText.text = windDirection;
         windForceText.text = windForce;
+        flipCanvasEvent.Invoke(isRight);
+
+        if (effector.forceMagnitude <= 12)
+        {
+            windTier = 1;
+            windTierEvent.Invoke(windTier);
+        }
+        else if (effector.forceMagnitude <= 17)
+        {
+            windTier = 2;
+            windTierEvent.Invoke(windTier);
+        }
+        else if (effector.forceMagnitude <= 21)
+        {
+            windTier = 3;
+            windTierEvent.Invoke(windTier);
+        }
+
+        
     }
 }

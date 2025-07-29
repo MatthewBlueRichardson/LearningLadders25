@@ -9,7 +9,6 @@ public class JumpScript : MonoBehaviour
     {
         if ((groundLayer.value & (1 << collision.transform.gameObject.layer)) > 0)
         {
-            Debug.Log("Hit with Ground");
             pMovement.ResetJump();
         }
     }
