@@ -18,7 +18,7 @@ public class PlayerRBRotationScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Get mouse X relative to screen centre
+        /*//Get mouse X relative to screen centre
         float screenMid = Screen.width / 2f;
         //float mouseX = Input.mousePosition.x;
         //Clamps based on screen width
@@ -35,7 +35,7 @@ public class PlayerRBRotationScript : MonoBehaviour
 
         float targetAngle = -normalisedX * maxTiltAngle;
 
-        rb.MoveRotation(targetAngle);
+        rb.MoveRotation(targetAngle);*/
     }
 
 }
