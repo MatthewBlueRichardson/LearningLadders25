@@ -8014,6 +8014,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2008445913}
+    - target: {fileID: 4213328084582912801, guid: 9b62a71f78bb70b4a8b71419ea658dac, type: 3}
+      propertyPath: m_Autodestruct
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5835598518581562380, guid: 9b62a71f78bb70b4a8b71419ea658dac, type: 3}
       propertyPath: m_Name
       value: WindCanvas
