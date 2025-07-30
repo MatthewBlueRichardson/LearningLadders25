@@ -354,6 +354,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windForceText: {fileID: 5347775670001883528}
   windDirectionText: {fileID: 2265252818915946999}
+  windTier: 0
+  windTierEvent: {fileID: 11400000, guid: 985f0ff5fa915794b9d7e74867d0d53f, type: 2}
+  flipCanvasEvent: {fileID: 11400000, guid: ce65407f7efd6fc4c9fb7b86d52d55cf, type: 2}
 --- !u!1 &6302509354027491845
 GameObject:
   m_ObjectHideFlags: 0

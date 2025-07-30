@@ -62,7 +62,6 @@ public class ScoreManager : MonoBehaviour
             onReachScore.Invoke(1);
             if (t1SoundPlayed == false)
             {
-                print("T1 sound played");
                 sfxEvent.Invoke(scoreMilestoneSound);
                 t1SoundPlayed = true;
             }
