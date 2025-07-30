@@ -27,12 +27,10 @@ public class WindAnimationTriggers : MonoBehaviour
         if (isRight == true)
         {
             parent.transform.eulerAngles = new Vector3(0f, 0f, 0f);
-            print("Look right");
         }
         else
         {
             parent.transform.eulerAngles = new Vector3(0f, 180f, 0f);
-            print("Look left");
         }
     }
 
@@ -40,8 +38,7 @@ public class WindAnimationTriggers : MonoBehaviour
     {
         GetComponent<Renderer>().enabled = false;
         windAnimator.SetBool("Idle?", true);
-        windAnimator.SetTrigger("ReturnIdle");
-        
+        windAnimator.SetTrigger("ReturnIdle");  
     }
 
 }

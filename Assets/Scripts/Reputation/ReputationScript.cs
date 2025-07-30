@@ -14,7 +14,9 @@ public class ReputationScript : MonoBehaviour
     [SerializeField] private AudioClipSOEvent sfxEvent;
     [SerializeField] private AudioClipSO repDownSFX;
     [SerializeField] private AudioClipSO repUpSFX;
-    
+
+    [SerializeField] private Animator repAnimator;
+
     public float currentRep;
     public float maxRep;
     public Image repBar;
@@ -40,6 +42,7 @@ public class ReputationScript : MonoBehaviour
         repBar.fillAmount = currentRep / maxRep;
         repText.text = currentRep.ToString();
         sfxEvent.Invoke(repUpSFX);
+        repAnimator.SetTrigger("RepIncrease");
     }
 
     public void DamageReputation(float repDamage)
@@ -51,6 +54,7 @@ public class ReputationScript : MonoBehaviour
         repBar.fillAmount = currentRep / maxRep;
         repText.text = currentRep.ToString();
         sfxEvent.Invoke(repDownSFX);
+        repAnimator.SetTrigger("RepDecrease");
 
         if (currentRep <= 0f)
         {
