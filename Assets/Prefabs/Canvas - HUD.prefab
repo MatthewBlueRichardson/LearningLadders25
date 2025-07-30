@@ -331,9 +331,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6fb2ca8ef65633428ed233f457e2a16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfxEvent: {fileID: 0}
+  scoreSound: {fileID: 0}
+  scoreMilestoneSound: {fileID: 0}
   onReachScore: {fileID: 11400000, guid: 909ec3f03634a8c4aa8b71703d589cfb, type: 2}
   scoreText: {fileID: 6712461058710197054}
   highscoreText: {fileID: 8988485317938887732}
+  gameOverHighScoreText: {fileID: 0}
+  gameOverScoreText: {fileID: 0}
+  scorePS: {fileID: 0}
 --- !u!114 &4924730721259019516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -614,6 +620,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   windForceText: {fileID: 9054714181807574766}
   windDirectionText: {fileID: 2176741283358126060}
+  windTier: 0
+  windTierEvent: {fileID: 0}
+  flipCanvasEvent: {fileID: 0}
 --- !u!1 &5484958228196793309
 GameObject:
   m_ObjectHideFlags: 0

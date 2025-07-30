@@ -20,6 +20,9 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private TMP_Text gameOverHighScoreText; // TODO: Revisit score manager and refactor it!
     [SerializeField] private TMP_Text gameOverScoreText;
 
+    [SerializeField] private ParticleSystem scorePS;
+    [SerializeField] private Animator scoreAnim;
+
     private int score = 0;
     private int highscore = 0;
     private int highestY = 0;
@@ -42,6 +45,8 @@ public class ScoreManager : MonoBehaviour
             scoreText.text = score.ToString();
             gameOverScoreText.text = "Score: " +  score.ToString();
             sfxEvent.Invoke(scoreSound);
+            scorePS.Play();
+            scoreAnim.SetTrigger("ScoreIncrease");
             PlayerPrefs.SetInt("Score", score);
             if (score > PlayerPrefs.GetInt("HighScore"))
             {
