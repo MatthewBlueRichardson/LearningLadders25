@@ -5,29 +5,43 @@ public class WindAnimationTriggers : MonoBehaviour
 {
     [SerializeField] private Animator windAnimator;
     [SerializeField] private GameObject parent;
+    [SerializeField] private float animDelay;
+    [SerializeField] private int currentWindTier;
 
     public void OnWindTierChanged(int windTier)
     {
-        //GetComponent<Renderer>().enabled = true;
-        windAnimator.SetInteger("WindTier", windTier);
+        currentWindTier = windTier;
+        float delay = Random.Range(0f, 1f);
+        Invoke(nameof(PlayWindAnim), delay);
+
+    }
+    public void PlayWindAnim()
+    {
+        GetComponent<Renderer>().enabled = true;
+        windAnimator.SetInteger("WindTier", currentWindTier);
+        windAnimator.SetBool("Idle?", false);
     }
 
     public void FlipParent(bool isRight)
     {
         if (isRight == true)
         {
-            parent.transform.Rotate(0f, 0f, 0f);
+            parent.transform.eulerAngles = new Vector3(0f, 0f, 0f);
+            print("Look right");
         }
         else
         {
-            parent.transform.Rotate(0f, 180f, 0f);
+            parent.transform.eulerAngles = new Vector3(0f, 180f, 0f);
+            print("Look left");
         }
     }
 
     public void ReturnToIdle()
     {
-        //windAnimator.SetTrigger("Idle");
-        //GetComponent<Renderer>().enabled = false;
+        GetComponent<Renderer>().enabled = false;
+        windAnimator.SetBool("Idle?", true);
+        windAnimator.SetTrigger("ReturnIdle");
+        
     }
 
 }

@@ -2894,7 +2894,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 817425412}
         m_TargetAssemblyTypeName: WindAnimationTriggers, Assembly-CSharp
-        m_MethodName: FlipCanvas
+        m_MethodName: FlipParent
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8021,6 +8021,18 @@ PrefabInstance:
     - target: {fileID: 5835598518581562380, guid: 9b62a71f78bb70b4a8b71419ea658dac, type: 3}
       propertyPath: m_Name
       value: WindCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192878189115345918, guid: 9b62a71f78bb70b4a8b71419ea658dac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192878189115345918, guid: 9b62a71f78bb70b4a8b71419ea658dac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8192878189115345918, guid: 9b62a71f78bb70b4a8b71419ea658dac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8599983894615984473, guid: 9b62a71f78bb70b4a8b71419ea658dac, type: 3}
       propertyPath: m_PresetInfoIsWorld
