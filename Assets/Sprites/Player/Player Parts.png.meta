@@ -1,31 +1,34 @@
 fileFormatVersion: 2
-guid: d8cefa55646fc2849a56cf7cc1c13bc0
+guid: aa2b6a5abfd629c41997496fc657b628
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7459305072443722105
-    second: main character puppet sprite sheet_0
+      213: 4765375638502488000
+    second: main character puppet sprite sheet 1_0
   - first:
-      213: 8396272796221419385
-    second: main character puppet sprite sheet_1
+      213: 8238594535172843669
+    second: main character puppet sprite sheet 1_1
   - first:
-      213: 6878318248009970480
-    second: main character puppet sprite sheet_2
+      213: 560690823196642890
+    second: main character puppet sprite sheet 1_2
   - first:
-      213: 79404898105082772
-    second: main character puppet sprite sheet_3
+      213: 3100626170026738173
+    second: main character puppet sprite sheet 1_3
   - first:
-      213: 8232991400110368516
-    second: main character puppet sprite sheet_4
+      213: 9111266832095468702
+    second: main character puppet sprite sheet 1_4
   - first:
-      213: -1363545883640886466
-    second: main character puppet sprite sheet_5
+      213: 233312752185442620
+    second: main character puppet sprite sheet 1_5
   - first:
-      213: -1665454878603002714
-    second: main character puppet sprite sheet_6
+      213: 2484831840024703892
+    second: main character puppet sprite sheet 1_6
   - first:
-      213: 2634969852506329198
-    second: main character puppet sprite sheet_7
+      213: -1537687963694765820
+    second: main character puppet sprite sheet 1_7
+  - first:
+      213: 8603176096110347367
+    second: main character puppet sprite sheet 1_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -147,12 +150,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: main character puppet sprite sheet_0
+      name: main character puppet sprite sheet 1_0
       rect:
         serializedVersion: 2
-        x: 37
+        x: 22
         y: 212
-        width: 107
+        width: 141
         height: 190
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -162,14 +165,36 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 786f8b5ce893b7890800000000000000
-      internalID: -7459305072443722105
+      spriteID: 0c7bd3a25e3022240800000000000000
+      internalID: 4765375638502488000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main character puppet sprite sheet_1
+      name: main character puppet sprite sheet 1_1
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 272
+        width: 109
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 598a37d641e555270800000000000000
+      internalID: 8238594535172843669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: main character puppet sprite sheet 1_2
       rect:
         serializedVersion: 2
         x: 190
@@ -184,14 +209,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 97fad007f9d858470800000000000000
-      internalID: 8396272796221419385
+      spriteID: a4e05714559f7c700800000000000000
+      internalID: 560690823196642890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main character puppet sprite sheet_2
+      name: main character puppet sprite sheet 1_3
       rect:
         serializedVersion: 2
         x: 314
@@ -206,14 +231,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 033b8b0f002b47f50800000000000000
-      internalID: 6878318248009970480
+      spriteID: df149b5e213a70b20800000000000000
+      internalID: 3100626170026738173
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main character puppet sprite sheet_3
+      name: main character puppet sprite sheet 1_4
       rect:
         serializedVersion: 2
         x: 0
@@ -228,14 +253,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 493caf8855a1a1100800000000000000
-      internalID: 79404898105082772
+      spriteID: e9c59d409e8b17e70800000000000000
+      internalID: 9111266832095468702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main character puppet sprite sheet_4
+      name: main character puppet sprite sheet 1_5
       rect:
         serializedVersion: 2
         x: 191
@@ -250,14 +275,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 407ac62ee06714270800000000000000
-      internalID: 8232991400110368516
+      spriteID: c31059346b4ec3300800000000000000
+      internalID: 233312752185442620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main character puppet sprite sheet_5
+      name: main character puppet sprite sheet 1_6
       rect:
         serializedVersion: 2
         x: 314
@@ -272,20 +297,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3b83a24e36b31de0800000000000000
-      internalID: -1363545883640886466
+      spriteID: 493b04fa465eb7220800000000000000
+      internalID: 2484831840024703892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main character puppet sprite sheet_6
+      name: main character puppet sprite sheet 1_7
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 28
-        height: 42
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,14 +319,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6ac3d63ac9d13e8e0800000000000000
-      internalID: -1665454878603002714
+      spriteID: 409649ca1f809aae0800000000000000
+      internalID: -1537687963694765820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: main character puppet sprite sheet_7
+      name: main character puppet sprite sheet 1_8
       rect:
         serializedVersion: 2
         x: 315
@@ -316,8 +341,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e60d084ce1b419420800000000000000
-      internalID: 2634969852506329198
+      spriteID: 7640acce31f946770800000000000000
+      internalID: 8603176096110347367
       vertices: []
       indices: 
       edges: []
@@ -336,14 +361,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      main character puppet sprite sheet_0: -7459305072443722105
-      main character puppet sprite sheet_1: 8396272796221419385
-      main character puppet sprite sheet_2: 6878318248009970480
-      main character puppet sprite sheet_3: 79404898105082772
-      main character puppet sprite sheet_4: 8232991400110368516
-      main character puppet sprite sheet_5: -1363545883640886466
-      main character puppet sprite sheet_6: -1665454878603002714
-      main character puppet sprite sheet_7: 2634969852506329198
+      main character puppet sprite sheet 1_0: 4765375638502488000
+      main character puppet sprite sheet 1_1: 8238594535172843669
+      main character puppet sprite sheet 1_2: 560690823196642890
+      main character puppet sprite sheet 1_3: 3100626170026738173
+      main character puppet sprite sheet 1_4: 9111266832095468702
+      main character puppet sprite sheet 1_5: 233312752185442620
+      main character puppet sprite sheet 1_6: 2484831840024703892
+      main character puppet sprite sheet 1_7: -1537687963694765820
+      main character puppet sprite sheet 1_8: 8603176096110347367
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
