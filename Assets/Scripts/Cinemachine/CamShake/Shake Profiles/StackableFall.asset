@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 361d1daca6dc0294880e3be0f482279e, type: 3}
   m_Name: StackableFall
   m_EditorClassIdentifier: 
-  impulseTime: 0.5
+  impulseTime: 0.25
   impactForce: 3
   defaultVelocity: {x: 0, y: 0, z: 1}
   impulseCurve:
@@ -48,6 +48,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  listenerAmplitude: 4
-  listenerFrequency: 3
+  listenerAmplitude: 2
+  listenerFrequency: 1.5
   listenerDuration: 0.5
