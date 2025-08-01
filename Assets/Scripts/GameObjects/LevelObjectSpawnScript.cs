@@ -1,10 +1,13 @@
 using UnityEngine;
+using System.Collections;
+using UnityEditor;
 
 public class LevelObjectSpawnScript : MonoBehaviour
 {
     [Header("Objects To Spawn")]
     [SerializeField] private GameObject[] objectsToSpawn;
     [SerializeField] private GameObject repItem;
+    [SerializeField] private GameObject spawnWarning;
 
     [Header("Spawn Variables")]
     [SerializeField] private float spawnInterval = 3f;
@@ -14,19 +17,24 @@ public class LevelObjectSpawnScript : MonoBehaviour
     [Tooltip("Chance out of 10 that repItem will spawn instead")]
     [SerializeField] private float repItemChance;
 
-    private float spawnTimer = 0f;
+    //private float spawnTimer = 0f;
     private float difficultyTimer = 0f;
+
+    private void Start()
+    {
+        StartCoroutine(SpawnObject());
+    }
 
     private void Update()
     {
-        spawnTimer += Time.deltaTime;
+        //spawnTimer += Time.deltaTime;
         difficultyTimer += Time.deltaTime;
 
-        if (spawnTimer >= spawnInterval)
-        {
-            SpawnObject();
-            spawnTimer = 0f;
-        }
+        //if (spawnTimer >= spawnInterval)
+        //{
+            //SpawnObject();
+            //spawnTimer = 0f;
+        //}
 
         if(difficultyTimer >= difficultyIncreaseTimer)
         {
@@ -36,11 +44,17 @@ public class LevelObjectSpawnScript : MonoBehaviour
         }
     }
 
-    void SpawnObject()
+    private IEnumerator SpawnObject()
     {
         float randomX = Random.Range(-spawnRangeX, spawnRangeX);
         Vector3 spawnPos = new Vector3(randomX, transform.position.y, 0f);
         randomObjectFloat = Random.Range(1f, 10f);
+
+        Vector3 warningPos = new Vector3(randomX, transform.position.y - 3, 0f);
+        GameObject newSpawnWarning = Instantiate(spawnWarning, warningPos, Quaternion.identity);
+        yield return new WaitForSeconds(3 * (spawnInterval/4));
+        Destroy(newSpawnWarning);
+        yield return new WaitForSeconds(spawnInterval/4);
 
         if (randomObjectFloat < repItemChance)
         {
@@ -53,5 +67,7 @@ public class LevelObjectSpawnScript : MonoBehaviour
             GameObject prefabToSpawn = objectsToSpawn[randomIndex];
             Instantiate(prefabToSpawn, spawnPos, Quaternion.identity);
         }     
+
+        StartCoroutine(SpawnObject());
     }
 }

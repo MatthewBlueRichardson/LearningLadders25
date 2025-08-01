@@ -231,6 +231,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8424228228463588887, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
+      propertyPath: spawnWarning
+      value: 
+      objectReference: {fileID: 6409384010296058449, guid: af422ade309882a4397c22a3f664750a, type: 3}
+    - target: {fileID: 8424228228463588887, guid: dec8c439de69c1840b8ef8e59563a3ce, type: 3}
       propertyPath: repItemChance
       value: 1
       objectReference: {fileID: 0}
