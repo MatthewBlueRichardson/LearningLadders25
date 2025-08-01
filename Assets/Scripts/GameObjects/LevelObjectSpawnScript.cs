@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using UnityEditor;
 
 public class LevelObjectSpawnScript : MonoBehaviour
 {
@@ -17,7 +16,6 @@ public class LevelObjectSpawnScript : MonoBehaviour
     [Tooltip("Chance out of 10 that repItem will spawn instead")]
     [SerializeField] private float repItemChance;
 
-    //private float spawnTimer = 0f;
     private float difficultyTimer = 0f;
 
     private void Start()
@@ -27,14 +25,7 @@ public class LevelObjectSpawnScript : MonoBehaviour
 
     private void Update()
     {
-        //spawnTimer += Time.deltaTime;
         difficultyTimer += Time.deltaTime;
-
-        //if (spawnTimer >= spawnInterval)
-        //{
-            //SpawnObject();
-            //spawnTimer = 0f;
-        //}
 
         if(difficultyTimer >= difficultyIncreaseTimer)
         {
@@ -44,6 +35,12 @@ public class LevelObjectSpawnScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Decides a spawn location and an object to spawn. It spawns
+    /// a warning a bit below the spawn position and deletes the warning
+    /// sign before spawning the chosen object.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator SpawnObject()
     {
         float randomX = Random.Range(-spawnRangeX, spawnRangeX);
