@@ -122,10 +122,11 @@ public class PlatformerMovement : MonoBehaviour
     }
 
     //Check if player hit GameOver barriers
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.collider.CompareTag("GameOver"))
+        if (collider.CompareTag("GameOver"))
         {
+            Debug.Log("Player should respawn!");
             respawnScript.Respawn();
         }
     }
