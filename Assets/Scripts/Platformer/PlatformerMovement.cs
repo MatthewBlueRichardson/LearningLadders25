@@ -58,7 +58,6 @@ public class PlatformerMovement : MonoBehaviour
     {
         // rb = GetComponent<Rigidbody2D>(); // Finds local RigidBody2D component in the character.
     }
-
     private void FixedUpdate()
     {
         if(canMove)
