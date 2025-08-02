@@ -1,5 +1,6 @@
 using LearningLadders.Audio;
 using LearningLadders.EventSystem;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,8 @@ public class SelfExplosion : MonoBehaviour
 
     [SerializeField] private float explosionRadius = 3f;
     [SerializeField] private float explosionForce = 500f;
+    [SerializeField] private float cooldown = 2f;
+    [SerializeField] private bool onCooldown = false;
     [SerializeField] private LayerMask explosionLayers;
     [SerializeField] private InputSystem_Actions controls;
     [SerializeField] private ParticleSystem ps;
@@ -34,21 +37,32 @@ public class SelfExplosion : MonoBehaviour
 
     void Explode()
     {
-        //Find all colliders in the explosion radius
-        Collider2D[] objects = Physics2D.OverlapCircleAll(torsoRb.transform.position, explosionRadius, explosionLayers);
-
-        foreach (Collider2D obj in objects)
+        if (onCooldown == false)
         {
-            Rigidbody2D rb = obj.attachedRigidbody;
-            if (rb != null && rb != GetComponent<Rigidbody2D>()) //Avoid pushing yourself
+            //Find all colliders in the explosion radius
+            Collider2D[] objects = Physics2D.OverlapCircleAll(torsoRb.transform.position, explosionRadius, explosionLayers);
+
+            foreach (Collider2D obj in objects)
             {
-                Vector2 direction = rb.position - (Vector2)transform.position;
-                direction.Normalize();
-                rb.AddForce(direction * explosionForce);
+                Rigidbody2D rb = obj.attachedRigidbody;
+                if (rb != null && rb != GetComponent<Rigidbody2D>()) //Avoid pushing yourself
+                {
+                    Vector2 direction = rb.position - (Vector2)transform.position;
+                    direction.Normalize();
+                    rb.AddForce(direction * explosionForce);
+                }
             }
-        }
-        ps.Play();
-        sfxEvent.Invoke(explosionSound);
+            ps.Play();
+            sfxEvent.Invoke(explosionSound);
+            StartCoroutine(Cooldown());
+        }        
+    }
+
+    IEnumerator Cooldown()
+    {
+        onCooldown = true;
+        yield return new WaitForSeconds(cooldown);
+        onCooldown = false;
     }
 
     void OnDrawGizmosSelected()
