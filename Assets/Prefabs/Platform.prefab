@@ -72,7 +72,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0065109134, y: 0}
+  m_Offset: {x: -0.0065109134, y: -0.6}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -251,8 +251,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f0154e7173e8b3941b9b33e462f9ae58, type: 3}
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 212a3364ce433ff4685d14f8bf353570, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -276,8 +276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frames:
-  - {fileID: 21300000, guid: f0154e7173e8b3941b9b33e462f9ae58, type: 3}
-  - {fileID: 21300000, guid: 0583e31eaebc08749a99099e13d8b633, type: 3}
+  - {fileID: 21300000, guid: 212a3364ce433ff4685d14f8bf353570, type: 3}
+  - {fileID: 21300000, guid: b5dfbd89f469f3044ba187d88ae7b798, type: 3}
   frameRate: 0.2
 --- !u!1 &8248890495160470425
 GameObject:
@@ -345,7 +345,7 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
