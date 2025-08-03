@@ -7257,6 +7257,8 @@ MonoBehaviour:
   torsoRb: {fileID: 1038703034}
   explosionRadius: 3
   explosionForce: 50000
+  cooldown: 2
+  onCooldown: 0
   explosionLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -19171,6 +19173,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3339300856122316720, guid: b8d4cfd2c2104404f959f12215ddc0d3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2088842502458792091}
+    - targetCorrespondingSourceObject: {fileID: 3339300856122316720, guid: b8d4cfd2c2104404f959f12215ddc0d3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2088842502458792093}
+    - targetCorrespondingSourceObject: {fileID: 3339300856122316720, guid: b8d4cfd2c2104404f959f12215ddc0d3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2088842502458792092}
   m_SourcePrefab: {fileID: 100100000, guid: b8d4cfd2c2104404f959f12215ddc0d3, type: 3}
 --- !u!114 &2088842502458792086 stripped
 MonoBehaviour:
@@ -19222,6 +19230,125 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2088842502458792092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518865623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c69ead26c9cb54ab03296290ff8327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 168f62d6c65a6b94382051b98004c8f9, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2088842502458792086}
+        m_TargetAssemblyTypeName: ReputationScript, Assembly-CSharp
+        m_MethodName: ExitKillzone
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  invertEventState: 0
+--- !u!114 &2088842502458792093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518865623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c69ead26c9cb54ab03296290ff8327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 8ae9e52c2a76ef54eb45c2abc1c8b251, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2088842502458792086}
+        m_TargetAssemblyTypeName: ReputationScript, Assembly-CSharp
+        m_MethodName: EnterKillzone
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  invertEventState: 0
+--- !u!1001 &4628508544406049580
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2213232104550782861, guid: 31427b4d3b6da954cadf2ba7c73b8d2e, type: 3}
+      propertyPath: m_Name
+      value: RisingZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143944725270660679, guid: 31427b4d3b6da954cadf2ba7c73b8d2e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7748239672212152065, guid: 31427b4d3b6da954cadf2ba7c73b8d2e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7748239672212152065, guid: 31427b4d3b6da954cadf2ba7c73b8d2e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -21.4356
+      objectReference: {fileID: 0}
+    - target: {fileID: 7748239672212152065, guid: 31427b4d3b6da954cadf2ba7c73b8d2e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7748239672212152065, guid: 31427b4d3b6da954cadf2ba7c73b8d2e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7748239672212152065, guid: 31427b4d3b6da954cadf2ba7c73b8d2e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7748239672212152065, guid: 31427b4d3b6da954cadf2ba7c73b8d2e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7748239672212152065, guid: 31427b4d3b6da954cadf2ba7c73b8d2e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7748239672212152065, guid: 31427b4d3b6da954cadf2ba7c73b8d2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7748239672212152065, guid: 31427b4d3b6da954cadf2ba7c73b8d2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7748239672212152065, guid: 31427b4d3b6da954cadf2ba7c73b8d2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31427b4d3b6da954cadf2ba7c73b8d2e, type: 3}
 --- !u!1001 &5000385658885276376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19405,3 +19532,4 @@ SceneRoots:
   - {fileID: 7565449724314048829}
   - {fileID: 1291233774}
   - {fileID: 1460362535267131970}
+  - {fileID: 4628508544406049580}
