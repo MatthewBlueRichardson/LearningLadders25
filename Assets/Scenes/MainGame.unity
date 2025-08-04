@@ -7282,6 +7282,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 674077752085868533, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 909929119603699770, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -7427,10 +7431,21 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6648596808990464408, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1610794748}
+    - targetCorrespondingSourceObject: {fileID: 6648596808990464408, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1610794756}
+    - targetCorrespondingSourceObject: {fileID: 6648596808990464408, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1610794755}
   m_SourcePrefab: {fileID: 100100000, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
 --- !u!1 &1610794741 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6648596808990464408, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+  m_PrefabInstance: {fileID: 1610794740}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1610794742 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 674077752085868533, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
   m_PrefabInstance: {fileID: 1610794740}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1610794747
@@ -7449,7 +7464,6 @@ MonoBehaviour:
   explosionRadius: 3
   explosionForce: 50000
   cooldown: 2
-  onCooldown: 0
   explosionLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -7787,7 +7801,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 12
+      scalar: 13
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -12314,6 +12328,48 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &1610794755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610794741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28a2b250872a204dbf29fa27103f51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repPE: {fileID: 11400000, guid: 8478d7bfcda56c5458fe84380dc83c31, type: 2}
+  repPickupPS: {fileID: 1610794742}
+--- !u!114 &1610794756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610794741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573294fc02ad974aafe8fd39ec7f267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 8478d7bfcda56c5458fe84380dc83c31, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1610794755}
+        m_TargetAssemblyTypeName: PlayerParticleTriggers, Assembly-CSharp
+        m_MethodName: RepItemPickupPE
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1660393338 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5484958228196793309, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
@@ -19805,7 +19861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6668423515818275002, guid: e888893c30cdf2a47a4280de863f6d6c, type: 3}
       propertyPath: repItemChance
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7948104170277289131, guid: e888893c30cdf2a47a4280de863f6d6c, type: 3}
       propertyPath: m_Camera
