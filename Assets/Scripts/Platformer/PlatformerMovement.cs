@@ -44,7 +44,7 @@ public class PlatformerMovement : MonoBehaviour
     [SerializeField] private AudioClipSO jumpSound;
 
     private int jumpCount = 0;
-    private bool grounded = true;
+    // private bool grounded = true;
 
     // Ground Check Variables
     [Header("[Ground Check]")]
@@ -147,7 +147,7 @@ public class PlatformerMovement : MonoBehaviour
             torsoRb.linearVelocity = new Vector2(torsoRb.linearVelocity.x, jumpHeight);
             sfxEvent.Invoke(jumpSound);
 
-            grounded = false;
+            // grounded = false;
 
             jumpCount++;
         }
@@ -166,7 +166,7 @@ public class PlatformerMovement : MonoBehaviour
     // This function is called by the JumpScript.cs script, when the puppet collides with anything that is a Ground Layer.
     public void ResetJump()
     {
-        grounded = true;
+        // grounded = true;
         jumpCount = 0;
     }
 }

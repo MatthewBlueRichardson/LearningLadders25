@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a32d127c6787eb345af0e4ac88dbbac5
+guid: 36d018225637fda42a47df2af839d1e0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9104562791996258929
-    second: Cloudy_Sky-Blue_03-1024x512_0
+      213: -31193440652909222
+    second: Cloudy_Sky-Night_02-1024x512_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,11 +96,37 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cloudy_Sky-Blue_03-1024x512_0
+      name: Cloudy_Sky-Night_02-1024x512_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 17afc2c0f97e95e70800000000000000
-      internalID: 9104562791996258929
+      spriteID: a55af822bbd219ff0800000000000000
+      internalID: -31193440652909222
       vertices: []
       indices: 
       edges: []
@@ -135,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Cloudy_Sky-Blue_03-1024x512_0: 9104562791996258929
+      Cloudy_Sky-Night_02-1024x512_0: -31193440652909222
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
