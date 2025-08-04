@@ -39,6 +39,11 @@ public class ReputationScript : MonoBehaviour
             currentRep -= 0.01f;
             repBar.fillAmount = currentRep / maxRep;
             repText.text = currentRep.ToString("F0");
+            if(currentRep <= 0)
+            {
+                currentRep = 0;
+                onGameOverEvent.Invoke(new Empty());
+            }
         }
     }
     public void IncreaseReputation(float repRestore)

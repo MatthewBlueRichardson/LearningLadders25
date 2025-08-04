@@ -1655,7 +1655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2213232104550782861, guid: 31427b4d3b6da954cadf2ba7c73b8d2e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7748239672212152065, guid: 31427b4d3b6da954cadf2ba7c73b8d2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17517,6 +17517,7 @@ GameObject:
   - component: {fileID: 1864059643}
   - component: {fileID: 1864059642}
   - component: {fileID: 1864059641}
+  - component: {fileID: 1864059644}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -17600,6 +17601,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1864059644}
+        m_TargetAssemblyTypeName: LearningLadders.EventSystem.VoidEventTrigger, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1864059642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17638,6 +17651,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864059639}
   m_CullTransparentMesh: 1
+--- !u!114 &1864059644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864059639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1560aa365c8f78843a1cae30bcdfd102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToTrigger: {fileID: 11400000, guid: 37584ff682d7f7247aa52d5472903883, type: 2}
 --- !u!1 &1960610976
 GameObject:
   m_ObjectHideFlags: 0
