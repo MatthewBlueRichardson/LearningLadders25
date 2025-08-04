@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 1553834901846817717}
   - component: {fileID: 3319990648701099938}
   - component: {fileID: 2781570275884953575}
-  m_Layer: 0
+  - component: {fileID: 22896127793446965}
+  m_Layer: 6
   m_Name: Platform
   m_TagString: PartOfPlatform
   m_Icon: {fileID: 0}
@@ -139,14 +140,17 @@ MonoBehaviour:
   jointFrequency: 1.5
   jointDampingRatio: 0.3
   jointEnableCollision: 1
-  jointBreakForce: 5000
-  jointTorqueForce: 5000
+  jointBreakForce: 50000
+  jointTorqueForce: 50000
   jointAutoConfigureConnectedAnchor: 1
-  stackSFX: []
-  breakSFX: {fileID: 0}
-  sfxEvent: {fileID: 0}
+  stackSFX:
+  - {fileID: 11400000, guid: 74daaaa20b7d5624cbdf5046a6d92ab7, type: 2}
+  - {fileID: 11400000, guid: b4f00671f84b7a1458df87b6f56a54cf, type: 2}
+  - {fileID: 11400000, guid: e16515ca8d4069145acd347352f16727, type: 2}
+  breakSFX: {fileID: 11400000, guid: c3e9c72feea7a324b92e9a51a913d3cf, type: 2}
+  sfxEvent: {fileID: 11400000, guid: 4c2a0dd782c94b943b16340fc1441a81, type: 2}
   onStackConnectionEvent: {fileID: 11400000, guid: f39b5e02121ca9f419f2d8efc76be2d0, type: 2}
-  dustEffect: {fileID: 0}
+  dustEffect: {fileID: 8567324527272368454, guid: 67d8b2bdcb440ea42a92d16d88b136d2, type: 3}
 --- !u!114 &2781570275884953575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +171,34 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: LearningLadders.PlatformManager, Assembly-CSharp
         m_MethodName: ConnectStackObject
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &22896127793446965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36664066302200975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2573294fc02ad974aafe8fd39ec7f267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 171ed8c2983dc474196512b265acb809, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3319990648701099938}
+        m_TargetAssemblyTypeName: LearningLadders.PlatformManager, Assembly-CSharp
+        m_MethodName: OnStackBroken
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

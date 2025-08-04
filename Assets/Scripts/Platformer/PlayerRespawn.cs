@@ -22,8 +22,11 @@ public class PlayerRespawn : MonoBehaviour
         // Pick a random x-position from this transform's position, plus/minus the xDistance.
         float ranX = Random.Range(transform.position.x + xDistance, transform.position.x - xDistance);
 
+        float yPos = PlayerPrefs.GetInt("Score");
+        Debug.Log("y spawn: " + yPos);
+
         // Spawn player in new location.
-        player.transform.position = new Vector2(ranX, transform.position.y);
+        player.transform.position = new Vector2(ranX, yPos + 2);
     }
 
     // This function adds height to the respawn position, based on the height of the last stackable.

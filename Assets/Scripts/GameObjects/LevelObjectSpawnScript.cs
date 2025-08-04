@@ -43,8 +43,10 @@ public class LevelObjectSpawnScript : MonoBehaviour
     /// <returns></returns>
     private IEnumerator SpawnObject()
     {
+        float ySpawn = PlayerPrefs.GetInt("Score");
+
         float randomX = Random.Range(-spawnRangeX, spawnRangeX);
-        Vector3 spawnPos = new Vector3(randomX, transform.position.y, 0f);
+        Vector3 spawnPos = new Vector3(randomX, transform.position.y + ySpawn, 0f);
         randomObjectFloat = Random.Range(1f, 10f);
 
         Vector3 warningPos = new Vector3(randomX, transform.position.y - 4, 0f);
