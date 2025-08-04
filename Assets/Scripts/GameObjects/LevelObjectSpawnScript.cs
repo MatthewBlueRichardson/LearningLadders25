@@ -53,7 +53,7 @@ public class LevelObjectSpawnScript : MonoBehaviour
         Destroy(newSpawnWarning);
         yield return new WaitForSeconds(spawnInterval/4);
 
-        if (randomObjectFloat < repItemChance)
+        if (randomObjectFloat <= repItemChance)
         {
             Instantiate(repItem, spawnPos, Quaternion.identity);
         }

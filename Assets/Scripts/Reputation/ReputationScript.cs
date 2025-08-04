@@ -23,6 +23,7 @@ public class ReputationScript : MonoBehaviour
     public TMP_Text repText;
 
     private bool canBeDamaged;
+    private bool inKillzone;
 
     void Start()
     {
@@ -33,14 +34,19 @@ public class ReputationScript : MonoBehaviour
 
     void Update()
     {
-        
+        if (inKillzone == true)
+        {
+            currentRep -= 0.01f;
+            repBar.fillAmount = currentRep / maxRep;
+            repText.text = currentRep.ToString("F0");
+        }
     }
     public void IncreaseReputation(float repRestore)
     {
         currentRep += repRestore;
         currentRep = Mathf.Clamp(currentRep, 0f, maxRep);
         repBar.fillAmount = currentRep / maxRep;
-        repText.text = currentRep.ToString();
+        repText.text = currentRep.ToString("F0");
         sfxEvent.Invoke(repUpSFX);
         repAnimator.SetTrigger("RepIncrease");
     }
@@ -52,7 +58,7 @@ public class ReputationScript : MonoBehaviour
         currentRep -= repDamage;
         currentRep = Mathf.Clamp(currentRep, 0f, maxRep);
         repBar.fillAmount = currentRep / maxRep;
-        repText.text = currentRep.ToString();
+        repText.text = currentRep.ToString("F0");
         sfxEvent.Invoke(repDownSFX);
         repAnimator.SetTrigger("RepDecrease");
 
@@ -67,5 +73,17 @@ public class ReputationScript : MonoBehaviour
         canBeDamaged = false;
         yield return new WaitForSeconds(gracePeriod);
         canBeDamaged = true;
+    }
+
+    public void EnterKillzone(bool inZone)
+    {
+        inKillzone = inZone;
+        repAnimator.SetTrigger("InZone");
+    }
+
+    public void ExitKillzone(bool inZone)
+    {
+        inKillzone = inZone;
+        repAnimator.SetTrigger("OutOfZone");
     }
 }
