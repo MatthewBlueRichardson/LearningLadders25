@@ -7,18 +7,26 @@ public class CameraScaler : MonoBehaviour
     private CinemachineCamera cineCam;
     [SerializeField] private float zoomIncrementSize = 1f;
     [SerializeField] private float zoomDuration = 0.5f;
-    [SerializeField] private float minSize = 6f;
+    [SerializeField] private float minSize = 7f;
     [SerializeField] private float maxSize = 15f;
 
     private int previousHeight = 0;
 
     private Tween currentTween;
 
+    public bool ZoomOutStart = true;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         cineCam = GetComponent<CinemachineCamera>();
         previousHeight = 0;
+
+        if (ZoomOutStart)
+        {
+            cineCam.Lens.OrthographicSize = 3.5f;
+            Invoke("ZoomOutFromStart", 0.2f);
+        }
     }
 
     // The connection event passes in the height of the last stacked object.
@@ -69,5 +77,28 @@ public class CameraScaler : MonoBehaviour
 
         // Update previousHeight.
         previousHeight = newHeight;
+    }
+
+    public void ZoomOutFromStart()
+    {
+        // Kill tween - Stops weird cutting effect happening with overlapping the zoom animation.
+        if (currentTween != null && currentTween.IsActive())
+        {
+            currentTween.Kill();
+        }
+
+        // Tween the orthographic size smoothly out to the minimum lens size.
+        currentTween = DOTween.To(() =>
+        {
+            return cineCam.Lens.OrthographicSize; // This is what we want to change!
+        },
+        x =>
+        {
+            var lens = cineCam.Lens;
+            lens.OrthographicSize = x; // This is what we want the value to be!
+            cineCam.Lens = lens;
+        },
+        minSize,
+        1.5f);
     }
 }

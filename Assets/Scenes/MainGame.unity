@@ -3332,8 +3332,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoomIncrementSize: 0.2
   zoomDuration: 0.5
-  minSize: 6
+  minSize: 7
   maxSize: 10
+  ZoomOutStart: 1
 --- !u!114 &847879887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20269,6 +20270,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2008445914}
+  - {fileID: 847879891}
   - {fileID: 271793277}
   - {fileID: 5000385658885276376}
   - {fileID: 1559041941}
@@ -20279,7 +20281,6 @@ SceneRoots:
   - {fileID: 1610794740}
   - {fileID: 53542262}
   - {fileID: 671541364}
-  - {fileID: 847879891}
   - {fileID: 968894029}
   - {fileID: 204173398}
   - {fileID: 7565449724314048829}
