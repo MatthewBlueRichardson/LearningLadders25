@@ -11,12 +11,13 @@ public class SelfExplosion : MonoBehaviour
     [SerializeField] private float explosionRadius = 3f;
     [SerializeField] private float explosionForce = 500f;
     [SerializeField] private float cooldown = 2f;
-    [SerializeField] private bool onCooldown = false;
     [SerializeField] private LayerMask explosionLayers;
     [SerializeField] private InputSystem_Actions controls;
     [SerializeField] private ParticleSystem ps;
     [SerializeField] private AudioClipSOEvent sfxEvent;
     [SerializeField] private AudioClipSO explosionSound;
+
+    private bool onCooldown = false;
 
     void Awake()
     {
