@@ -37,6 +37,7 @@ public class ReputationScript : MonoBehaviour
         if (inKillzone == true)
         {
             currentRep -= 0.01f;
+            currentRep = Mathf.Clamp(currentRep, 0f, maxRep);
             repBar.fillAmount = currentRep / maxRep;
             repText.text = currentRep.ToString("F0");
         }
