@@ -26,7 +26,7 @@ public class PlayerRespawn : MonoBehaviour
         Debug.Log("y spawn: " + yPos);
 
         // Spawn player in new location.
-        player.transform.position = new Vector2(ranX, yPos + 2);
+        player.transform.position = new Vector2(ranX, yPos + 10);
     }
 
     // This function adds height to the respawn position, based on the height of the last stackable.
