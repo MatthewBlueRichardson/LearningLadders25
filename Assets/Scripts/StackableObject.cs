@@ -1,5 +1,6 @@
 using UnityEngine;
 using LearningLadders.EventSystem;
+using LearningLadders.Audio;
 
 namespace LearningLadders
 {
@@ -10,9 +11,13 @@ namespace LearningLadders
         [SerializeField] private VoidEvent onStackBroken;
         [SerializeField] private VoidEvent onGameOverEvent;
         [SerializeField] private FloatEvent onDamageReputation;
+        [SerializeField] private AudioClipSOEvent onPlaySfxEvent;
 
+        [Header("Game Objects")]
         [SerializeField] private GameObject repTextObject;
-        //[SerializeField] private ParticleSystem dustEffect;
+
+        [Header("Audio Clip SOs")]
+        [SerializeField] private AudioClipSO objectCollisionSfx;
 
         private bool isConnected = false;
         private GameObject lastPlatformPart;
@@ -52,7 +57,6 @@ namespace LearningLadders
 
             if (collision.collider.CompareTag("PartOfPlatform") || collision.collider.CompareTag("Stackable"))
             {
-                //dustEffect.Play();
                 lastPlatformPart = collision.collider.gameObject;
                 onStackConnectionEvent.Invoke(ID);
             }
