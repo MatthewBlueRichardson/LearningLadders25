@@ -17,9 +17,11 @@ public class LevelObjectSpawnScript : MonoBehaviour
     [SerializeField] private float repItemChance;
 
     private float difficultyTimer = 0f;
+    private Camera mainCam;
 
     private void Start()
     {
+        mainCam = Camera.main;
         StartCoroutine(SpawnObject());
     }
 
@@ -49,11 +51,10 @@ public class LevelObjectSpawnScript : MonoBehaviour
         Vector3 spawnPos = new Vector3(randomX, transform.position.y + ySpawn, 0f);
         randomObjectFloat = Random.Range(1f, 10f);
 
-        Vector3 warningPos = new Vector3(randomX, transform.position.y - 4, 0f);
+        Vector3 warningPos = new Vector3(randomX, transform.position.y - mainCam.pixelHeight/100, 0f);
         GameObject newSpawnWarning = Instantiate(spawnWarning, warningPos, Quaternion.identity, transform);
-        yield return new WaitForSeconds(3 * (spawnInterval/4));
+        yield return new WaitForSeconds(spawnInterval);
         Destroy(newSpawnWarning);
-        yield return new WaitForSeconds(spawnInterval/4);
 
         if (randomObjectFloat <= repItemChance)
         {
