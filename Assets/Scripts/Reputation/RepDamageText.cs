@@ -8,7 +8,7 @@ public class RepDamageText : MonoBehaviour
 
     public void SetDamageText(float repDamage)
     {
-        repText.text = repDamage.ToString();
+        repText.text = "-" + repDamage.ToString();
     }
 
     public void DestroySelf()

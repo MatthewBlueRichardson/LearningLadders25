@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e49c23597d198cc44ae755441052453f
+guid: b84074de23da3954d81270460c68e896
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Click Cheese
+  - Planet Comic
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
