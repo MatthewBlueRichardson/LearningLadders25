@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using LearningLadders.EventSystem;
+using UnityEditor.Experimental.GraphView;
 
 namespace LearningLadders.Audio
 {
@@ -177,6 +178,14 @@ namespace LearningLadders.Audio
                 float sliderValue = PlayerPrefs.GetFloat(parameter + "Raw", 1f);
                 _loadVolumeEvents[parameter].Invoke(sliderValue);
             }
+        }
+
+        public void SetMusicPitch(int score)
+        {
+            if (score < 10) audioSourceMusic.pitch = 1f;
+            else if (score >= 10 && score < 20) audioSourceMusic.pitch = 1.05f;
+            else if (score >= 20 && score < 30) audioSourceMusic.pitch = 1.1f;
+            else audioSourceMusic.pitch = 1.5f;
         }
     }
 }

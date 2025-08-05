@@ -13,6 +13,7 @@ public class ScoreManager : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] private IntEvent onReachScore;
+    [SerializeField] private IntEvent onNewScore;
 
     [Header("Game Objects")]
     [SerializeField] private TMP_Text scoreText;
@@ -54,7 +55,7 @@ public class ScoreManager : MonoBehaviour
                 PlayerPrefs.SetInt("HighScore", score);
                 gameOverHighScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore");
             }
-                
+            onNewScore.Invoke(blockY);   
         }
 
         // Change tier of background objects, 0 = low, 1 = mid, 2 = high.

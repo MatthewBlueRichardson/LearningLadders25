@@ -3173,7 +3173,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 989069343069371182, guid: d0544fcb5290651479adf44b40689199, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1499487421}
   m_SourcePrefab: {fileID: 100100000, guid: d0544fcb5290651479adf44b40689199, type: 3}
 --- !u!1 &696197546
 GameObject:
@@ -13263,6 +13266,50 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1499487410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 989069343069371182, guid: d0544fcb5290651479adf44b40689199, type: 3}
+  m_PrefabInstance: {fileID: 671541364}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1499487419 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2541058621496492439, guid: d0544fcb5290651479adf44b40689199, type: 3}
+  m_PrefabInstance: {fileID: 671541364}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499487410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d1e931bfd53b14499a1218651f9e8f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1499487421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499487410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c203b132a0b798c4491b5eb73e1f2c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToListen: {fileID: 11400000, guid: 96df8b00baf058545ae564fdb429b437, type: 2}
+  onEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1499487419}
+        m_TargetAssemblyTypeName: LearningLadders.Audio.AudioManager, Assembly-CSharp
+        m_MethodName: SetMusicPitch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1504336551
 GameObject:
   m_ObjectHideFlags: 0
@@ -26249,6 +26296,10 @@ PrefabInstance:
       propertyPath: audioEvent
       value: 
       objectReference: {fileID: 11400000, guid: 4c2a0dd782c94b943b16340fc1441a81, type: 2}
+    - target: {fileID: 7953509354777325156, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
+      propertyPath: onNewScore
+      value: 
+      objectReference: {fileID: 11400000, guid: 96df8b00baf058545ae564fdb429b437, type: 2}
     - target: {fileID: 7953509354777325156, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
       propertyPath: scoreSound
       value: 
