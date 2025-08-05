@@ -15,6 +15,7 @@ public class ButtonsAndUI : MonoBehaviour
 
     public void RestartCurrentScene()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

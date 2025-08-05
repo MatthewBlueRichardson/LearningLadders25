@@ -5277,6 +5277,7 @@ GameObject:
   - component: {fileID: 1034500003}
   - component: {fileID: 1034500002}
   - component: {fileID: 1034500001}
+  - component: {fileID: 1034500004}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -5360,6 +5361,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1034500004}
+        m_TargetAssemblyTypeName: LearningLadders.EventSystem.VoidEventTrigger, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1034500002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5398,6 +5411,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034499999}
   m_CullTransparentMesh: 1
+--- !u!114 &1034500004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034499999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1560aa365c8f78843a1cae30bcdfd102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToTrigger: {fileID: 11400000, guid: 37584ff682d7f7247aa52d5472903883, type: 2}
 --- !u!4 &1038703033 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8484185654953582045, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
@@ -24628,6 +24654,7 @@ GameObject:
   - component: {fileID: 1864059643}
   - component: {fileID: 1864059642}
   - component: {fileID: 1864059641}
+  - component: {fileID: 1864059644}
   m_Layer: 5
   m_Name: RestartButton
   m_TagString: Untagged
@@ -24711,6 +24738,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1864059644}
+        m_TargetAssemblyTypeName: LearningLadders.EventSystem.VoidEventTrigger, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1864059642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24749,6 +24788,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864059639}
   m_CullTransparentMesh: 1
+--- !u!114 &1864059644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864059639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1560aa365c8f78843a1cae30bcdfd102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventToTrigger: {fileID: 11400000, guid: 37584ff682d7f7247aa52d5472903883, type: 2}
 --- !u!1 &1947707969
 GameObject:
   m_ObjectHideFlags: 0
@@ -26620,9 +26672,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3339300856122316720, guid: b8d4cfd2c2104404f959f12215ddc0d3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2088842502458792091}
-    - targetCorrespondingSourceObject: {fileID: 3339300856122316720, guid: b8d4cfd2c2104404f959f12215ddc0d3, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2088842502458792093}
     - targetCorrespondingSourceObject: {fileID: 3339300856122316720, guid: b8d4cfd2c2104404f959f12215ddc0d3, type: 3}
       insertIndex: -1
@@ -26639,45 +26688,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ebf604f6113464cbfb932532633002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2088842502458792089 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2825234640119830512, guid: b8d4cfd2c2104404f959f12215ddc0d3, type: 3}
-  m_PrefabInstance: {fileID: 2088842502458792084}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518865623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4899c6dff4239344395c540a5842d39d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2088842502458792091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1518865623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2573294fc02ad974aafe8fd39ec7f267, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventToListen: {fileID: 11400000, guid: a0e1c97750146ca4281ba910e4867825, type: 2}
-  onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2088842502458792089}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PauseGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &2088842502458792092
 MonoBehaviour:
   m_ObjectHideFlags: 0

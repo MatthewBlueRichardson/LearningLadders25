@@ -8,6 +8,11 @@ public class GameManager : MonoBehaviour
 
     private bool isPaused;
 
+    private void Start()
+    {
+        UnpauseGame();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
