@@ -333,7 +333,7 @@ MonoBehaviour:
   onDamageReputation: {fileID: 11400000, guid: 8fe9aa7b6506cd049b4ac58918c1d2d0, type: 2}
   onPlaySfxEvent: {fileID: 11400000, guid: 4c2a0dd782c94b943b16340fc1441a81, type: 2}
   repTextObject: {fileID: 2033495289049802595, guid: 02875fcf2b2bce34ca7a60e02b9ab511, type: 3}
-  objectCollisionSfx: {fileID: 0}
+  objectCollisionSfx: {fileID: 11400000, guid: d8be60f10f1591741af5893181c76da6, type: 2}
   repDamage: 10
 --- !u!60 &7797619179302735941
 PolygonCollider2D:
