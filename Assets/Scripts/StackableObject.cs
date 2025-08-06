@@ -59,6 +59,7 @@ namespace LearningLadders
             {
                 lastPlatformPart = collision.collider.gameObject;
                 onStackConnectionEvent.Invoke(ID);
+                onPlaySfxEvent.Invoke(objectCollisionSfx);
             }
         }
 
