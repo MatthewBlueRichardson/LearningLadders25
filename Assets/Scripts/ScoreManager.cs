@@ -55,7 +55,7 @@ public class ScoreManager : MonoBehaviour
                 PlayerPrefs.SetInt("HighScore", score);
                 gameOverHighScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore");
             }
-            onNewScore.Invoke(blockY);   
+            onNewScore.Invoke(blockY);
         }
 
         // Change tier of background objects, 0 = low, 1 = mid, 2 = high.
