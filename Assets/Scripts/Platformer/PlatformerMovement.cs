@@ -46,6 +46,8 @@ public class PlatformerMovement : MonoBehaviour
     private int jumpCount = 0;
     // private bool grounded = true;
 
+    private float defaultGravityForce;
+
     // Ground Check Variables
     [Header("[Ground Check]")]
     [Tooltip("An empty transform child positioned at the bottom of the character.")]
@@ -57,6 +59,8 @@ public class PlatformerMovement : MonoBehaviour
     void Start()
     {
         // rb = GetComponent<Rigidbody2D>(); // Finds local RigidBody2D component in the character.
+
+        defaultGravityForce = gravityForce;
     }
     private void FixedUpdate()
     {
@@ -169,5 +173,15 @@ public class PlatformerMovement : MonoBehaviour
     {
         // grounded = true;
         jumpCount = 0;
+    }
+
+    public void EnableWaterGravity(bool enabled)
+    {
+        gravityForce = -1f;
+    }
+
+    public void DisableWaterGravity(bool disable)
+    {
+        gravityForce = defaultGravityForce;
     }
 }
