@@ -4745,6 +4745,7 @@ MonoBehaviour:
     -- License: Attribution 4.0\r\nMotorcycle - Benelli by Vrymaa -- https://freesound.org/s/737778/
     -- License: Creative Commons 0\r\nShop door bell.wav by 775noise -- https://freesound.org/s/494565/
     -- License: Creative Commons 0\r\nFast Warp In by GammaGool -- https://freesound.org/s/735062/
+    -- License: Creative Commons 0\nGame Start by plasterbrain -- https://freesound.org/s/243020/
     -- License: Creative Commons 0"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c0a12a5525a959847a3dadc0d3f59ea5, type: 2}
@@ -5949,8 +5950,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 562055610}
   m_HandleRect: {fileID: 562055609}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.4843751
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
