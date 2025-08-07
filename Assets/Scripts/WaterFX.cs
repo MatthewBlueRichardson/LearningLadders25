@@ -6,17 +6,22 @@ using UnityEngine.Rendering;
 
 public class WaterFX : MonoBehaviour
 {
+    [Header("Post Processing Volume")]
     [SerializeField] private Volume waterVolume;
-    [SerializeField] private AudioClipSO waterImpactSFX;
-    [SerializeField] private AudioClipSO underwaterSFX;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClipSO waterImpactSFX;
+
+    [Header("Events")]
     [SerializeField] private BoolEvent onLowPassEnabledEvent;
+    [SerializeField] private AudioClipSOEvent onPlaySfxEvent;
+
 
     private Tween currentTween;
 
     private void Start()
     {
-        if(waterVolume != null)
+        if (waterVolume != null)
         {
             waterVolume.weight = 0.0f;
         }
@@ -29,9 +34,14 @@ public class WaterFX : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            // Enable post processing
             TweenVolumeVFX(1);
 
+            // Enable low pass filter on audio manager
             onLowPassEnabledEvent.Invoke(true);
+
+            // Play SFX
+            onPlaySfxEvent.Invoke(waterImpactSFX);
         }
     }
 
@@ -40,18 +50,20 @@ public class WaterFX : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            // Disable post processing
             TweenVolumeVFX(0);
 
+            // Disable low pass filter on audio manager
             onLowPassEnabledEvent.Invoke(false);
         }
     }
 
     private void TweenVolumeVFX(float targetWeight)
     {
-        if(waterVolume == null) { return; }
-        
+        if (waterVolume == null) { return; }
+
         targetWeight = Mathf.Clamp01(targetWeight);
-        
+
         // Kill tween - Stops weird cutting effect happening with overlapping the zoom animation.
         if (currentTween != null && currentTween.IsActive())
         {
