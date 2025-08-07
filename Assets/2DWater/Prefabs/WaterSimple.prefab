@@ -276,5 +276,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterVolume: {fileID: 0}
   waterImpactSFX: {fileID: 11400000, guid: 6d33e7132671b7d4c9811b9806914897, type: 2}
-  underwaterSFX: {fileID: 11400000, guid: 45291a8974ed14741890253525b5688d, type: 2}
   onLowPassEnabledEvent: {fileID: 11400000, guid: ed35ea517ef0d80459223cdbb8a611fe, type: 2}
+  onPlaySfxEvent: {fileID: 0}
