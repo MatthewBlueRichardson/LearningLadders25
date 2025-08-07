@@ -18,6 +18,11 @@ public class TeleportAbility : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] private VoidEvent onTeleportEvent;
+    [SerializeField] private ParticleSystem preTelePS;
+    [SerializeField] private ParticleSystem postTelePS;
+
+    [Tooltip("Needs to be the same as the duration of the particle effect")]
+    [SerializeField] private float teleportDelay = 0.3f;
 
     private bool onCooldown = false;
     private InputSystem_Actions controls;
@@ -41,9 +46,18 @@ public class TeleportAbility : MonoBehaviour
     private void Teleport()
     {
         if (onCooldown) return;
+        StartCoroutine(StartTeleport());
+        
+    }
 
+    IEnumerator StartTeleport()
+    {
         onPlaySfxEvent.Invoke(teleport);
+        preTelePS.Play();
+        //Teleport
+        yield return new WaitForSeconds(teleportDelay);
         onTeleportEvent.Invoke(new Empty());
+        postTelePS.Play();
         StartCoroutine(Cooldown());
     }
 

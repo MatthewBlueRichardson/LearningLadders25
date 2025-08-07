@@ -553,6 +553,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!198 &146982702 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 902268542605595103, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+  m_PrefabInstance: {fileID: 1610794740}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &158320953
 GameObject:
   m_ObjectHideFlags: 0
@@ -3345,6 +3350,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cloud-1
       objectReference: {fileID: 0}
+    - target: {fileID: 8737317091816792401, guid: 0d2b38bb743f3b748aa89c32d5d4fb42, type: 3}
+      propertyPath: m_SortingOrder
+      value: -5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5929,6 +5938,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3992653535506940080, guid: b24ece3f3c259724bb64dbb7859c066a, type: 3}
+      propertyPath: m_SortingOrder
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 5686717189352601135, guid: b24ece3f3c259724bb64dbb7859c066a, type: 3}
       propertyPath: m_Name
       value: Cloud-2
@@ -8693,6 +8706,18 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: -1.5200002
       objectReference: {fileID: 0}
+    - target: {fileID: 5939988026939469910, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: cooldown
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5939988026939469910, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: preTelePS
+      value: 
+      objectReference: {fileID: 146982702}
+    - target: {fileID: 5939988026939469910, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: postTelePS
+      value: 
+      objectReference: {fileID: 1690362728}
     - target: {fileID: 6648596808990464408, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       propertyPath: m_Name
       value: Player
@@ -13606,6 +13631,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!198 &1690362728 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 739678747289338293, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+  m_PrefabInstance: {fileID: 1610794740}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1701968380
 GameObject:
   m_ObjectHideFlags: 0
