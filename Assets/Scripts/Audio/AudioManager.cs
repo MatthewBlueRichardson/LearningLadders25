@@ -31,6 +31,9 @@ namespace LearningLadders.Audio
 
         private Dictionary<string, FloatEvent> _loadVolumeEvents = new();
 
+        private const float lowPassDefaultCutoff = 22000f;
+        private const float lowPassFilterCutoff = 500f;
+
         private void Awake()
         {
             _loadVolumeEvents["MasterVolume"] = onLoadMasterVolume;
@@ -186,6 +189,19 @@ namespace LearningLadders.Audio
             else if (score >= 10 && score < 20) audioSourceMusic.pitch = 1.05f;
             else if (score >= 20 && score < 30) audioSourceMusic.pitch = 1.1f;
             else audioSourceMusic.pitch = 1.5f;
+        }
+
+        // Called by the "onLowPassEnabled" boolean event, to enable the Audio Mixer's Low Pass Filter (e.g., while underwater).
+        public void EnableLowPassFilter(bool enabled)
+        {
+            if (enabled)
+            {
+                audioMixer.SetFloat("LowPassFrequency", lowPassFilterCutoff);
+            }
+            else
+            {
+                audioMixer.SetFloat("LowPassFrequency", lowPassDefaultCutoff);
+            }
         }
     }
 }

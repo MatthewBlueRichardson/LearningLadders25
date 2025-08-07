@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 270394267970809005}
   - component: {fileID: 270394267970809004}
   - component: {fileID: 270394267970809007}
+  - component: {fileID: 1104269469010356134}
   m_Layer: 4
   m_Name: WaterSimple
   m_TagString: Untagged
@@ -261,3 +262,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 19, y: 0.99999994}
   m_EdgeRadius: 0
+--- !u!114 &1104269469010356134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270394267970809006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5f4aa8a32e9f714e8cceb24d8b2e90c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterVolume: {fileID: 0}
+  waterImpactSFX: {fileID: 11400000, guid: 6d33e7132671b7d4c9811b9806914897, type: 2}
+  underwaterSFX: {fileID: 11400000, guid: 45291a8974ed14741890253525b5688d, type: 2}
+  onLowPassEnabledEvent: {fileID: 11400000, guid: ed35ea517ef0d80459223cdbb8a611fe, type: 2}
