@@ -27374,6 +27374,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1610794741}
+    - target: {fileID: 2605617920990789140, guid: e888893c30cdf2a47a4280de863f6d6c, type: 3}
+      propertyPath: exitEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 168f62d6c65a6b94382051b98004c8f9, type: 2}
     - target: {fileID: 3705251258360372226, guid: e888893c30cdf2a47a4280de863f6d6c, type: 3}
       propertyPath: m_Pivot.x
       value: 0

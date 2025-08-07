@@ -1,3 +1,4 @@
+using LearningLadders.EventSystem;
 using UnityEngine;
 
 public class PlayerRespawn : MonoBehaviour
@@ -7,6 +8,8 @@ public class PlayerRespawn : MonoBehaviour
     [SerializeField] private float xDistance;
     [Header("Assign Player")]
     [SerializeField] private GameObject player;
+    [Header("Events")]
+    [SerializeField] private BoolEvent exitEvent;
 
     private int previousHeight;
     private int minY;
@@ -27,6 +30,7 @@ public class PlayerRespawn : MonoBehaviour
 
         // Spawn player in new location.
         player.transform.position = new Vector2(ranX, yPos + 10);
+        exitEvent.Invoke(false);
     }
 
     // This function adds height to the respawn position, based on the height of the last stackable.
