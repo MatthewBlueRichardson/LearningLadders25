@@ -1247,7 +1247,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -574.9959}
+  m_AnchoredPosition: {x: 0, y: -575.445}
   m_SizeDelta: {x: 1439.214, y: 2230.287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &283676132
@@ -1284,7 +1284,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -434.99985}
+  m_AnchoredPosition: {x: 0, y: -412}
   m_SizeDelta: {x: 922.3394, y: 1691.0986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &283676134
@@ -1307,7 +1307,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
+  m_text: 'https://www.dafont.com/chicalo.font
+
+    https://www.dafont.com/newyear-coffee.font
+
+    https://www.dafont.com/planet-comic.font
+
+    https://www.dafont.com/londrina.font
 
 '
   m_isRightToLeft: 0
@@ -1374,7 +1380,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 735.25696, z: 0, w: 826.23096}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5950,8 +5956,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 562055610}
   m_HandleRect: {fileID: 562055609}
   m_Direction: 2
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1.0000002
+  m_Size: 0.48396552
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

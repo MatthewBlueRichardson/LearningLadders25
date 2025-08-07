@@ -41,6 +41,10 @@ public class TeleportAbility : MonoBehaviour
 
         Vector3 mousePos = Input.mousePosition;
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+        RaycastHit2D hit = Physics2D.Raycast(mousePos, mousePos - Camera.main.ScreenToViewportPoint(mousePos), Mathf.Infinity);
+
+        if (hit.transform.tag == "GameOver" || hit.transform.tag == "Stackable" || hit.transform.tag == "PartOfPlatform") return;
+
         player.transform.position = worldPos;
 
         onPlaySfxEvent.Invoke(teleport);
