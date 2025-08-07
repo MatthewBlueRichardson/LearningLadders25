@@ -20,9 +20,6 @@ public class PlayerRBRotationScript : MonoBehaviour
     {
         //Get mouse X relative to screen centre
         float screenMid = Screen.width / 2f;
-        //float mouseX = Input.mousePosition.x;
-        //Clamps based on screen width
-        //float normalisedX = (mouseX - screenMid) / screenMid;
 
         Vector3 playerPos = player.transform.position;
         Vector3 cam = Camera.main.WorldToScreenPoint(playerPos);

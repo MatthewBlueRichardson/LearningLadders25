@@ -19,7 +19,6 @@ public class HeadCheck : MonoBehaviour
             // If the stackable has a RigidBody, and is currently falling...
             if(rb != null && rb.linearVelocityY < -0.2f)
             {
-                Debug.Log("Hit");
                 eventTrigger.Trigger(); // Call OnCharacterCrushed UnityEvent.
             }
         }

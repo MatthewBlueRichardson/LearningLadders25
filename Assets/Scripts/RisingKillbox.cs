@@ -20,25 +20,14 @@ public class RisingKillbox : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player is IN water");
             enterEvent.Invoke(true);
         }
     }
 
-    /*private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Player is IN water");
-            enterEvent.Invoke(true);
-        }
-    }
-    */
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player has exited water");
             exitEvent.Invoke(false);
         }
     }

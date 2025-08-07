@@ -26,7 +26,6 @@ public class PlayerRespawn : MonoBehaviour
         float ranX = Random.Range(transform.position.x + xDistance, transform.position.x - xDistance);
 
         float yPos = PlayerPrefs.GetInt("Score");
-        Debug.Log("y spawn: " + yPos);
 
         // Spawn player in new location.
         player.transform.position = new Vector2(ranX, yPos + 10);
