@@ -1,16 +1,21 @@
 using LearningLadders.EventSystem;
 using UnityEngine;
+using LearningLadders.Audio;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] VoidEvent onPauseGameEvent;
-    [SerializeField] VoidEvent onUnpauseGameEvent;
+    [Header("Events")]
+    [SerializeField] private VoidEvent onPauseGameEvent;
+    [SerializeField] private VoidEvent onUnpauseGameEvent;
+    [SerializeField] private AudioClipSOEvent onPlaySfxEvent;
+    [SerializeField] private AudioClipSO startGame;
 
     private bool isPaused;
 
     private void Start()
     {
         UnpauseGame();
+        onPlaySfxEvent.Invoke(startGame);
     }
 
     private void Update()

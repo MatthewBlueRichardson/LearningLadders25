@@ -27208,6 +27208,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2825234640119830512, guid: b8d4cfd2c2104404f959f12215ddc0d3, type: 3}
+      propertyPath: startGame
+      value: 
+      objectReference: {fileID: 11400000, guid: 11d8819341e13f14ab245d47c6900901, type: 2}
+    - target: {fileID: 2825234640119830512, guid: b8d4cfd2c2104404f959f12215ddc0d3, type: 3}
+      propertyPath: onPlaySfxEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 4c2a0dd782c94b943b16340fc1441a81, type: 2}
     - target: {fileID: 3339300856122316720, guid: b8d4cfd2c2104404f959f12215ddc0d3, type: 3}
       propertyPath: m_Name
       value: GameManager
