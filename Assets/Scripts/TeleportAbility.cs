@@ -24,6 +24,8 @@ public class TeleportAbility : MonoBehaviour
     [Tooltip("Needs to be the same as the duration of the particle effect")]
     [SerializeField] private float teleportDelay = 0.3f;
 
+    [SerializeField] private Animator playerAnimator;
+
     private bool onCooldown = false;
     private InputSystem_Actions controls;
 
@@ -54,10 +56,12 @@ public class TeleportAbility : MonoBehaviour
     {
         onPlaySfxEvent.Invoke(teleport);
         preTelePS.Play();
+        playerAnimator.SetTrigger("Shrink");
         //Teleport
         yield return new WaitForSeconds(teleportDelay);
         onTeleportEvent.Invoke(new Empty());
         postTelePS.Play();
+        playerAnimator.SetTrigger("Grow");
         StartCoroutine(Cooldown());
     }
 
