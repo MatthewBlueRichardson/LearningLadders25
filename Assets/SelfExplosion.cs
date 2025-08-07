@@ -16,6 +16,7 @@ public class SelfExplosion : MonoBehaviour
     [SerializeField] private ParticleSystem ps;
     [SerializeField] private AudioClipSOEvent sfxEvent;
     [SerializeField] private AudioClipSO explosionSound;
+    [SerializeField] private FloatEvent onExplode;
 
     private bool onCooldown = false;
 
@@ -55,6 +56,7 @@ public class SelfExplosion : MonoBehaviour
             }
             ps.Play();
             sfxEvent.Invoke(explosionSound);
+            onExplode.Invoke(cooldown);
             StartCoroutine(Cooldown());
         }        
     }
