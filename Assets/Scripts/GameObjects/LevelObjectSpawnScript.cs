@@ -48,7 +48,7 @@ public class LevelObjectSpawnScript : MonoBehaviour
         float ySpawn = PlayerPrefs.GetInt("Score");
 
         float randomX = Random.Range(-spawnRangeX, spawnRangeX);
-        Vector3 spawnPos = new Vector3(randomX, transform.position.y + ySpawn, 0f);
+        Vector3 spawnPos = new Vector3(randomX, transform.position.y + ySpawn + 10, 0f);
         randomObjectInt = Random.Range(1, 10);
 
         Vector3 warningPos = new Vector3(randomX, transform.position.y - mainCam.pixelHeight/100, 0f);
