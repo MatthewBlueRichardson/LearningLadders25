@@ -14,6 +14,16 @@ public class WaterFX : MonoBehaviour
 
     private Tween currentTween;
 
+    private void Start()
+    {
+        if(waterVolume != null)
+        {
+            waterVolume.weight = 0.0f;
+        }
+
+        onLowPassEnabledEvent.Invoke(false);
+    }
+
     // Upon entering the water...
     private void OnTriggerEnter2D(Collider2D collision)
     {
