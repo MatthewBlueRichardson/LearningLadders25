@@ -634,8 +634,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ability1Image: {fileID: 9194898075313998657}
   ability1Animator: {fileID: 9105785927297195728}
+  ability1KeyAnimator: {fileID: 3428368624310223612}
   ability2Image: {fileID: 252197035275864654}
   ability2Animator: {fileID: 3367135565624570368}
+  ability2KeyAnimator: {fileID: 6582085686408901260}
 --- !u!114 &4511241749989862819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -841,6 +843,7 @@ GameObject:
   - component: {fileID: 8794873512505826281}
   - component: {fileID: 2352361429127204494}
   - component: {fileID: 3582907995571562395}
+  - component: {fileID: 6582085686408901260}
   m_Layer: 5
   m_Name: KeyIcon
   m_TagString: Untagged
@@ -906,6 +909,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &6582085686408901260
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4137552024538448067}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cbea6aa27115f1947ac4c667c9d619a2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4196694252414970275
 GameObject:
   m_ObjectHideFlags: 0
@@ -2015,6 +2040,7 @@ GameObject:
   - component: {fileID: 1006953206259495398}
   - component: {fileID: 1761462040572844366}
   - component: {fileID: 7766127506388244941}
+  - component: {fileID: 3428368624310223612}
   m_Layer: 5
   m_Name: KeyIcon
   m_TagString: Untagged
@@ -2032,7 +2058,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 805579348655647167}
   m_Father: {fileID: 5420795453699442494}
@@ -2080,6 +2106,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &3428368624310223612
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9081607167172293487}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cbea6aa27115f1947ac4c667c9d619a2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9095799759643505451
 GameObject:
   m_ObjectHideFlags: 0

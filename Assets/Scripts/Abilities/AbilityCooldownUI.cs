@@ -7,6 +7,7 @@ public class AbilityCooldownUI : MonoBehaviour
     [Header("Explosion Ability")]
     [SerializeField] private Image ability1Image;
     [SerializeField] private Animator ability1Animator;
+    [SerializeField] private Animator ability1KeyAnimator;
 
     private bool isA1Cooldown = false;
     private float explodeCooldown;
@@ -14,6 +15,7 @@ public class AbilityCooldownUI : MonoBehaviour
     [Header("Teleport Ability")]
     [SerializeField] private Image ability2Image;
     [SerializeField] private Animator ability2Animator;
+    [SerializeField] private Animator ability2KeyAnimator;
 
     private bool isA2Cooldown = false;
     private float teleportCooldown;
@@ -36,6 +38,7 @@ public class AbilityCooldownUI : MonoBehaviour
         isA1Cooldown = true;
 
         ability1Animator.SetBool("In", false); // Lower transparency of this ability's UI icon
+        ability1KeyAnimator.SetTrigger("Press");
     }
 
     public void Ability2Activated(float cooldown2)
@@ -45,6 +48,7 @@ public class AbilityCooldownUI : MonoBehaviour
         isA2Cooldown = true;
 
         ability2Animator.SetBool("In", false); // Lower transparency of this ability's UI icon
+        ability2KeyAnimator.SetTrigger("Press");
     }
 
     public void UpdateA1CooldownUI()
