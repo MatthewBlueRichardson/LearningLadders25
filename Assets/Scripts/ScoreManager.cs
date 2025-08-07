@@ -32,6 +32,8 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
+        score = 0;
+        PlayerPrefs.SetInt("Score", score);
         scoreText.text = score.ToString();
         highscoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore");
         gameOverHighScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore");
