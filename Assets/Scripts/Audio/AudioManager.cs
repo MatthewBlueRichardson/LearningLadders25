@@ -188,7 +188,7 @@ namespace LearningLadders.Audio
             if (score < 10) audioSourceMusic.pitch = 1f;
             else if (score >= 10 && score < 20) audioSourceMusic.pitch = 1.05f;
             else if (score >= 20 && score < 30) audioSourceMusic.pitch = 1.1f;
-            else audioSourceMusic.pitch = 1.5f;
+            else audioSourceMusic.pitch = 1.15f;
         }
 
         // Called by the "onLowPassEnabled" boolean event, to enable the Audio Mixer's Low Pass Filter (e.g., while underwater).
