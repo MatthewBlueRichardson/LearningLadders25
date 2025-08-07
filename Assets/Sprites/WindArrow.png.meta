@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f984ccc72566cd24abf9c15b19e5344e
+guid: 45fb313f085bbf14ba72444081104683
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3758923921526908785
-    second: KeyIcon_0
+      213: -5574650015923664844
+    second: WindArrow_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KeyIcon_0
+      name: WindArrow_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 586
-        height: 633
+        width: 1071
+        height: 411
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f889ba7eb9e95dbc0800000000000000
-      internalID: -3758923921526908785
+      spriteID: 4388eb5a85dd2a2b0800000000000000
+      internalID: -5574650015923664844
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      KeyIcon_0: -3758923921526908785
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
