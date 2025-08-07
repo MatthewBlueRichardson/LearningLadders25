@@ -4,19 +4,19 @@ using UnityEngine.UI;
 
 public class AbilityCooldownUI : MonoBehaviour
 {
+    [Header("Explosion Ability")]
     [SerializeField] private Image ability1Image;
-    [SerializeField] private KeyCode ability1;
-
-    [SerializeField] private Image ability2Image;
-    [SerializeField] private KeyCode ability2;
-
+    [SerializeField] private Animator ability1Animator;
 
     private bool isA1Cooldown = false;
     private float explodeCooldown;
 
+    [Header("Teleport Ability")]
+    [SerializeField] private Image ability2Image;
+    [SerializeField] private Animator ability2Animator;
+
     private bool isA2Cooldown = false;
     private float teleportCooldown;
-
 
     void Start()
     {
@@ -34,6 +34,8 @@ public class AbilityCooldownUI : MonoBehaviour
         ability1Image.fillAmount = 1;
         explodeCooldown = cooldown1;
         isA1Cooldown = true;
+
+        ability1Animator.SetBool("In", false); // Lower transparency of this ability's UI icon
     }
 
     public void Ability2Activated(float cooldown2)
@@ -41,6 +43,8 @@ public class AbilityCooldownUI : MonoBehaviour
         ability2Image.fillAmount = 1;
         teleportCooldown = cooldown2;
         isA2Cooldown = true;
+
+        ability2Animator.SetBool("In", false); // Lower transparency of this ability's UI icon
     }
 
     public void UpdateA1CooldownUI()
@@ -58,6 +62,8 @@ public class AbilityCooldownUI : MonoBehaviour
             {
                 isA1Cooldown = false;
                 ability1Image.fillAmount = 0;
+
+                ability1Animator.SetBool("In", true);
             }
         }
     }
@@ -77,6 +83,8 @@ public class AbilityCooldownUI : MonoBehaviour
             {
                 isA2Cooldown = false;
                 ability2Image.fillAmount = 0;
+
+                ability2Animator.SetBool("In", true);
             }
         }
     }
