@@ -13754,15 +13754,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2799590084157694976, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 2799590084157694976, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_ActionId
       value: 8ab1e78d-2c3a-4f59-8baa-b36b82547050
       objectReference: {fileID: 0}
     - target: {fileID: 2799590084157694976, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_ActionId
+      value: df85d0b1-d49e-4a4b-a307-91bf5ae30368
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799590084157694976, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_ActionName
       value: 'Player/Explode[/Keyboard/e]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799590084157694976, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: m_ActionEvents.Array.data[20].m_ActionName
+      value: 'Player/Teleport[/Mouse/leftButton]'
       objectReference: {fileID: 0}
     - target: {fileID: 3397618877050566193, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       propertyPath: m_Layer
@@ -13855,6 +13863,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6648596808990464408, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1610794766}
+    - targetCorrespondingSourceObject: {fileID: 6648596808990464408, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1610794767}
   m_SourcePrefab: {fileID: 100100000, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
 --- !u!1 &1610794741 stripped
 GameObject:
@@ -13981,6 +13992,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.3053701, y: 4.7212553}
   m_EdgeRadius: 0
+--- !u!114 &1610794767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610794741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d8dbfaa3f721f042b634821ca21a863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPlaySfxEvent: {fileID: 11400000, guid: 4c2a0dd782c94b943b16340fc1441a81, type: 2}
+  cooldown: 15
+  player: {fileID: 1610794741}
 --- !u!1 &1637484308
 GameObject:
   m_ObjectHideFlags: 0

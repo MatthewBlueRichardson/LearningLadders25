@@ -116,6 +116,15 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Teleport"",
+                    ""type"": ""Button"",
+                    ""id"": ""df85d0b1-d49e-4a4b-a307-91bf5ae30368"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -512,6 +521,17 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""Explode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f92d1bb1-1ab4-411f-b155-9ac52dc9bfda"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Teleport"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1109,6 +1129,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_Player_Next = m_Player.FindAction("Next", throwIfNotFound: true);
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_Explode = m_Player.FindAction("Explode", throwIfNotFound: true);
+        m_Player_Teleport = m_Player.FindAction("Teleport", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1198,6 +1219,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Next;
     private readonly InputAction m_Player_Sprint;
     private readonly InputAction m_Player_Explode;
+    private readonly InputAction m_Player_Teleport;
     public struct PlayerActions
     {
         private @InputSystem_Actions m_Wrapper;
@@ -1212,6 +1234,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         public InputAction @Next => m_Wrapper.m_Player_Next;
         public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
         public InputAction @Explode => m_Wrapper.m_Player_Explode;
+        public InputAction @Teleport => m_Wrapper.m_Player_Teleport;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1251,6 +1274,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Explode.started += instance.OnExplode;
             @Explode.performed += instance.OnExplode;
             @Explode.canceled += instance.OnExplode;
+            @Teleport.started += instance.OnTeleport;
+            @Teleport.performed += instance.OnTeleport;
+            @Teleport.canceled += instance.OnTeleport;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1285,6 +1311,9 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
             @Explode.started -= instance.OnExplode;
             @Explode.performed -= instance.OnExplode;
             @Explode.canceled -= instance.OnExplode;
+            @Teleport.started -= instance.OnTeleport;
+            @Teleport.performed -= instance.OnTeleport;
+            @Teleport.canceled -= instance.OnTeleport;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1477,6 +1506,7 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         void OnNext(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
         void OnExplode(InputAction.CallbackContext context);
+        void OnTeleport(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
