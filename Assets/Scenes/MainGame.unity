@@ -14005,6 +14005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onPlaySfxEvent: {fileID: 11400000, guid: 4c2a0dd782c94b943b16340fc1441a81, type: 2}
+  teleport: {fileID: 11400000, guid: 7e0b34532b2630d47ae66131f5fd9e3f, type: 2}
   cooldown: 15
   player: {fileID: 1610794741}
 --- !u!1 &1637484308

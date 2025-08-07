@@ -6,8 +6,14 @@ using UnityEngine.InputSystem;
 
 public class TeleportAbility : MonoBehaviour
 {
+    [Header("Audio")]
     [SerializeField] private AudioClipSOEvent onPlaySfxEvent;
+    [SerializeField] private AudioClipSO teleport;
+
+    [Header("Cooldown")]
     [SerializeField] private float cooldown;
+
+    [Header("Player")]
     [SerializeField] private GameObject player;
 
     private bool onCooldown = false;
@@ -37,7 +43,7 @@ public class TeleportAbility : MonoBehaviour
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
         player.transform.position = worldPos;
 
-        //onPlaySfxEvent.Invoke();
+        onPlaySfxEvent.Invoke(teleport);
         StartCoroutine(Cooldown());
     }
 
