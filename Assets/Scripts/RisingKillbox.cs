@@ -11,7 +11,7 @@ public class RisingKillbox : MonoBehaviour
 
     [SerializeField] private Image repBar;
 
-    void Update()
+    void FixedUpdate()
     {
         transform.Translate(Vector3.up * riseSpeed * Time.deltaTime);
     }

@@ -25,9 +25,9 @@ public class AbilityCooldownUI : MonoBehaviour
 
         if (isA1Cooldown)
         {
-            ability1Image.fillAmount += 1 / explodeCooldown * Time.deltaTime;
+            ability1Image.fillAmount -= 1 / explodeCooldown * Time.deltaTime;
 
-            if(ability1Image.fillAmount >= 1)
+            if(ability1Image.fillAmount <= 0)
             {
                 isA1Cooldown = false;
                 ability1Image.fillAmount = 0;
@@ -37,6 +37,7 @@ public class AbilityCooldownUI : MonoBehaviour
 
     public void Ability1Activated(float cooldown1)
     {
+        ability1Image.fillAmount = 1;
         explodeCooldown = cooldown1;
         isA1Cooldown = true;
     }
