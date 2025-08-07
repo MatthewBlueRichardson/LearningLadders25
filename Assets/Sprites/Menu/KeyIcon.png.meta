@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: e0fb51a2903e3f84688f9afd93d4a7d4
+guid: f984ccc72566cd24abf9c15b19e5344e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8970190499216312772
-    second: Pisa2Title2_0
-  - first:
-      213: -5323458447126359831
-    second: Pisa2Title2_1
-  - first:
-      213: 8515891903028519683
-    second: Pisa2Title2_2
-  - first:
-      213: 5691662609463779588
-    second: Pisa2Title2_3
+      213: -3758923921526908785
+    second: KeyIcon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -109,79 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pisa2Title2_0
+      name: KeyIcon_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 5
-        width: 157
-        height: 230
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4c94f51abb48c7c70800000000000000
-      internalID: 8970190499216312772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pisa2Title2_1
-      rect:
-        serializedVersion: 2
-        x: 159
-        y: 6
-        width: 91
-        height: 229
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9e01b7a4fb64f16b0800000000000000
-      internalID: -5323458447126359831
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pisa2Title2_2
-      rect:
-        serializedVersion: 2
-        x: 255
-        y: 6
-        width: 156
-        height: 229
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 303e3a111968e2670800000000000000
-      internalID: 8515891903028519683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pisa2Title2_3
-      rect:
-        serializedVersion: 2
-        x: 406
         y: 0
-        width: 187
-        height: 235
+        width: 586
+        height: 633
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4012672dcf8dcfe40800000000000000
-      internalID: 5691662609463779588
+      spriteID: f889ba7eb9e95dbc0800000000000000
+      internalID: -3758923921526908785
       vertices: []
       indices: 
       edges: []
@@ -200,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -209,11 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Pisa2Title2_0: 8970190499216312772
-      Pisa2Title2_1: -5323458447126359831
-      Pisa2Title2_2: 8515891903028519683
-      Pisa2Title2_3: 5691662609463779588
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
