@@ -119,17 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &3069165 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9194898075313998657, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
-  m_PrefabInstance: {fileID: 1238373603282004122}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5622767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2812,17 +2801,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &589038036 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 252197035275864654, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
-  m_PrefabInstance: {fileID: 1238373603282004122}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &590025040
 GameObject:
   m_ObjectHideFlags: 0
@@ -7837,83 +7815,6 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
---- !u!1 &1412755448 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3153899572826777770, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
-  m_PrefabInstance: {fileID: 1238373603282004122}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1412755455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412755448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03615be523b9b894e9b92136c6f088cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ability1Image: {fileID: 3069165}
-  ability1: 101
-  ability2Image: {fileID: 589038036}
-  ability2: 114
---- !u!114 &1412755456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412755448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1747b0fc8c549e44b811e4d760a021a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventToListen: {fileID: 11400000, guid: 86c97f9b3ffd78c4b8c2c43248f3638a, type: 2}
-  onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1412755455}
-        m_TargetAssemblyTypeName: AbilityCooldownUI, Assembly-CSharp
-        m_MethodName: Ability1Activated
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1412755464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412755448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1747b0fc8c549e44b811e4d760a021a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventToListen: {fileID: 11400000, guid: 3d8266bd8e6917d43b0f7e7e3771ca97, type: 2}
-  onEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1412755455}
-        m_TargetAssemblyTypeName: AbilityCooldownUI, Assembly-CSharp
-        m_MethodName: Ability2Activated
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1430320950
 GameObject:
   m_ObjectHideFlags: 0
@@ -21835,15 +21736,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1701968381}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3153899572826777770, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1412755455}
-    - targetCorrespondingSourceObject: {fileID: 3153899572826777770, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1412755456}
-    - targetCorrespondingSourceObject: {fileID: 3153899572826777770, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1412755464}
     - targetCorrespondingSourceObject: {fileID: 5568286403253919161, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1780854340}

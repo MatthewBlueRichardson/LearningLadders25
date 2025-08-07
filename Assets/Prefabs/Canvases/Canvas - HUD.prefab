@@ -633,10 +633,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability1Image: {fileID: 9194898075313998657}
-  ability1: 101
   ability1Animator: {fileID: 9105785927297195728}
   ability2Image: {fileID: 252197035275864654}
-  ability2: 114
   ability2Animator: {fileID: 3367135565624570368}
 --- !u!114 &4511241749989862819
 MonoBehaviour:
