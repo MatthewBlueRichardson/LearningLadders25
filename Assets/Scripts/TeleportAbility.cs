@@ -17,7 +17,7 @@ public class TeleportAbility : MonoBehaviour
     [SerializeField] private GameObject player;
 
     [Header("Events")]
-    [SerializeField] private VoidEvent onTeleportEvent;
+    [SerializeField] private FloatEvent onTeleportEvent;
     [SerializeField] private ParticleSystem preTelePS;
     [SerializeField] private ParticleSystem postTelePS;
 
@@ -59,7 +59,7 @@ public class TeleportAbility : MonoBehaviour
         playerAnimator.SetTrigger("Shrink");
         //Teleport
         yield return new WaitForSeconds(teleportDelay);
-        onTeleportEvent.Invoke(new Empty());
+        onTeleportEvent.Invoke(cooldown);
         postTelePS.Play();
         playerAnimator.SetTrigger("Grow");
         StartCoroutine(Cooldown());
