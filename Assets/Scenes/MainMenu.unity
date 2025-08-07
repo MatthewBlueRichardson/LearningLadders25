@@ -1247,7 +1247,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -619.2042}
+  m_AnchoredPosition: {x: 0, y: -574.9959}
   m_SizeDelta: {x: 1439.214, y: 2230.287}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &283676132
@@ -1284,7 +1284,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -269.59424}
+  m_AnchoredPosition: {x: 0, y: -434.99985}
   m_SizeDelta: {x: 922.3394, y: 1691.0986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &283676134
@@ -2180,7 +2180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -94.5943}
+  m_AnchoredPosition: {x: 0, y: -260}
   m_SizeDelta: {x: 314.5085, y: 96.5675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &566696734
@@ -4066,7 +4066,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -128.59424}
+  m_AnchoredPosition: {x: 0, y: -293.99982}
   m_SizeDelta: {x: 100, y: 3.2776}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1313799632
@@ -4707,7 +4707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -44.59424}
+  m_AnchoredPosition: {x: 0, y: -215.1}
   m_SizeDelta: {x: 922.3394, y: 583.2764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1633827663
@@ -4738,6 +4738,13 @@ MonoBehaviour:
     -- License: Attribution 4.0\r\nhttps://www.zapsplat.com/music/ui-thin-plucked-tone-positive-1/\r\nhttps://www.zapsplat.com/music/game-tone-mallet-hit-negative-error-sound-2/\r\n\rBoing
     1 by magnuswaker -- https://freesound.org/s/540788/ -- License: Creative Commons
     0\r\nPunchy Soft Snare (Short).wav by Musictart -- https://freesound.org/s/164943/
+    -- License: Creative Commons 0\nUmbrella Open 3 with subs by Geoff-Bremner-Audio
+    -- https://freesound.org/s/792187/ -- License: Creative Commons 0\r\nNeon Lamp,
+    Switch On, Hum by Kinoton -- https://freesound.org/s/351430/ -- License: Creative
+    Commons 0\r\nRock_Hammer_Chisel_01.wav by dheming -- https://freesound.org/s/240981/
+    -- License: Attribution 4.0\r\nMotorcycle - Benelli by Vrymaa -- https://freesound.org/s/737778/
+    -- License: Creative Commons 0\r\nShop door bell.wav by 775noise -- https://freesound.org/s/494565/
+    -- License: Creative Commons 0\r\nFast Warp In by GammaGool -- https://freesound.org/s/735062/
     -- License: Creative Commons 0"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c0a12a5525a959847a3dadc0d3f59ea5, type: 2}
@@ -4803,7 +4810,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 314.15808}
+  m_margin: {x: 0, y: -163.11841, z: 0, w: 314.15808}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5942,8 +5949,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 562055610}
   m_HandleRect: {fileID: 562055609}
   m_Direction: 2
-  m_Value: 1.0000004
-  m_Size: 0.44473177
+  m_Value: 1
+  m_Size: 0.4843751
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
