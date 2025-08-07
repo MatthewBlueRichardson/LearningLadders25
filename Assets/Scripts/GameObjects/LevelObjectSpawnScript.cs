@@ -12,7 +12,7 @@ public class LevelObjectSpawnScript : MonoBehaviour
     [SerializeField] private float spawnInterval = 3f;
     [SerializeField] private float spawnRangeX = 8f;  //How far left/right objects can spawn
     [SerializeField] private float difficultyIncreaseTimer = 10f; // After how much time to increase the difficulty.
-    [SerializeField] private float randomObjectFloat;
+    [SerializeField] private int randomObjectInt;
     [Tooltip("Chance out of 10 that repItem will spawn instead")]
     [SerializeField] private float repItemChance;
 
@@ -49,14 +49,14 @@ public class LevelObjectSpawnScript : MonoBehaviour
 
         float randomX = Random.Range(-spawnRangeX, spawnRangeX);
         Vector3 spawnPos = new Vector3(randomX, transform.position.y + ySpawn, 0f);
-        randomObjectFloat = Random.Range(1f, 10f);
+        randomObjectInt = Random.Range(1, 10);
 
         Vector3 warningPos = new Vector3(randomX, transform.position.y - mainCam.pixelHeight/100, 0f);
         GameObject newSpawnWarning = Instantiate(spawnWarning, warningPos, Quaternion.identity, transform);
         yield return new WaitForSeconds(spawnInterval);
         Destroy(newSpawnWarning);
 
-        if (randomObjectFloat <= repItemChance)
+        if (randomObjectInt <= repItemChance)
         {
             Instantiate(repItem, spawnPos, Quaternion.identity);
         }

@@ -1,19 +1,22 @@
 using LearningLadders.EventSystem;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class WindForce : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI windForceText;
-    [SerializeField] private TextMeshProUGUI windDirectionText;
+
+    [SerializeField] private Image windArrow;
 
     [SerializeField] private int windTier;
+
+    [SerializeField] private Animator windAnim;
 
     [SerializeField] private IntEvent windTierEvent;
     [SerializeField] private BoolEvent flipCanvasEvent;
 
     private AreaEffector2D effector;
-    private string windDirection;
     private string windForce;
     private bool isRight;
     private float timer;
@@ -54,11 +57,11 @@ public class WindForce : MonoBehaviour
         effector.forceAngle = 180; // Set to left
         effector.forceMagnitude = Random.Range(7, 21);
 
-        windDirection = "Wind Direction: West!";
-        windForce = "Wind Force: " + effector.forceMagnitude.ToString() + " mph!";
+        windAnim.SetTrigger("WindChange");
+        windArrow.transform.eulerAngles = new Vector3(0f, 180f, 0f);
+        windForce = effector.forceMagnitude.ToString() + " mph";
 
         isRight = false;
-        windDirectionText.text = windDirection;
         windForceText.text = windForce;
         flipCanvasEvent.Invoke(isRight);
 
@@ -85,11 +88,11 @@ public class WindForce : MonoBehaviour
         effector.forceAngle = 0; // Set to left
         effector.forceMagnitude = Random.Range(7, 21);
 
-        windDirection = "Wind Direction: East!";
-        windForce = "Wind Force: " + effector.forceMagnitude.ToString() + " mph!";
+        windAnim.SetTrigger("WindChange");
+        windArrow.transform.eulerAngles = new Vector3(0f, 0f, 0f);
+        windForce = effector.forceMagnitude.ToString() + " mph";
 
         isRight = true;
-        windDirectionText.text = windDirection;
         windForceText.text = windForce;
         flipCanvasEvent.Invoke(isRight);
 

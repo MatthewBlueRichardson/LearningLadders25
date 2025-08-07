@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: f984ccc72566cd24abf9c15b19e5344e
+guid: 2ac9aba0d1ca973479533c1dd8503abe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3758923921526908785
-    second: KeyIcon_0
+      213: -8498254242273402215
+    second: WindIcons_0
+  - first:
+      213: 4779477510794614584
+    second: WindIcons_1
+  - first:
+      213: 94227878064195123
+    second: WindIcons_2
+  - first:
+      213: 8375300879299452455
+    second: WindIcons_3
+  - first:
+      213: 7873541158338676041
+    second: WindIcons_4
+  - first:
+      213: -2760697597130659236
+    second: WindIcons_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +115,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KeyIcon_0
+      name: WindIcons_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 586
-        height: 633
+        width: 533
+        height: 437
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f889ba7eb9e95dbc0800000000000000
-      internalID: -3758923921526908785
+      spriteID: 9926656dac2201a80800000000000000
+      internalID: -8498254242273402215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WindIcons_2
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 0
+        width: 537
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33684ff71c3ce4100800000000000000
+      internalID: 94227878064195123
       vertices: []
       indices: 
       edges: []
@@ -125,7 +162,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e84f15330e0950a49b3365a106765210
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +172,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      KeyIcon_0: -3758923921526908785
+      WindIcons_0: -8498254242273402215
+      WindIcons_2: 94227878064195123
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
