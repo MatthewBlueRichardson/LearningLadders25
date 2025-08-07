@@ -16,6 +16,9 @@ public class TeleportAbility : MonoBehaviour
     [Header("Player")]
     [SerializeField] private GameObject player;
 
+    [Header("Events")]
+    [SerializeField] private VoidEvent onTeleportEvent;
+
     private bool onCooldown = false;
     private InputSystem_Actions controls;
 
@@ -39,15 +42,8 @@ public class TeleportAbility : MonoBehaviour
     {
         if (onCooldown) return;
 
-        Vector3 mousePos = Input.mousePosition;
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-        RaycastHit2D hit = Physics2D.Raycast(mousePos, mousePos - Camera.main.ScreenToViewportPoint(mousePos), Mathf.Infinity);
-
-        if (hit.transform.tag == "GameOver" || hit.transform.tag == "Stackable" || hit.transform.tag == "PartOfPlatform") return;
-
-        player.transform.position = worldPos;
-
         onPlaySfxEvent.Invoke(teleport);
+        onTeleportEvent.Invoke(new Empty());
         StartCoroutine(Cooldown());
     }
 
