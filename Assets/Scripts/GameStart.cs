@@ -11,6 +11,11 @@ public class GameStart : MonoBehaviour
     [SerializeField] private AudioClipSO audioClip;
     [SerializeField] private AudioClipSOEvent onPlaySfxEvent;
 
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
+
     public void StartGame()
     {
         onPlaySfxEvent.Invoke(audioClip);
