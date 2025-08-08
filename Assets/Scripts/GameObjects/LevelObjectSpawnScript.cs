@@ -51,7 +51,12 @@ public class LevelObjectSpawnScript : MonoBehaviour
         Vector3 spawnPos = new Vector3(randomX, transform.position.y + ySpawn + 10, 0f);
         randomObjectInt = Random.Range(1, 10);
 
-        Vector3 warningPos = new Vector3(randomX, transform.position.y - mainCam.pixelHeight/100, 0f);
+        float yPos = 0.9f;
+        Vector3 warningPos = new Vector3(randomX, yPos, 0);
+        warningPos = mainCam.ViewportToWorldPoint(warningPos);
+        warningPos.x = randomX;
+        warningPos.z = 0;
+
         GameObject newSpawnWarning = Instantiate(spawnWarning, warningPos, Quaternion.identity, transform);
         yield return new WaitForSeconds(spawnInterval);
         Destroy(newSpawnWarning);
