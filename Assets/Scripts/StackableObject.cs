@@ -19,6 +19,10 @@ namespace LearningLadders
         [Header("Audio Clip SOs")]
         [SerializeField] private AudioClipSO objectCollisionSfx;
 
+        [Header("Variables")]
+        [SerializeField] private float invulnerabilityPeriod;
+
+        private bool canConnect = false;
         private bool isConnected = false;
         private GameObject lastPlatformPart;
 
@@ -30,6 +34,13 @@ namespace LearningLadders
         {
             ID = GetInstanceID();
             PlatformManager.RegisterStackable(ID, this);
+        }
+
+        private void Update()
+        {
+            if(!canConnect) invulnerabilityPeriod -= Time.deltaTime;
+
+            if (invulnerabilityPeriod < 0) canConnect = true;
         }
 
         private void OnDestroy()
@@ -53,7 +64,7 @@ namespace LearningLadders
                 Destroy(gameObject);
             }
 
-            if (isConnected) return;
+            if (isConnected || !canConnect) return;
 
             if (collision.collider.CompareTag("PartOfPlatform") || collision.collider.CompareTag("Stackable"))
             {

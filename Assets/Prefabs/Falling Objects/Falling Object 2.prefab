@@ -334,6 +334,7 @@ MonoBehaviour:
   onPlaySfxEvent: {fileID: 11400000, guid: 4c2a0dd782c94b943b16340fc1441a81, type: 2}
   repTextObject: {fileID: 2033495289049802595, guid: 02875fcf2b2bce34ca7a60e02b9ab511, type: 3}
   objectCollisionSfx: {fileID: 11400000, guid: 48150c3ded96aca45bf34435a39ac8c0, type: 2}
+  invulnerabilityPeriod: 1
   repDamage: 10
 --- !u!61 &1529302660114192620
 BoxCollider2D:

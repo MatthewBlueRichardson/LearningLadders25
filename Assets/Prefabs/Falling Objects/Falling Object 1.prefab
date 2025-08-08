@@ -335,6 +335,7 @@ MonoBehaviour:
   onPlaySfxEvent: {fileID: 11400000, guid: 4c2a0dd782c94b943b16340fc1441a81, type: 2}
   repTextObject: {fileID: 2033495289049802595, guid: 02875fcf2b2bce34ca7a60e02b9ab511, type: 3}
   objectCollisionSfx: {fileID: 11400000, guid: fbd3ae22f0db4a14a8e17756a27ab607, type: 2}
+  invulnerabilityPeriod: 1
   repDamage: 10
 --- !u!96 &863344059409915944
 TrailRenderer:
