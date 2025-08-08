@@ -4402,6 +4402,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6668423515818275002, guid: e888893c30cdf2a47a4280de863f6d6c, type: 3}
+      propertyPath: objectsToSpawn.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6668423515818275002, guid: e888893c30cdf2a47a4280de863f6d6c, type: 3}
+      propertyPath: 'objectsToSpawn.Array.data[5]'
+      value: 
+      objectReference: {fileID: 9218424740516944561, guid: 6ff5aed795adf6847a246085bc2f668b, type: 3}
+    - target: {fileID: 6668423515818275002, guid: e888893c30cdf2a47a4280de863f6d6c, type: 3}
+      propertyPath: 'objectsToSpawn.Array.data[6]'
+      value: 
+      objectReference: {fileID: 9218424740516944561, guid: 37fd68e08acdd984393631995184c91a, type: 3}
+    - target: {fileID: 6668423515818275002, guid: e888893c30cdf2a47a4280de863f6d6c, type: 3}
+      propertyPath: 'objectsToSpawn.Array.data[7]'
+      value: 
+      objectReference: {fileID: 9218424740516944561, guid: 9666caacb86693c4b9dd56395fdbcc7e, type: 3}
+    - target: {fileID: 6668423515818275002, guid: e888893c30cdf2a47a4280de863f6d6c, type: 3}
+      propertyPath: 'objectsToSpawn.Array.data[8]'
+      value: 
+      objectReference: {fileID: 9218424740516944561, guid: 9c63446ab8379464d9c6e03fddf4a541, type: 3}
     - target: {fileID: 7948104170277289131, guid: e888893c30cdf2a47a4280de863f6d6c, type: 3}
       propertyPath: m_Camera
       value: 
