@@ -14,6 +14,7 @@ public class ScoreManager : MonoBehaviour
     [Header("Events")]
     [SerializeField] private IntEvent onReachScore;
     [SerializeField] private IntEvent onNewScore;
+    [SerializeField] private VoidEvent onNewHighScore;
 
     [Header("Game Objects")]
     [SerializeField] private TMP_Text scoreText;
@@ -60,6 +61,7 @@ public class ScoreManager : MonoBehaviour
                 Debug.Log("New high score: " + score);
                 PlayerPrefs.SetInt("HighScore", score);
                 gameOverHighScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore");
+                onNewHighScore.Invoke(new Empty());
             }
             onNewScore.Invoke(score + 1);
         }
