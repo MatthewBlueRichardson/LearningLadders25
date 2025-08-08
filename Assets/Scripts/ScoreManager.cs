@@ -44,7 +44,11 @@ public class ScoreManager : MonoBehaviour
         if (blockY > highestY)
         {
             highestY = blockY;
-            score = highestY;
+
+            // Score can only increase by 2 everytime!
+            if(blockY > score + 2) score = score + 2;
+            else score = highestY;
+
             scoreText.text = score.ToString();
             gameOverScoreText.text = "Score: " +  score.ToString();
             sfxEvent.Invoke(scoreSound);
