@@ -9915,6 +9915,10 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: -1.5200002
       objectReference: {fileID: 0}
+    - target: {fileID: 5543032429633990004, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 5939988026939469910, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       propertyPath: cooldown
       value: 30
@@ -9941,7 +9945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8245317768061489381, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8794306545707388298, guid: 4b4c88ad2bee5ad4e833c565fee87332, type: 3}
       propertyPath: respawnScript
