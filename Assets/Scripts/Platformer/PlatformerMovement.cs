@@ -43,6 +43,9 @@ public class PlatformerMovement : MonoBehaviour
     [SerializeField] private AudioClipSOEvent sfxEvent;
     [SerializeField] private AudioClipSO jumpSound;
 
+    [Header("Events")]
+    [SerializeField] private FloatEvent onDamageRepEvent;
+
     private int jumpCount = 0;
     // private bool grounded = true;
 
@@ -130,6 +133,7 @@ public class PlatformerMovement : MonoBehaviour
         if (collider.CompareTag("GameOver"))
         {
             Debug.Log("Player should respawn!");
+            onDamageRepEvent.Invoke(5f);
             respawnScript.Respawn();
         }
     }
