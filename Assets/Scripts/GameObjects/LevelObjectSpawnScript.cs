@@ -33,7 +33,7 @@ public class LevelObjectSpawnScript : MonoBehaviour
         {
             spawnInterval -= 0.25f;
             difficultyTimer = 0f;
-            if (spawnInterval <= 1.5f) spawnInterval = 1.5f;
+            if (spawnInterval <= 1f) spawnInterval = 1f;
         }
     }
 
