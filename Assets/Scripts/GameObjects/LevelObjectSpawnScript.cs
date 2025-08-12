@@ -19,6 +19,8 @@ public class LevelObjectSpawnScript : MonoBehaviour
     private float difficultyTimer = 0f;
     private Camera mainCam;
 
+    private bool hasReachedMaxSpawnSpeed = false;
+
     private void Start()
     {
         mainCam = Camera.main;
@@ -29,11 +31,15 @@ public class LevelObjectSpawnScript : MonoBehaviour
     {
         difficultyTimer += Time.deltaTime;
 
-        if(difficultyTimer >= difficultyIncreaseTimer)
+        if(difficultyTimer >= difficultyIncreaseTimer && hasReachedMaxSpawnSpeed == false)
         {
             spawnInterval -= 0.25f;
             difficultyTimer = 0f;
-            if (spawnInterval <= 1f) spawnInterval = 1f;
+            if (spawnInterval <= 0.8f)
+            {
+                spawnInterval = 0.8f;
+                hasReachedMaxSpawnSpeed = true;
+            }
         }
     }
 
