@@ -152,16 +152,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4583392456474361910
-Transform:
+--- !u!224 &4583392456474361910
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842168374773709605}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -551.12866, y: -255.95937, z: 11.957651}
+  m_LocalPosition: {x: 0, y: 0, z: 11.957651}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -170,6 +169,11 @@ Transform:
   - {fileID: 6960936033418281498}
   m_Father: {fileID: 7091877675942547715}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -551.12866, y: -255.95937}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1552672202693341042
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,6 +590,7 @@ MonoBehaviour:
   scoreMilestoneSound: {fileID: 0}
   onReachScore: {fileID: 11400000, guid: 909ec3f03634a8c4aa8b71703d589cfb, type: 2}
   onNewScore: {fileID: 0}
+  onNewHighScore: {fileID: 0}
   scoreText: {fileID: 6712461058710197054}
   highscoreText: {fileID: 8988485317938887732}
   gameOverHighScoreText: {fileID: 0}
