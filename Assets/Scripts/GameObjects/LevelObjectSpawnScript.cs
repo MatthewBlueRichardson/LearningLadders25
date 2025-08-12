@@ -15,6 +15,7 @@ public class LevelObjectSpawnScript : MonoBehaviour
     [SerializeField] private int randomObjectInt;
     [Tooltip("Chance out of 10 that repItem will spawn instead")]
     [SerializeField] private float repItemChance;
+    [SerializeField] private float maxSpawnRate;
 
     private float difficultyTimer = 0f;
     private Camera mainCam;
@@ -35,9 +36,9 @@ public class LevelObjectSpawnScript : MonoBehaviour
         {
             spawnInterval -= 0.25f;
             difficultyTimer = 0f;
-            if (spawnInterval <= 0.8f)
+            if (spawnInterval <= maxSpawnRate)
             {
-                spawnInterval = 0.8f;
+                spawnInterval = maxSpawnRate;
                 hasReachedMaxSpawnSpeed = true;
             }
         }

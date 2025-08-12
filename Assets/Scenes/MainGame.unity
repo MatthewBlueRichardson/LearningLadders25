@@ -23723,6 +23723,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6668423515818275002, guid: e888893c30cdf2a47a4280de863f6d6c, type: 3}
+      propertyPath: maxSpawnRate
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6668423515818275002, guid: e888893c30cdf2a47a4280de863f6d6c, type: 3}
       propertyPath: repItemChance
       value: 1
       objectReference: {fileID: 0}
