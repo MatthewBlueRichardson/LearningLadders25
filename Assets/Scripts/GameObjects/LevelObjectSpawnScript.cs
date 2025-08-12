@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using LearningLadders.EventSystem;
 
 public class LevelObjectSpawnScript : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class LevelObjectSpawnScript : MonoBehaviour
     [Tooltip("Chance out of 10 that repItem will spawn instead")]
     [SerializeField] private float repItemChance;
     [SerializeField] private float maxSpawnRate;
+
+    public VoidEvent onSpawnRateUpdated;
 
     private float difficultyTimer = 0f;
     private Camera mainCam;
@@ -41,6 +44,8 @@ public class LevelObjectSpawnScript : MonoBehaviour
                 spawnInterval = maxSpawnRate;
                 hasReachedMaxSpawnSpeed = true;
             }
+
+            onSpawnRateUpdated.Invoke(new Empty());
         }
     }
 

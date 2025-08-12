@@ -50,6 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onPauseGameEvent: {fileID: 11400000, guid: 004c2a4882f2e434eabdbc0258cceb5d, type: 2}
   onUnpauseGameEvent: {fileID: 11400000, guid: 37584ff682d7f7247aa52d5472903883, type: 2}
+  onPlaySfxEvent: {fileID: 0}
+  startGame: {fileID: 0}
 --- !u!114 &7834632411186261876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,10 +69,14 @@ MonoBehaviour:
   sfxEvent: {fileID: 11400000, guid: 4c2a0dd782c94b943b16340fc1441a81, type: 2}
   repDownSFX: {fileID: 11400000, guid: 844ad4ee49806e64297337e1dbf5f361, type: 2}
   repUpSFX: {fileID: 11400000, guid: 63108d9561d5d264f8039c35d5d85391, type: 2}
+  repAnimator: {fileID: 0}
   currentRep: 0
   maxRep: 100
   repBar: {fileID: 0}
   repText: {fileID: 0}
+  minDamage: 0.01
+  maxDamage: 0.1
+  damageIncrement: 0.005
 --- !u!114 &5026553240257794325
 MonoBehaviour:
   m_ObjectHideFlags: 0

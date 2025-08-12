@@ -22,21 +22,30 @@ public class ReputationScript : MonoBehaviour
     public Image repBar;
     public TMP_Text repText;
 
+    [Header("Killzone")]
+    [Range(0f, 1f)]
+    public float minDamage = 0.01f;
+    [Range(0f, 1f)]
+    public float maxDamage = 0.1f;
+    public float damageIncrement;
+
     private bool canBeDamaged;
     private bool inKillzone;
+    private float currentDamage;
 
     void Start()
     {
         canBeDamaged = true;
         currentRep = maxRep;
         repText.text = currentRep.ToString();
+        currentDamage = minDamage;
     }
 
     void Update()
     {
         if (inKillzone == true)
         {
-            currentRep -= 0.01f;
+            currentRep -= currentDamage;
             currentRep = Mathf.Clamp(currentRep, 0f, maxRep);
             repBar.fillAmount = currentRep / maxRep;
             repText.text = currentRep.ToString("F0");
@@ -91,5 +100,13 @@ public class ReputationScript : MonoBehaviour
     {
         inKillzone = inZone;
         repAnimator.SetTrigger("OutOfZone");
+    }
+
+    public void IncreaseKillZoneDamage()
+    {
+        currentDamage += damageIncrement;
+        currentDamage = Mathf.Clamp(currentDamage, minDamage, maxDamage);
+
+        Debug.Log("KILLZONE DAMAGE HAS INCREASED TO: " + currentDamage);
     }
 }
