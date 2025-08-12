@@ -36,7 +36,6 @@ public class CameraScaler : MonoBehaviour
         if (_height >= 0) 
         {
             UpdateHeight(_height);
-            Debug.Log(_height);
         }
     }
 
