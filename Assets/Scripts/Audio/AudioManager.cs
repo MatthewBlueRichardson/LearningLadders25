@@ -184,9 +184,9 @@ namespace LearningLadders.Audio
 
         public void SetMusicPitch(int score)
         {
-            if (score < 10) audioSourceMusic.pitch = 1f;
-            else if (score >= 10 && score < 20) audioSourceMusic.pitch = 1.05f;
-            else if (score >= 20 && score < 30) audioSourceMusic.pitch = 1.1f;
+            if (score < 11) audioSourceMusic.pitch = 1f;
+            else if (score >= 11 && score < 21) audioSourceMusic.pitch = 1.05f;
+            else if (score >= 21 && score < 31) audioSourceMusic.pitch = 1.1f;
             else audioSourceMusic.pitch = 1.15f;
         }
 
