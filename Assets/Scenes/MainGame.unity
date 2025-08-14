@@ -1444,7 +1444,7 @@ PrefabInstance:
       objectReference: {fileID: 1040870311}
     - target: {fileID: 3319990648701099938, guid: a672034d906c559498c056ecae27742d, type: 3}
       propertyPath: jointFrequency
-      value: 90
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3319990648701099938, guid: a672034d906c559498c056ecae27742d, type: 3}
       propertyPath: jointBreakForce
@@ -1452,7 +1452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3319990648701099938, guid: a672034d906c559498c056ecae27742d, type: 3}
       propertyPath: jointDampingRatio
-      value: 0.8
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3319990648701099938, guid: a672034d906c559498c056ecae27742d, type: 3}
       propertyPath: stackSFX.Array.size
