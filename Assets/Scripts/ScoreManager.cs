@@ -44,20 +44,30 @@ public class ScoreManager : MonoBehaviour
     {
         if (blockY > highestY)
         {
-            highestY = blockY;
+
 
             // Score can only increase by a max of 2 everytime!
-            if(blockY > score + 2) return;
+            if(blockY > score + 2)
+            {
+                score = score + 2;
+                highestY = score;
+            }
 
-            score = highestY;
+            else
+            {
+                highestY = blockY;
+                score = highestY;
 
-            scoreText.text = score.ToString();
-            gameOverScoreText.text = "Score: " +  score.ToString();
-            sfxEvent.Invoke(scoreSound);
-            scorePS.Play();
-            scoreAnim.SetTrigger("ScoreIncrease");
-            PlayerPrefs.SetInt("Score", score);
-            onNewScore.Invoke(score + 1);
+                scoreText.text = score.ToString();
+                gameOverScoreText.text = "Score: " + score.ToString();
+                sfxEvent.Invoke(scoreSound);
+                scorePS.Play();
+                scoreAnim.SetTrigger("ScoreIncrease");
+                PlayerPrefs.SetInt("Score", score);
+                onNewScore.Invoke(score + 1);
+            }
+
+            
             if (score > PlayerPrefs.GetInt("HighScore"))
             {
                 Debug.Log("New high score: " + score);
