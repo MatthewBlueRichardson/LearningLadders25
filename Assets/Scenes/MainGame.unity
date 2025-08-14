@@ -23153,8 +23153,28 @@ PrefabInstance:
       value: -1.625
       objectReference: {fileID: 0}
     - target: {fileID: 5700610039117689671, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700610039117689671, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700610039117689671, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700610039117689671, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700610039117689671, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -792
+      value: 255
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700610039117689671, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 105
       objectReference: {fileID: 0}
     - target: {fileID: 6055261380478911845, guid: 8427826f7a3e5d7478c53f170385f227, type: 3}
       propertyPath: m_LocalScale.x
