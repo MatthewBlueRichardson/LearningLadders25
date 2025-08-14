@@ -41,7 +41,7 @@ public class ReputationScript : MonoBehaviour
         currentDamage = minDamage;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (inKillzone == true)
         {
